@@ -345,6 +345,6 @@ Any `Yes` in Post-Humanizer Fact Lock requires immediate targeted revision befor
 
 ## Parent-agent verification additions
 
-After generation, the parent agent should verify the audit includes `Narrative Humanizer Check` and `Post-Humanizer Fact Lock`. It should also manually inspect suspicious passages instead of relying only on keyword bans.
+After generation, the orchestrating process should verify that the audit includes `Narrative Humanizer Check` and `Post-Humanizer Fact Lock`. It should also inspect suspicious passages directly instead of relying only on keyword bans.
 
 Keyword scans are only warnings. Do not ban valid genre language mechanically. Flag only usage that breaks immersion, contradicts style, or sounds machine-generated.

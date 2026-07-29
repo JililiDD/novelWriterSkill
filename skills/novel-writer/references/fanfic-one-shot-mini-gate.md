@@ -1,6 +1,6 @@
 # Fanfic / one-shot mini planning gate
 
-Use this when the user asks for short fanfiction or a one-shot scene and the `novel-generator` skill is loaded, or when the assistant has promised a structured writing workflow.
+Use this when the user asks for short fanfiction or a one-shot scene and the `novel-writer` skill is active, or when a structured writing workflow has already been promised.
 
 ## Rule
 

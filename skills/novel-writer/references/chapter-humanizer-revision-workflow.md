@@ -74,7 +74,7 @@ User asks for changes such as:
 
 Use this when the user asks to apply the same light-revision method to many completed chapters.
 
-1. Split the range into manageable chunks and, when available, use `delegate_task` subagents in parallel.
+1. Split the range into manageable chunks and, when available, use subagents in parallel; otherwise process the chunks sequentially with isolated inputs and outputs.
 2. Give every subagent the same invariants:
    - light revision only; do not rewrite plot/structure
    - preserve canon, evidence chains, reveal timing, character knowledge boundaries, and required wording
@@ -83,7 +83,7 @@ Use this when the user asks to apply the same light-revision method to many comp
    - verify forbidden/meta terms and required chapter terms after editing
 3. Include known cross-chapter state facts in the task context so subagents do not reintroduce old bugs.
    - Example: after a chapter-1 fix, “沈照 first wound is chest-front shallow cut; later right-rib wound only exists if a later chapter explicitly creates it.”
-4. After subagents finish, the parent agent must independently sample/verify the results rather than trusting summaries only:
+4. After all revision passes finish, the orchestrating process must independently sample and verify the results rather than trusting summaries only:
    - sizes/non-empty for every edited file
    - forbidden/meta-term scan across the full range
    - required keyword/event scan per chapter
@@ -91,15 +91,14 @@ Use this when the user asks to apply the same light-revision method to many comp
    - dashboard read endpoint HTTP 200 for each chapter if running
 5. Do not over-normalize style across the range. Reducing `像/仿佛` counts is a warning metric, not a target. Keep metaphors that are clear, viewpoint-appropriate, and not overused.
 
-## Practical examples from 《雪尽刀还》
+## Generic revision examples
 
-- Chapter 1: `胸口像有一枚钝钉向内敲` risked later literal interpretation as a real nail-like injury. Light fix: make it clearly a sensation/old-wound pain rather than an entity.
-- Chapter 1: first knife only cut clothing, but later `胸前渗血` and `止血散` appeared. Light fix: add a shallow chest cut at the initial strike and show simple use of止血散.
-- Chapter 1: repeated `没有回头` four times. Keep meaningful occurrences; replace others with current action (`刀尖仍压在那人喉下`).
-- Chapter 2: state drift from Chapter 1 `胸前浅口` to `右肋伤口`. Light fix: align wound location.
-- Chapter 2: ornamental comparisons (`像怕风吹走`, `像空了一块`, `像故意把沉默遮住`) were replaced by concrete observable behavior only where clearer.
-- Chapters 4-10 batch pass: use subagents for range chunks, but parent must re-run independent verification. Important continuity examples: do not reintroduce `钝钉` as literalized inner pain; keep 柳照水 ear-injury blood source consistent; only use later `右肋旧伤` after a chapter explicitly creates a right-rib wound.
-- Batch pass caution: do not force every chapter toward zero metaphors. One chapter may end up with few/no `像` if its existing object/evidence imagery is already dense, but this is an outcome of judgment, not a universal target.
+- A metaphor such as “a nail driving into the chest” may later be misread as a literal injury. Clarify that it is a sensation unless the story establishes a physical wound.
+- If an attack initially damages only clothing but later scenes show bleeding and treatment, either establish a shallow wound at the original strike or remove the unsupported consequences.
+- If a gesture or sentence is repeated several times, keep the most meaningful occurrence and replace the others with concrete current action.
+- If a wound, object, location, or possession changes between chapters without an intervening event, align the later reference with the established state.
+- Replace ornamental comparisons with observable behavior only when doing so improves clarity; do not drive metaphor counts toward zero as a mechanical target.
+- For batch passes, divide chapters into isolated chunks but re-run full-range verification for cross-chapter state drift after all chunks are complete.
 
 ## Report format
 

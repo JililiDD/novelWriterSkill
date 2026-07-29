@@ -22,8 +22,8 @@ import asyncio
 from pathlib import Path
 import edge_tts
 
-book = Path('/home/ddxy/Desktop/hermes/jobs/novel-generator/xuejin-daohuan')
-out = Path('/home/ddxy/Desktop/hermes/jobs/novel-generator/audiobook/xuejin-daohuan/samples')
+book = Path('/path/to/book-project')
+out = book / 'audiobook' / 'samples'
 out.mkdir(parents=True, exist_ok=True)
 text = (book / 'chapters/ch01_final.md').read_text(encoding='utf-8')
 text = '\n'.join(line.strip().lstrip('#').strip() for line in text.splitlines() if line.strip())[:750]
@@ -56,7 +56,7 @@ asyncio.run(main())
 
 Target directory:
 ```text
-~/Desktop/hermes/jobs/novel-generator/audiobook/<book-id>/
+<project-root>/audiobook/
   samples/      # voice audition MP3s
   chunks/       # per-chapter chunk audio
   chapters/     # merged chapter MP3s
@@ -71,6 +71,14 @@ Production steps:
 5. Merge with ffmpeg into per-chapter MP3/M4A, then optionally M4B.
 6. Add Dashboard audio links/player for each chapter if needed.
 
-## Environment notes from session
+## Environment preflight
 
-On the current machine, `edge_tts` was importable from the Hermes Python environment. `ffmpeg` and `espeak-ng` were not found, and no NVIDIA GPU was detected (`nvidia-smi` unavailable). This favors Edge TTS samples first and cloud GPU for open-source model trials.
+Before generating audio, verify the actual environment rather than assuming tools are installed:
+
+- import or invoke the selected TTS engine
+- check whether `ffmpeg` is available before planning audio merges
+- check GPU availability before selecting local neural models
+- confirm internet access when using online voices
+- record the selected voice, rate, engine, and dependency versions in the audiobook manifest
+
+If local GPU or merge tools are unavailable, generate short voice samples first and use a suitable external compute environment only when the user approves it.

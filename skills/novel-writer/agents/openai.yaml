@@ -1,0 +1,5 @@
+interface:
+  display_name: "Novel Writer"
+  short_description: "Plan, write, audit, and revise long-form fiction"
+  brand_color: "#7C3AED"
+  default_prompt: "Use novel-writer to set up, continue, audit, or revise a structured fiction project."

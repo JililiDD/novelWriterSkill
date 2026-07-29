@@ -1,7 +1,7 @@
 {
-  "name": "noval-writer-skill",
-  "version": "1.0.0",
-  "description": "Codex-importable long-form novel writing workflow ported from the user's Hermes novel-generator skill.",
+  "name": "novel-writer",
+  "version": "1.1.0",
+  "description": "Structured long-form fiction planning, chapter generation, continuity auditing, revision, and project-state management.",
   "author": {
     "name": "JililiDD"
   },
@@ -10,14 +10,14 @@
     "novel",
     "fiction",
     "creative-writing",
-    "writing",
-    "codex-skill"
+    "long-form-writing",
+    "continuity"
   ],
   "skills": "./skills/",
   "interface": {
-    "displayName": "Noval Writer Skill",
-    "shortDescription": "Long-form fiction planning, generation, audit, and revision workflow.",
-    "longDescription": "A Codex-compatible port of the Hermes novel-generator skill, including style and element selection, system bible creation, chapter preflight, multi-role drafting/review passes, continuity audits, humanizer revision, and mobile dashboard guidance.",
+    "displayName": "Novel Writer",
+    "shortDescription": "Plan, write, audit, and revise long-form fiction.",
+    "longDescription": "A structured fiction workflow with premise and style locks, System Bible creation, chapter preflight, staged drafting and review, continuity audits, narrative humanization, fact locking, and project-scoped state management.",
     "developerName": "JililiDD",
     "category": "Productivity",
     "capabilities": [
@@ -28,8 +28,8 @@
     ],
     "defaultPrompt": [
       "Use novel-writer to set up a new novel project.",
-      "Use novel-writer to generate the next chapter preflight.",
-      "Use novel-writer to revise this chapter for continuity and human prose."
+      "Use novel-writer to prepare the next chapter preflight.",
+      "Use novel-writer to audit and revise this chapter."
     ],
     "brandColor": "#7C3AED"
   }

@@ -1,5 +1,17 @@
 # Changelog
 
+## v1.1.0 — Skill standardization
+
+- Unified the public name as `novel-writer` / “Novel Writer” and corrected the legacy misspelling in manifests and documentation.
+- Reduced `SKILL.md` frontmatter to `name` and `description` and replaced the duplicated provider-specific entrypoint with one platform-neutral control plane.
+- Replaced provider-specific delegation terminology with available-subagent or isolated sequential-pass guidance.
+- Added `agents/openai.yaml` for ChatGPT Skill metadata.
+- Moved book-specific notes out of the reusable Skill into repository-level `project-notes/`.
+- Generalized project-derived examples, paths, dashboard instructions, and TTS environment assumptions.
+- Added validation and standard `skill.zip` packaging.
+
+The sections below preserve the imported workflow's earlier internal history.
+
 ## Unreleased
 
 - Chapter preflight now explicitly reads the prior final chapter and prior audit/Fact Lock when available, preventing next-chapter briefs from relying only on memory or the outline.

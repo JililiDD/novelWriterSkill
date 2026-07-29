@@ -4,12 +4,12 @@ Use this after the user has confirmed the detailed plot outline and asks to gene
 
 ## Non-negotiable rules
 
-1. The parent assistant must not directly write final novel prose.
-2. Use `delegate_task` multi-agent workflow for prose generation.
+1. Keep drafting, review, humanization, and verification as distinct role passes.
+2. Use available subagents when supported; otherwise run the same passes sequentially with separate intermediate files.
 3. Every chapter requires a preflight plan and explicit user confirmation before prose drafting.
 4. The approved chapter contract is binding.
 5. After Humanizer, run Fact Lock.
-6. After subagent completion, parent agent verifies files directly.
+6. After all role passes complete, independently verify the generated files.
 
 ## Per-chapter flow
 
@@ -95,9 +95,9 @@ Update:
 - foreshadowing tracker
 - any state files used by the project
 
-### 9. Parent verification
+### 9. Final verification
 
-The parent agent must independently verify:
+The orchestrating process must independently verify:
 - expected files exist and non-empty
 - final chapter can be read
 - forbidden/meta terms absent

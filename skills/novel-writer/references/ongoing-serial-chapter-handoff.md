@@ -5,7 +5,7 @@ Use this when continuing an already-running novel project across turns or after 
 ## Routing
 
 1. If the next chapter's preflight has not been confirmed in the current conversation, create/update `state/chapterXX_brief.md` and stop for user confirmation.
-2. If the user explicitly confirms the current preflight (`可以`, `确认`, `继续写第X章`, `生成正文`) then run the chapter-generation pipeline through `delegate_task`.
+2. If the user explicitly confirms the current preflight (`可以`, `确认`, `继续写第X章`, `生成正文`), run the chapter-generation pipeline using available subagents or isolated sequential role passes.
 3. Do not treat a compacted-session summary as sufficient factual grounding. Use it to locate files, then read the actual project files.
 
 ## Minimum file refresh before next-chapter preflight
@@ -31,9 +31,9 @@ The next `chapterXX_brief.md` should include:
 - Required beat checklist
 - Forbidden/meta leakage terms
 
-## Parent verification after delegated prose generation
+## Final verification after prose generation
 
-After `delegate_task` returns, independently verify before reporting success:
+After all generation and review passes complete, independently verify before reporting success:
 - final, draft, and audit files exist and are non-empty
 - title is exact
 - required ending or exact clue phrase is present

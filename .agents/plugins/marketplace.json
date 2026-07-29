@@ -1,11 +1,11 @@
 {
-  "name": "noval-writer-skill",
+  "name": "novel-writer",
   "interface": {
-    "displayName": "Noval Writer Skill"
+    "displayName": "Novel Writer"
   },
   "plugins": [
     {
-      "name": "noval-writer-skill",
+      "name": "novel-writer",
       "source": {
         "source": "local",
         "path": "./"

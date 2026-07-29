@@ -1,6 +1,6 @@
 # 《雪尽刀还》后期章节生成经验（第八至十章）
 
-适用：使用 `novel-generator` 生成悬疑旧案/武侠终局章节时，尤其是信息密集的后期揭秘、终章回收与 Dashboard 验证。
+适用：生成悬疑旧案/武侠终局章节时，尤其是信息密集的后期揭秘、终章回收与 Dashboard 验证。
 
 ## 后期章节合同与节奏
 
@@ -54,7 +54,7 @@
 ```bash
 python3 - <<'PY'
 from pathlib import Path
-import re, json, urllib.request, time
+import re
 root=Path('/home/ddxy/Desktop/hermes/jobs/novel-generator/xuejin-daohuan')
 ch='09'
 final=root/f'chapters/ch{ch}_final.md'
@@ -63,12 +63,12 @@ audit=root/f'audits/ch{ch}_lore_audit.md'
 for label,p in [('FINAL',final),('DRAFT',draft),('AUDIT',audit)]:
     print(label, p.exists(), p.stat().st_size if p.exists() else 0)
 text=final.read_text(encoding='utf-8')
-aud=audit.read_text(encoding='utf-8')
 forbidden=['F-','[伏笔]','agent','audit','outline','scene','场景一','上一章','本章','前文','伏笔','读者','作者']
 print('FORBIDDEN_FOUND', [w for w in forbidden if w in text])
 required=['江上旧渡','顾沉舟','雪夜账最后一页','密信','无面客','三庄','第十七人']
 print('REQUIRED_MISSING', [w for w in required if w not in text])
 print('CHARS_NO_WS', len(re.sub(r'\s+','', text)))
+PY
 ```
 
 ## Dashboard 验证
@@ -79,7 +79,3 @@ print('CHARS_NO_WS', len(re.sub(r'\s+','', text)))
 2. 找到 `id == xuejin-daohuan` 或标题包含《雪尽刀还》的 book。
 3. 找到目标章节的 `url`。
 4. 请求 `http://127.0.0.1:8420 + url`，要求 HTTP 200。
-
-## 文件写入注意
-
-本会话多次遇到 `read_file/write_file` 因环境缺少 `cat/head` 失败；稳定做法是立即切换到 Python `pathlib` 读写，避免重复调用同一失败工具。

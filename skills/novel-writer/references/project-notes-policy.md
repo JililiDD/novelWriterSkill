@@ -2,9 +2,9 @@
 
 ## Principle
 
-The universal `novel-generator` skill should store **methods**, not full project content.
+The reusable `novel-writer` skill should store **methods**, not full project content.
 
-Project-specific novels such as 《雪尽刀还》 may produce useful lessons, but the skill must not embed full chapters, full briefs, full audits, or whole-book canon as reference material.
+Individual novel projects may produce useful lessons, but the skill must not embed full chapters, full briefs, full audits, or whole-book canon as reference material.
 
 ## What belongs in universal references
 
@@ -41,9 +41,9 @@ A project-specific note should be a compact summary/checklist, normally under 1,
 Full text stays in the project directory, e.g.:
 
 ```text
-~/Desktop/hermes/jobs/novel-generator/<book-id>/chapters/
-~/Desktop/hermes/jobs/novel-generator/<book-id>/state/
-~/Desktop/hermes/jobs/novel-generator/<book-id>/audits/
+<project-root>/chapters/
+<project-root>/state/
+<project-root>/audits/
 ```
 
 When full context is needed, read it from the project directory on demand. Do not copy it into the skill.
@@ -52,8 +52,8 @@ When full context is needed, read it from the project directory on demand. Do no
 
 Convert project incidents into reusable rules:
 
-- Bad: “In 《雪尽刀还》第三章, line X said...”
+- Bad: “In Project A, chapter 3, line X said...”
 - Good: “If a sensory metaphor implies a physical object, record it as figurative or rewrite it to avoid later state drift.”
 
-- Bad: “柳照水第七章耳伤...”
-- Good: “Track state source consistency: if a character’s sensory injury or resource state changes, later references must preserve source/location unless a new event changes it.”
+- Bad: “Character A's ear injury in chapter 7...”
+- Good: “Track state-source consistency: if a character's injury or resource state changes, later references must preserve its source and location unless a new event changes it.”
