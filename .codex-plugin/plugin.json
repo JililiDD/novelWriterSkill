@@ -1,0 +1,36 @@
+{
+  "name": "noval-writer-skill",
+  "version": "1.0.0",
+  "description": "Codex-importable long-form novel writing workflow ported from the user's Hermes novel-generator skill.",
+  "author": {
+    "name": "JililiDD"
+  },
+  "license": "MIT",
+  "keywords": [
+    "novel",
+    "fiction",
+    "creative-writing",
+    "writing",
+    "codex-skill"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Noval Writer Skill",
+    "shortDescription": "Long-form fiction planning, generation, audit, and revision workflow.",
+    "longDescription": "A Codex-compatible port of the Hermes novel-generator skill, including style and element selection, system bible creation, chapter preflight, multi-role drafting/review passes, continuity audits, humanizer revision, and mobile dashboard guidance.",
+    "developerName": "JililiDD",
+    "category": "Productivity",
+    "capabilities": [
+      "Writing",
+      "Planning",
+      "Review",
+      "Project Memory"
+    ],
+    "defaultPrompt": [
+      "Use novel-writer to set up a new novel project.",
+      "Use novel-writer to generate the next chapter preflight.",
+      "Use novel-writer to revise this chapter for continuity and human prose."
+    ],
+    "brandColor": "#7C3AED"
+  }
+}

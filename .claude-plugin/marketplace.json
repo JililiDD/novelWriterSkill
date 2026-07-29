@@ -1,0 +1,28 @@
+{
+  "name": "noval-writer-skill",
+  "description": "Local marketplace for the Codex-compatible Novel Writer skill.",
+  "owner": {
+    "name": "JililiDD"
+  },
+  "plugins": [
+    {
+      "name": "noval-writer-skill",
+      "source": "./",
+      "description": "Codex-importable long-form novel writing workflow ported from the user's Hermes novel-generator skill.",
+      "version": "1.0.0",
+      "author": {
+        "name": "JililiDD"
+      },
+      "license": "MIT",
+      "keywords": [
+        "novel",
+        "fiction",
+        "creative-writing",
+        "writing",
+        "codex-skill"
+      ],
+      "category": "Productivity",
+      "strict": true
+    }
+  ]
+}
