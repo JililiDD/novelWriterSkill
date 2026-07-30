@@ -1,24 +1,13 @@
-# Workflow Pitfalls - Novel Generation
+# Workflow Pitfalls — Compatibility Reference
 
-## 1. 逻辑幻觉与设定跑偏 (Fact Alignment)
+This historical file is retained only for backward compatibility.
 
-**现象**: 子代理在生成过程中凭空捏造了不在“系统圣经”中的重要背景或人物关系（如：在确定了不是兄妹的情况下，依然写出了“失散多年的哥哥”的情节）。
+Use the canonical owners instead:
 
-**原因**: 
-- 子代理读取了历史对话中被废弃的草案。
-- 审计逻辑过于依赖关键词，而非“事实对比”。
+- rejected brainstorming and source-of-truth isolation: `project-notes-policy.md`, `role-execution-protocol.md`;
+- genre/style neutrality: `project-profile-workflow.md`, `style-and-element-selection.md`;
+- fact alignment, unsupported entities, and continuity: `continuity-bug-audit.md`;
+- approved chapter obligations: `chapter-pipeline.md`;
+- long-term state and source evidence: `long-form-continuity.md`.
 
-**通用对策**:
-1. **严格上下文隔离**: 传递给子代理或后续角色步骤的 context **严禁**包含讨论过程中的草案，只能包含最终确认的 `system_bible.md` 与当前任务所需的批准状态文件。
-2. **三步审计法**:
-   - **Step 1**: 提取初稿中的核心事实（关系、背景、关键物品）。
-   - **Step 2**: 与系统圣经进行 1:1 事实比对。
-   - **Step 3**: 标记任何在圣经中无依据的新概念为“幻觉 Bug”。
-
-## 2. 题材窄化与通用性缺失
-
-**现象**: 代理默认将所有小说处理为“武侠”或“修仙”，跳过了题材确认步骤。
-
-**对策**:
-- 即使是基于现有设定，在正式生成第 1 章前，必须显式列出：**题材 (Genre)**、**文风 (Style)**、**基调 (Tone)**。
-- 禁止在技能中嵌入特定题材的硬编码规则（如：直接写“不要提哥哥”），应将其抽象为“必须服从系统圣经”。
+Do not add new workflow rules to this file.

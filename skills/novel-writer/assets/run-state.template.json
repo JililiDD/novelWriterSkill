@@ -1,0 +1,150 @@
+{
+  "schema_version": "1.0",
+  "run_id": "chapter-08-20260729-001",
+  "created_at": "2026-07-29T17:30:00-04:00",
+  "updated_at": "2026-07-29T17:30:00-04:00",
+  "mode": "standard",
+  "work_unit": {
+    "type": "chapter",
+    "id": "chapter-08"
+  },
+  "operation": "generate",
+  "revision_level": null,
+  "stages": {
+    "preflight": {
+      "status": "active",
+      "started_at": "2026-07-29T17:30:00-04:00",
+      "completed_at": null,
+      "execution_batch": "batch-01",
+      "inputs": [],
+      "outputs": [],
+      "evidence": [],
+      "findings": [],
+      "blocking_reason": null,
+      "not_applicable_reason": null,
+      "notes": null
+    },
+    "draft_writing": {
+      "status": "pending",
+      "started_at": null,
+      "completed_at": null,
+      "execution_batch": null,
+      "inputs": [],
+      "outputs": [],
+      "evidence": [],
+      "findings": [],
+      "blocking_reason": null,
+      "not_applicable_reason": null,
+      "notes": null
+    },
+    "content_review": {
+      "status": "pending",
+      "started_at": null,
+      "completed_at": null,
+      "execution_batch": null,
+      "inputs": [],
+      "outputs": [],
+      "evidence": [],
+      "findings": [],
+      "blocking_reason": null,
+      "not_applicable_reason": null,
+      "notes": null,
+      "checks": {
+        "character_review": {
+          "status": "pending",
+          "inputs": [],
+          "outputs": [],
+          "evidence": [],
+          "findings": [],
+          "blocking_reason": null,
+          "not_applicable_reason": null,
+          "notes": null
+        },
+        "lore_continuity_audit": {
+          "status": "pending",
+          "inputs": [],
+          "outputs": [],
+          "evidence": [],
+          "findings": [],
+          "blocking_reason": null,
+          "not_applicable_reason": null,
+          "notes": null
+        }
+      }
+    },
+    "prose_refinement": {
+      "status": "pending",
+      "started_at": null,
+      "completed_at": null,
+      "execution_batch": null,
+      "inputs": [],
+      "outputs": [],
+      "evidence": [],
+      "findings": [],
+      "blocking_reason": null,
+      "not_applicable_reason": null,
+      "notes": null,
+      "passes": {
+        "prose_stylist": {
+          "status": "pending",
+          "inputs": [],
+          "outputs": [],
+          "evidence": [],
+          "findings": [],
+          "blocking_reason": null,
+          "not_applicable_reason": null,
+          "notes": null
+        },
+        "narrative_humanizer": {
+          "status": "pending",
+          "inputs": [],
+          "outputs": [],
+          "evidence": [],
+          "findings": [],
+          "blocking_reason": null,
+          "not_applicable_reason": null,
+          "notes": null
+        }
+      }
+    },
+    "story_fact_check": {
+      "status": "pending",
+      "started_at": null,
+      "completed_at": null,
+      "execution_batch": null,
+      "inputs": [],
+      "outputs": [],
+      "evidence": [],
+      "findings": [],
+      "blocking_reason": null,
+      "not_applicable_reason": null,
+      "notes": null
+    },
+    "final_verification": {
+      "status": "pending",
+      "started_at": null,
+      "completed_at": null,
+      "execution_batch": null,
+      "inputs": [],
+      "outputs": [],
+      "evidence": [],
+      "findings": [],
+      "blocking_reason": null,
+      "not_applicable_reason": null,
+      "notes": null
+    },
+    "promotion_state_update": {
+      "status": "pending",
+      "started_at": null,
+      "completed_at": null,
+      "execution_batch": null,
+      "inputs": [],
+      "outputs": [],
+      "evidence": [],
+      "findings": [],
+      "blocking_reason": null,
+      "not_applicable_reason": null,
+      "notes": null
+    }
+  }
+}

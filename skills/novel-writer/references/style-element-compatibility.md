@@ -1,257 +1,112 @@
-# Style & Element Compatibility Matrix — 文风元素兼容性矩阵
+# Style & Element Compatibility — 简化判断框架
 
-Use this during style/element selection before length and outline. It helps decide which elements are core, which should be secondary, and which combinations need constraints.
+Use this after the user chooses tentative styles and elements. Do not attempt to maintain an exhaustive catalogue of every genre/trope combination.
 
-## How to use
+## Decision dimensions
 
-For the user’s chosen style/element mix, classify it as:
+Evaluate the mix across four primary dimensions.
 
-- **Strong fit**: elements reinforce each other naturally.
-- **Conditional fit**: can work, but needs implementation constraints.
-- **High risk**: likely to damage suspense, tone, logic, or length unless redesigned.
+### 1. Tone coherence
 
-Then produce:
+Ask whether the styles and emotional promises can coexist without cancelling each other.
+
+Examples:
+
+- horror plus constant low-stakes joking may destroy dread;
+- restrained realism plus exaggerated instant rewards may break credibility;
+- gentle healing plus occasional darkness can work when the lower emotional bound remains protected.
+
+### 2. Suspense and information integrity
+
+Ask whether a mechanism or viewpoint makes uncertainty impossible.
+
+Examples:
+
+- an omniscient system can destroy mystery unless access is limited;
+- prophecy can weaken tension unless incomplete, costly, or interpretable;
+- reincarnation/preknowledge requires explicit failure, uncertainty, or changed conditions.
+
+### 3. Complexity budget
+
+Ask whether the target length can support the number of systems, factions, relationships, mysteries, and progression tracks.
+
+When complexity exceeds the budget:
+
+- reduce core elements;
+- convert an element to secondary texture;
+- defer it to a later volume;
+- expand the project scale.
+
+Do not solve overload by compressing every arc and consequence.
+
+### 4. Mechanism dominance
+
+Ask whether a system, trope, romance structure, mystery device, competition format, or world gimmick is replacing character choice and causal storytelling.
+
+A mechanism should create constraints and decisions, not automatically produce all conflict and payoff.
+
+## Secondary checks
+
+Also check:
+
+- viewpoint fit;
+- dialogue-register fit;
+- era and technology consistency;
+- reader-promise compatibility;
+- whether the intended payoff requires consequences the chosen tone avoids;
+- whether multiple core elements compete for the same narrative space.
+
+## Classification
+
+### Strong fit
+
+The components reinforce each other and require only ordinary implementation discipline.
+
+### Conditional fit
+
+The combination can work only with explicit constraints. Record those constraints in Project Profile.
+
+### High risk
+
+The combination is likely to damage suspense, tone, logic, pacing, or reader trust unless one component is weakened, redesigned, or removed.
+
+## Output
 
 ```markdown
 ## Compatibility Check
-- Works well:
-- Potential conflicts:
+- Strong fits:
+- Conditional fits:
+- High-risk conflicts:
 - Required constraints:
-- Suggested core elements:
-- Suggested secondary/seasoning elements:
-- Elements to remove or forbid:
+- Complexity-budget assessment:
+- Mechanism-dominance risk:
+- Recommended core elements:
+- Recommended secondary/deferred elements:
+- Items to remove or forbid:
 ```
 
-## Strong combinations
+## Compact examples
 
-### 穿越 + 系统 + 轻松诙谐
+### System mechanism + literary/realist voice
 
-Works because modern viewpoint + external rules + humor create quick reader access.
+Conditional. Keep interface frequency low, avoid reward-popup narration, and make the mechanism expose character or theme rather than replace them.
 
-Constraints:
-- system rules must be clear
-- humor cannot erase stakes
-- avoid endless task popups
+### Mystery + omniscient information source
 
-### 穿越 + 经营/种田 + 市井烟火气
+High risk. Limit access, reliability, interpretation, timing, or cost so evidence and reader participation remain meaningful.
 
-Works because outsider knowledge meets daily-life detail and material constraints.
+### Horror + dark humor
 
-Constraints:
-- technology/knowledge transfer must consider materials, labor, local customs
-- progress should come from concrete work, not author shortcuts
+Conditional. Humor may release or sharpen tension, but must not make the threat socially or physically consequence-free.
 
-### 武侠旧案 + 冷峻悬疑 + 半文半白
+### Management/building + ensemble cast
 
-Works because old documents, sect silence, restrained dialogue, and jianghu rules support mystery tension.
+Strong when resource tradeoffs, specialist motives, and organizational conflict remain visible. High risk when upgrades become automatic and followers lack agency.
 
-Constraints:
-- evidence chain must drive reveals
-- protagonist cannot solve by omniscience
-- prose should stay restrained, not over-aphoristic
+### Slow emotional drama + high-frequency reversal hooks
 
-### 规则怪谈 + 新怪谈感 + 冷峻悬疑
+Conditional. Hooks must arise from character choices and consequences rather than repeated misunderstandings or arbitrary revelations.
 
-Works because rules, uncertainty, and atmosphere reinforce each other.
+## Rule
 
-Constraints:
-- rules must be trackable
-- contradictions require hidden logic, not randomness
-- avoid explaining all horror too early
-
-### 末世 + 囤货 + 生存压迫
-
-Works because preparation creates dramatic irony and later resource pressure.
-
-Constraints:
-- storage, money, logistics, and social suspicion must be plausible
-- preknowledge should fail or mutate sometimes
-
-### 领主流 + 基建 + 群像
-
-Works because territory-building naturally needs specialists, factions, and resource tradeoffs.
-
-Constraints:
-- keep resource ledger sensible
-- followers need motives and conflicts
-- avoid one-click upgrades
-
-### 宗门经营 + 仙侠 + 群像成长
-
-Works because disciples, resources, reputation, inheritance, and external enemies interlock.
-
-Constraints:
-- cultivation rules and resource costs must stay consistent
-- disciples should have arcs, not just numbers
-
-### 真假千金/少爷 + 短剧强钩子风
-
-Works because identity reversal and family conflict provide frequent emotional turns.
-
-Constraints:
-- avoid universal family stupidity
-- reveal consequences must be social and emotional, not only slapback
-
-### 追妻火葬场 + 晋江细腻情绪流
-
-Works because relationship injury and repair require layered emotion.
-
-Constraints:
-- harm must have real cost
-- forgiveness cannot be rushed
-- love declarations must not erase past damage
-
-### 科幻 + 克苏鲁低语感 + 现实主义冷叙事
-
-Works because institutional/technical realism can make cosmic horror feel grounded.
-
-Constraints:
-- keep the unknown partially unknowable
-- science can frame the fear, not dissolve it too early
-
-## Conditional combinations
-
-### 文学向 + 系统流
-
-Can work if the system is subdued, symbolic, or thematically integrated.
-
-Required constraints:
-- low UI frequency
-- system text should not dominate prose
-- system mechanics should reveal theme/character, not only rewards
-
-### 半文半白 + 系统流
-
-Can work if the system is adapted into in-world forms.
-
-Implementation options:
-- 命簿
-- 天机盘
-- 功德簿
-- 山河卷
-- 香火账
-
-Avoid modern UI language unless intentional comedy.
-
-### 黑色幽默 + 恐怖
-
-Can work as horror-comedy or absurd horror.
-
-Required constraints:
-- decide whether fear or humor is primary
-- jokes should expose dread, not erase it
-- do not undercut every scary moment
-
-### 高燃史诗 + 群像权谋
-
-Can work at long length.
-
-Required constraints:
-- enough chapters for factions
-- clear POV/role per faction
-- no all-knowing masterminds
-
-### 轻小说吐槽 + 严肃主线
-
-Can work if comedy lives in voice while plot consequences remain real.
-
-Required constraints:
-- reduce jokes during deaths/confessions/major losses
-- keep character growth beyond labels
-
-### 赛博冷感 + 言情
-
-Can work if intimacy contrasts with dehumanized systems.
-
-Required constraints:
-- relationship beats need concrete vulnerability
-- avoid replacing emotion with interface descriptions
-
-### 废土诗意感 + 爽文
-
-Can work if爽点 is survival/protection/rebuilding rather than constant domination.
-
-Required constraints:
-- preserve scarcity and loss
-- avoid making wasteland too easy
-
-### 社会派悬疑 + 短剧强钩子风
-
-Can work if hooks are generated by evidence and social pressure.
-
-Required constraints:
-- do not sacrifice case logic for cliffhanger
-- social critique must be embodied in plot
-
-## High-risk combinations
-
-### 悬疑推理 + 全知系统
-
-Risk: system can destroy fair-play mystery.
-
-Fix:
-- system only gives partial clues
-- system can be limited, biased, delayed, or costly
-- final deduction must still come from character reasoning
-
-### 恐怖 + 高频吐槽
-
-Risk: constant jokes erase fear.
-
-Fix:
-- make it explicitly horror-comedy
-- restrict jokes to relief beats
-- preserve silent dread moments
-
-### 短篇 + 多阵营史诗
-
-Risk: too many factions for length, resulting in summary instead of story.
-
-Fix:
-- reduce factions
-- choose one core conflict
-- make epic scale implied rather than fully dramatized
-
-### 文学向 + 高频打脸爽点
-
-Risk: tonal whiplash and shallow characterization.
-
-Fix:
-- convert打脸 into subtle consequence or social reversal
-- reduce public humiliation loops
-
-### 群像权谋 + 单线快节奏爽文
-
-Risk:群像 needs breadth while快爽 needs narrow acceleration.
-
-Fix:
-- make one main POV dominant
-- use secondary characters as pressure nodes, not equal protagonists
-
-### 现实主义冷叙事 + 夸张金手指
-
-Risk: realism collapses if the golden finger solves material constraints too easily.
-
-Fix:
-- add cost, secrecy, social consequence, or unreliable output
-
-### 民俗志怪 + 纯科技硬解释
-
-Risk: premature explanation kills eerie ambiguity.
-
-Fix:
-- decide whether it is folk horror or techno-thriller
-- if hybrid, leave some cultural/psychological ambiguity
-
-### 规则怪谈 + 随机改规则
-
-Risk: readers feel cheated.
-
-Fix:
-- rule changes must be seeded
-- hidden rules must be inferable
-- violations need consistent consequences
-
-## Output rule
-
-After compatibility analysis, ask the user to confirm the final mix before length/outline.
+Examples illustrate the dimensions; they are not a fixed compatibility database. Evaluate the actual premise and record only the constraints relevant to the project.

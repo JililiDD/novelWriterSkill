@@ -1,5 +1,5 @@
 interface:
   display_name: "Novel Writer"
-  short_description: "Plan, write, audit, and revise long-form fiction"
+  short_description: "Plan and maintain continuity-safe long-form fiction"
   brand_color: "#7C3AED"
-  default_prompt: "Use novel-writer to set up, continue, audit, or revise a structured fiction project."
+  default_prompt: "Use novel-writer to plan or continue a long-form fiction project with Project Profile, System Bible, Story Memory, seven-stage prose delivery, and periodic continuity audits."

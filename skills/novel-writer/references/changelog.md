@@ -1,5 +1,36 @@
 # Changelog
 
+## v1.4.0 — Long-form continuity and architecture simplification
+
+- Added one active-only `state/story_memory.md` model for Current Position, Active Characters, Knowledge & Secrets, Important Objects & Resources, Foreshadowing & Promises, and Open Consequences.
+- Added source-backed Context Manifest assembly inside existing work-unit briefs and Proposed Story Memory Delta inside existing chapter audits; Final Verification approves the delta before Promotion applies it.
+- Added checkpoint, arc, and volume audit behavior plus Story Memory compaction/rebaseline templates without adding a new prose stage, database, CLI, or runtime layer.
+- Clarified single ownership: Project Profile owns style/reader experience and Style Anchors, System Bible owns stable canon, Story Memory owns dynamic state, outlines own future intent, and promoted prose owns original event evidence.
+- Consolidated duplicate long-novel planning into one canonical layered planning reference and converted overlapping planning, provenance, continuation, and pitfalls files into compatibility pointers.
+- Made Continuity & Story Logic Audit the factual-quality owner and Narrative Humanizer the language-quality owner; reduced completed-prose revision guidance to revision-specific policy.
+- Replaced the fixed style menu and exhaustive compatibility catalogue with premise-relevant library selection and a compact four-dimension compatibility framework.
+- Moved dashboard/mobile-reader and audiobook/TTS implementation out of core routing, retaining only safe companion handoff boundaries without fixed ports, process-kill commands, or time-sensitive model recommendations.
+- Preserved the seven-stage prose workflow and run-state schemas while synchronizing version `1.4.0` metadata and distribution.
+
+## v1.3.0 — Resumable prose-run state
+
+- Added a pure-Skill run-state protocol for chapter, scene, and one-shot generation, regeneration, revision, and audit work.
+- Added one JSON snapshot per run, a small selected-run index, reusable templates, and Draft 2020-12 schemas without adding a CLI, database, runtime adapter, event log, or workflow engine.
+- Replaced the nine top-level role sequence with seven stages: Preflight, Draft Writing, Content Review, Prose Refinement, Story Fact Check, Final Verification, and Promotion & State Update.
+- Renamed the drafting role to Draft Writer and the post-Humanizer semantic gate to Story Fact Check while preserving all protected plot, clue, knowledge, canon, beat, phrase, foreshadowing, and boundary checks.
+- Added pause, block, stale, cancellation, recovery, freshness, applicability, and downstream invalidation rules with Orchestrator-only state ownership.
+- Added multiple candidate runs, explicit selected-run switching, verification-before-promotion, risk-based overwrite confirmation, and post-write reread evidence.
+- Preserved existing planning workflows and project files without requiring run-state backfill.
+
+## v1.2.0 — Execution modes and control-plane refactor
+
+- Added Fast, Standard, and Production execution modes with Standard as the default and explicit eligibility, persistence, escalation, and shortcut boundaries.
+- Added one confirmation-gate matrix covering premise, style and Tone Lock, Project Profile, outline, System Bible, detailed plot outline, current preflight, deep revision or regeneration, and next-unit continuation.
+- Added a platform-independent nine-stage role execution protocol supporting inspectable subagents or isolated sequential passes with identical ownership and pass/fail semantics.
+- Reduced `SKILL.md` from 263 lines to a compact control plane that routes detailed startup, generation, continuation, revision, dashboard, and TTS workflows to focused references.
+- Reconciled startup, one-shot, chapter, continuation, and completed-prose revision references with the shared mode, confirmation, role, correction, and merge policies.
+- Preserved existing quality requirements, including project-file inspection, binding briefs, completed-prose backups, continuity severity, forbidden-prose leakage checks, Humanizer boundaries, Fact Lock, Final Verification, and no automatic chapter continuation.
+
 ## v1.1.0 — Skill standardization
 
 - Unified the public name as `novel-writer` / “Novel Writer” and corrected the legacy misspelling in manifests and documentation.

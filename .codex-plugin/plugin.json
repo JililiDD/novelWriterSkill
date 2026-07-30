@@ -1,7 +1,7 @@
 {
   "name": "novel-writer",
-  "version": "1.1.0",
-  "description": "Structured long-form fiction planning, chapter generation, continuity auditing, revision, and project-state management.",
+  "version": "1.4.0",
+  "description": "Structured long-form fiction planning, seven-stage prose delivery, resumable run state, Story Memory, periodic audits, and continuity-safe revision.",
   "author": {
     "name": "JililiDD"
   },
@@ -16,8 +16,8 @@
   "skills": "./skills/",
   "interface": {
     "displayName": "Novel Writer",
-    "shortDescription": "Plan, write, audit, and revise long-form fiction.",
-    "longDescription": "A structured fiction workflow with premise and style locks, System Bible creation, chapter preflight, staged drafting and review, continuity audits, narrative humanization, fact locking, and project-scoped state management.",
+    "shortDescription": "Plan, write, audit, revise, and maintain long-form fiction.",
+    "longDescription": "A structured fiction workflow with Fast, Standard, and Production modes, explicit confirmation gates, seven-stage prose delivery, resumable candidate runs, source-backed Story Memory, checkpoint/arc/volume audits, continuity review, narrative humanization, and verified post-check promotion.",
     "developerName": "JililiDD",
     "category": "Productivity",
     "capabilities": [

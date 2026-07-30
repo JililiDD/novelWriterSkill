@@ -1,120 +1,103 @@
-# Style & Element Selection — 文风、元素组合与基调锁定
+# Style & Element Selection — 文风、元素与基调锁定
 
-## Purpose
+Use this before Project Profile creation. This reference owns the selection procedure; `style-library.md` and `element-library.md` own reusable definitions.
 
-Before outlining a novel, lock the writing style, trope/element mix, and tone. This prevents later drift and helps determine appropriate length.
+## Selection principles
 
-## Style selection prompt
+- Choose exactly one main style.
+- Choose up to two supporting styles.
+- Choose one to three core elements and up to three secondary elements.
+- Record styles/elements the user explicitly rejects.
+- Run compatibility analysis before setting final length or outlining.
+- Preserve a custom option whenever the libraries do not fit.
 
-Ask the user:
+Do not maintain a fixed short menu that drifts out of sync with the libraries. Read the premise, then present the five to eight most relevant options from the current Style Library and the most relevant element groups from the Element Library.
 
-```markdown
-请选择文风，可组合但要有主次：
+## Step 1: Style candidates
 
-1. 轻松诙谐
-2. 半文半白
-3. 冷峻悬疑
-4. 热血爽文
-5. 慢热细腻
-6. 文学向
-7. 轻小说 / 日常感
-8. 影视化强剧情
-9. 黑色幽默
-10. 高燃史诗
-11. 自定义
-
-请给出：
-- 主文风：1个
-- 辅助文风：最多2个
-- 明确不要的文风：
-```
-
-## Element selection prompt
-
-Ask the user:
+Present candidates with one-line implementation implications, not names alone.
 
 ```markdown
-请选择小说元素，可组合：
+## Suggested Style Directions
+1. [Style] — [what it changes in narration, dialogue, pacing, and emotional distance]
+2. ...
 
-身份/开局：穿越、重生、失忆、替身、退婚、废柴、隐藏身份、遗孤、退休高手、反派觉醒、炮灰自救
-金手指/机制：系统、面板、签到、模拟器、熟练度、加点、空间、AI辅助、预知梦、时间循环、存档读档、无限流副本
-剧情驱动：复仇、查案、生存、升级、争霸、经营、种田、探险、逃亡、寻亲、救亡、家族崛起、门派复兴
-世界类型：武侠、仙侠、玄幻、都市异能、历史架空、赛博朋克、星际科幻、末世废土、西幻、克苏鲁、灵异、校园、商战
-情绪卖点：爽、虐、甜、燃、悬疑、治愈、沙雕、黑暗、热血、轻松、压抑、群像、反转、宿命感、成长感
-关系结构：单主角、双主角、群像、师徒、宿敌、兄弟、伪装夫妻、先婚后爱、强强、破镜重圆、队伍冒险
-
-请给出：
-- 核心元素：1–3个
-- 辅助元素：0–3个
-- 禁用元素：
+Choose:
+- Main style: one
+- Supporting styles: zero to two
+- Explicitly avoid:
+- Custom direction, if none fit:
 ```
 
-## Compatibility check
+When the user names a custom style, define its observable traits before using it. Follow `library-expansion-protocol.md` only when the user wants the definition saved as a reusable library entry.
 
-After user selection, load and apply `references/style-element-compatibility.md`.
+## Step 2: Element mix
 
-Classify the chosen mix as:
-- **Strong fit**: style and elements reinforce each other naturally.
-- **Conditional fit**: can work, but requires implementation constraints.
-- **High risk**: likely to damage suspense, tone, logic, or length unless redesigned.
+Use the Element Library to present premise-relevant choices across identity, mechanism, plot engine, world type, emotional payoff, relationship structure, and organization/growth patterns.
 
-Check:
-- Are there too many core elements?
-- Does style conflict with element mechanics?
-- Does the intended tone fit the genre?
-- Does the selected length support the complexity?
-- Which elements should be core vs secondary/seasoning?
-- What constraints are required to make the combination work?
+```markdown
+## Element Mix
+- Core elements: one to three
+- Secondary elements: zero to three
+- Forbidden elements:
+- Required implementation constraints:
+```
 
-Output format:
+Core elements must drive plot decisions. Secondary elements add texture or bounded subplots. Do not label many unrelated items as core.
+
+## Step 3: Compatibility analysis
+
+Load `style-element-compatibility.md` and evaluate:
+
+- tone coherence;
+- suspense and information integrity;
+- complexity budget;
+- whether a mechanism dominates character/story;
+- genre and viewpoint fit;
+- target-length feasibility;
+- conflicts among emotional promises.
+
+Output:
 
 ```markdown
 ## Compatibility Check
-- Works well:
-- Potential conflicts:
+- Strong fits:
+- Conditional fits:
+- High-risk conflicts:
 - Required constraints:
-- Suggested core elements:
-- Suggested secondary/seasoning elements:
-- Elements to remove or forbid:
+- Recommended core hierarchy:
+- Items to weaken, defer, or remove:
 ```
 
-Do not proceed to length/chapter scale until the user confirms the final style + element + tone mix.
+Do not proceed to final length and Project Profile until the user confirms the resulting mix under `execution-modes.md`.
 
-## Tone Lock template
+## Step 4: Tone Lock
 
 ```markdown
 ## Tone Lock
-- 主情绪：
-- 情绪下限：
-- 情绪上限：
-- 不能出现：
-- 读者体验目标：
+- Main emotional texture:
+- Lower bound:
+- Upper bound:
+- Must avoid:
+- Reader experience target:
 ```
 
-## Style Bible template
+Tone Lock defines a range, not one emotion repeated in every chapter.
 
-```markdown
-## Style Bible
-- 主文风：
-- 辅助文风：
-- 语言密度：
-- 对话风格：
-- 情绪表达方式：
-- 节奏：
-- 禁用文风：
-```
+## Step 5: Seed Project Profile fields
 
-## Element Bible template
+After confirmation, pass the result to `project-profile-workflow.md`:
 
-```markdown
-## Element Bible
-- 核心元素：
-- 辅助元素：
-- 禁用元素：
-- 元素实现规则：
-- 元素冲突处理：
-```
+- main/supporting styles;
+- language, dialogue, emotional-expression, viewpoint, and pacing implications;
+- core/secondary/forbidden elements;
+- implementation constraints;
+- Tone Lock;
+- reader-experience direction;
+- initial drift signals.
 
-## Rule
+Do not create a separate full Style Bible or Element Bible outside Project Profile unless an existing project convention explicitly requires it.
 
-Style and element choices must be included in the System Bible and passed to Storyteller, Character Agents, Lore Auditor, Prose Stylist, Narrative Humanizer, and Post-Humanizer Fact Lock.
+## Downstream rule
+
+Chapter Preflight and all prose roles receive only the relevant Project Profile constraints and Style Anchors for the current work unit. They do not independently reinterpret the original style/element discussion.

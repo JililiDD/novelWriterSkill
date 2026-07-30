@@ -1,46 +1,55 @@
-# Fanfic / one-shot mini planning gate
+# Fanfic / One-Shot Mini Planning Gate
 
-Use this when the user asks for short fanfiction or a one-shot scene and the `novel-writer` skill is active, or when a structured writing workflow has already been promised.
+Use this for short fanfiction or a one-shot scene when the `novel-writer` Skill is active or a structured workflow has been promised.
 
-## Rule
+Load `execution-modes.md` first. It owns whether the compact gate is required, may be combined, or may be skipped by an explicit immediate-writing request. Load `run-state-protocol.md` and `role-execution-protocol.md` when prose delivery uses persisted state or multiple logical stages. This file owns the content of the compact gate.
 
-Do not jump directly to prose after promising the workflow, even if the request is “just a short fanfic.” First produce a compact planning gate and wait for confirmation unless the user explicitly says to skip planning and write immediately.
+## Default routing
 
-## Required compact gate
+- Fast is normally eligible for a self-contained one-shot that does not create broad persistent canon.
+- Standard applies when the user does not select a mode and the work depends on an ongoing project or substantial canon.
+- Escalate from Fast when continuity, persistent-canon, destructive-revision, or multi-chapter risk appears.
+- Do not use “short” as a reason to ignore an already-promised workflow.
+
+## Compact gate
+
+Capture the following as one reviewable brief when the active mode permits compact confirmation:
 
 1. **Premise Lock**
-   - main character / POV
-   - central emotional conflict
-   - relationship structure
-   - ending direction
+   - main character and POV;
+   - central emotional conflict;
+   - relationship structure;
+   - ending direction.
 2. **Style Lock**
-   - main style
-   - supporting style(s)
-   - avoid list
+   - main style;
+   - supporting styles;
+   - avoid list.
 3. **Element Lock**
-   - core elements
-   - secondary elements
-   - forbidden elements
+   - core elements;
+   - secondary elements;
+   - forbidden elements.
 4. **Tone Lock**
-   - main emotion
-   - lower bound
-   - upper bound
-   - reader experience target
+   - main emotion;
+   - lower and upper bounds;
+   - reader-experience target.
 5. **Outline**
-   - 5–9 beats for a one-shot
+   - five to nine beats for a one-shot.
 6. **Mini System Bible**
-   - key characterization rules
-   - dialogue distribution rules
-   - what must not be contradicted
+   - key characterization rules;
+   - dialogue-distribution rules;
+   - facts and boundaries that must not be contradicted.
 7. **Scene/Chapter Preflight**
-   - ask 3–5 targeted yes/no confirmation questions
+   - three to five targeted confirmation checks covering the highest-risk constraints.
 
-## Example lesson from session
+Apply the confirmation and skip rules from `execution-modes.md`. When an immediate-writing Fast path is valid, preserve the user's explicit premise, facts, style constraints, and forbidden changes as a temporary binding brief before drafting.
 
-User requested a Top Gun angst fanfic with Slider as the main character: Ice babies Mav and has no time for Slider; Slider should stay mostly silent; Mav and Ice should have most of the dialogue. The assistant wrote the fic directly after having promised the novel workflow. The user objected. Correct behavior is to first present the mini gate above, then draft only after confirmation.
+## Quality boundaries
 
-## Pitfalls
+- Encode specified dialogue distribution in the Mini System Bible before prose unless the valid immediate-writing path already states it unambiguously.
+- For a mostly silent protagonist, show emotion through action, withheld response, physical blocking, chores, departure, and what others fail to notice; do not compensate with unrequested monologues.
+- Story Fact Check remains mandatory after prose refinement, and Final Verification must pass before any Promotion & State Update.
+- Stop after the requested one-shot or scene; do not auto-continue.
 
-- “Short fanfic” is not a reason to skip planning after the workflow has been promised.
-- If the user specifies dialogue distribution, encode it in the Mini System Bible before writing.
-- For silent protagonists, show emotion through action, withheld response, physical blocking, chores, leaving the room, and what other characters fail to notice; do not compensate by giving the silent character long monologues.
+## Failure lesson
+
+A prior workflow failure occurred when a short angst fanfic was drafted immediately after a structured process had been promised. The correction is not “always add ceremony”; it is to apply the active mode honestly: use the compact gate when required, or use the explicit Fast immediate-writing path only when the user's request already supplies a sufficient binding brief.

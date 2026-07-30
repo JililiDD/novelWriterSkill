@@ -1,31 +1,55 @@
 # Novel Writer
 
-A reusable skill for structured long-form fiction planning, chapter generation, continuity auditing, revision, and project-state management.
+A reusable Skill for structured long-form fiction planning, seven-stage prose delivery, continuity control, revision, recovery, and multi-volume project maintenance.
 
 ## Contents
 
-- `skills/novel-writer/SKILL.md` — skill entrypoint and workflow router
-- `skills/novel-writer/agents/openai.yaml` — ChatGPT skill interface metadata
-- `skills/novel-writer/references/` — selectively loaded workflow and quality modules
+- `skills/novel-writer/SKILL.md` — compact control plane and intent router
+- `skills/novel-writer/agents/openai.yaml` — ChatGPT Skill interface metadata
+- `skills/novel-writer/references/` — selectively loaded planning, delivery, state, continuity, and quality protocols
+- `skills/novel-writer/assets/` — reusable run-state, Story Memory, and periodic-audit templates
 - `.codex-plugin/plugin.json` — Codex plugin manifest
-- `.agents/plugins/marketplace.json` — local agent marketplace manifest
 - `.claude-plugin/marketplace.json` — local Claude-compatible marketplace manifest
-- `project-notes/` — project-specific material excluded from the reusable skill package
-- `dist/` — generated release archives; ignored by Git
+- `project-notes/` — project-specific material excluded from the reusable Skill package
+- `dist/` — generated release archive; ignored by Git
 
-## Core workflow
+## Core architecture
 
-Novel Writer supports:
+Novel Writer separates project information by authority:
 
-1. premise, style, element, and tone confirmation
-2. project profile and System Bible creation
-3. detailed and layered novel planning
-4. per-chapter preflight confirmation
-5. staged drafting, character review, lore audit, styling, and humanization
-6. post-humanizer fact locking and project-state updates
-7. targeted chapter revision, dashboards, and optional TTS workflows
+- **Project Profile** — style, elements, Tone Lock, reader promise, Style Anchors
+- **System Bible** — stable characters, world/system rules, durable canon
+- **Story Memory** — current dynamic state, knowledge, objects/resources, foreshadowing/promises, open consequences
+- **Outlines** — future intent
+- **Promoted prose** — original evidence of what occurred
+- **Chapter brief/audit** — current contract, selected context, findings, and proposed dynamic-state delta
 
-Project-specific manuscripts, canon, audits, and learned rules must remain in the novel project's own directory rather than in the reusable skill.
+Supported prose delivery uses seven stages:
+
+1. Preflight
+2. Draft Writing
+3. Content Review
+4. Prose Refinement
+5. Story Fact Check
+6. Final Verification
+7. Promotion & State Update
+
+Final Verification happens before official promotion or Story Memory update. Stable canon changes require separate explicit confirmation.
+
+## Long-form continuity
+
+For serial and multi-volume work, `long-form-continuity.md` provides:
+
+- active-only Story Memory;
+- source-backed Context Manifest assembly;
+- Proposed Story Memory Delta inside existing chapter audits;
+- checkpoint, arc, and volume audits;
+- volume rebaseline and Story Memory compaction;
+- existing-project bootstrap without full historical backfill.
+
+## Companion boundaries
+
+Dashboard/mobile-reader and audiobook/TTS implementation are separate companion workflows. Novel Writer hands off promoted final prose and stable project artifacts but does not hardcode frontend servers, ports, process commands, current TTS products, GPU assumptions, or deployment environments.
 
 ## Install in Codex
 
@@ -41,11 +65,12 @@ Restart or open a new Codex session after installation.
 Example requests:
 
 ```text
-Use novel-writer to set up a new novel project.
-Use novel-writer to prepare chapter 8 preflight for /path/to/book.
-Use novel-writer to audit chapter 3 for continuity and AI-like prose.
+Use novel-writer to set up a multi-volume novel project.
+Use novel-writer to prepare chapter 8 Preflight and Context Manifest.
+Use novel-writer to audit this arc for continuity, style drift, and unresolved promises.
+Use novel-writer to revise chapter 3 without changing Story Memory facts.
 ```
 
 ## Development
 
-Generated packages belong in `dist/` and should not be committed. Validate the skill before distribution and publish the final ChatGPT-compatible bundle as `skill.zip`.
+Validate the complete Skill before distribution. Generated packages belong in `dist/` and should not be committed. Publish the complete bundle as `dist/skill.zip` with `novel-writer/` as the archive root.

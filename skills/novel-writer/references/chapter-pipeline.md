@@ -1,116 +1,164 @@
-# Chapter Pipeline — 逐章生成流程
+# Chapter / Scene Delivery Workflow
 
-Use this after the user has confirmed the detailed plot outline and asks to generate a chapter.
+Use this after planning and current-unit confirmation are satisfied.
 
-## Non-negotiable rules
+Load:
 
-1. Keep drafting, review, humanization, and verification as distinct role passes.
-2. Use available subagents when supported; otherwise run the same passes sequentially with separate intermediate files.
-3. Every chapter requires a preflight plan and explicit user confirmation before prose drafting.
-4. The approved chapter contract is binding.
-5. After Humanizer, run Fact Lock.
-6. After all role passes complete, independently verify the generated files.
+- `execution-modes.md` — confirmation/mode;
+- `run-state-protocol.md` — persistence/recovery/selection/promotion eligibility;
+- `role-execution-protocol.md` — responsibility and handoff;
+- `long-form-continuity.md` — Story Memory, Context Manifest, delta;
+- `continuity-bug-audit.md` — factual quality;
+- `narrative-humanizer.md` — language quality.
 
-## Per-chapter flow
+This file owns prose-delivery artifacts and stage application, not the mode/state/role definitions themselves.
 
-### 1. Orchestrator preflight
+## Default project artifacts
 
-Create `state/chapterXX_brief.md` containing:
-- story so far / canon facts
-- approved chapter contract
-- project profile constraints from `state/project_profile.md` when available: main style, supporting styles, forbidden styles, core elements, relevant chapter elements, Tone Lock, and prose risks
-- previous-chapter locked facts when available: read the prior final chapter and prior audit/Fact Lock directly; do not rely on memory or outline alone
-- new-character/new-location provenance gate
-- character state and knowledge boundaries
-- foreshadowing plan
-- style/tone reminders
-- continuity hazards
-- proposed scene flow
-- chapter boundary control: if an event spans multiple chapters, explicitly state what must **not** be resolved in this chapter and the exact ending hook/hand-off point for the next chapter
-- length target and verification expectation: include the target word/character range and whether slight overflow is acceptable for match/action density or should trigger compression
+Follow project conventions or use:
 
-Stop and ask user for confirmation.
+```text
+state/project_profile.md
+state/system_bible.md
+state/story_memory.md
+state/chapterXX_brief.md
+state/runs/
+drafts/
+chapters/
+audits/
+```
 
-### 2. Storyteller draft
+Project Profile owns style/reader experience; System Bible stable canon; Story Memory current dynamic state; outlines future intent; promoted prose original event evidence.
 
-After confirmation only:
-- write scene prose using approved brief
-- no scene headers inside prose
-- save to `scenes/chXX_sYY_draft.md` or current project convention
+## Work-unit brief
 
-### 3. Character Agents
+Create/refresh a brief containing:
 
-Major characters check:
-- voice authenticity
-- action consistency
-- knowledge boundary
-- relationship state
+```markdown
+# Work-Unit Brief
+## Identity
+- Type/ID, operation/revision, mode, POV, title, target size
+## Approved Contract
+- Starting state
+- Required event chain/turning point
+- Required/forbidden characters
+- Emotional movement
+- Callbacks/foreshadowing and allowed secret movement
+- Exact wording, reserved future events, ending boundary
+- Forbidden changes
+## Project Profile Constraints
+- Relevant style/elements/Tone Lock/Style Anchors/drift risks
+## Continuity Hazards
+- Character/relationship, knowledge, objects/resources, timeline/location, provenance, open consequences
+## Context Manifest
+- Use `long-form-continuity.md`
+## Output Plan
+- Candidate, audit, official target, backup, verification
+```
 
-### 4. Lore Auditor
+Apply the current-unit gate. Do not draft until Preflight passes.
 
-Audit against:
-- System Bible
-- `state/project_profile.md` when available / Style Bible / Element Bible
-- chapter brief
-- prior relevant canon
-- foreshadowing tracker
+## Seven stages
 
-Must include:
-- Outline Compliance Audit
-- Meta-Narrative Leakage Check
-- Continuity Bug Audit from `continuity-bug-audit.md`
-- severity: Critical / Major / Minor
+### 1. Preflight
 
-### 5. Prose Stylist
+- Resolve project, mode, work unit, operation, candidate/target, selected run, and confirmation.
+- Read actual Project Profile, System Bible, Story Memory, current plan, recent promoted prose, and activated evidence.
+- Build Context Manifest; recheck original sources for high-risk facts.
+- Block on source conflict, missing authority, unclear scope, or unsafe path.
+- Set applicability with reasons and initialize state when required.
 
-Polish according to Style Bible, not a hardcoded genre.
+### 2. Draft Writing
 
-Checklist:
-- remove technical markers
-- remove meta/chapter self-reference
-- scan metaphor/simile logic
-- scan over-repeated image families and stock body cues
-- reduce forced aphorism and generic polish
+- Draft from the approved contract and selected context.
+- Obey current character/knowledge/object/promise/consequence state and Style Anchors.
+- Enrich realization without replacing required events or boundaries.
+- Save a new candidate; never write directly to official final.
+- Keep workflow scaffolding out of prose.
 
-### 6. Narrative Humanizer
+### 3. Content Review
 
-Use `narrative-humanizer.md`.
+Keep Character Review and Lore & Continuity Audit separately identifiable.
 
-Goal: reduce AI-like prose while preserving genre, facts, character voice, and plot.
+Character Review checks voice, action, motivation, knowledge, relationship/emotional continuity, and required presence.
 
-### 7. Post-Humanizer Fact Lock
+Lore & Continuity Audit applies `continuity-bug-audit.md`, marks every contract item, assigns severity/owner, separates Stable Canon Candidates, and produces the Proposed Story Memory Delta or explicit no-state-change result.
 
-Confirm no changes to:
-- plot events
-- clues/evidence
-- world rules
-- character knowledge boundaries
-- required outline beats
-- foreshadowing obligations
+Blocking corrections create a new candidate and stale this and downstream stages.
 
-### 8. Orchestrator state update
+### 4. Prose Refinement
 
-Update:
-- chapter status
-- foreshadowing tracker
-- any state files used by the project
+Run:
 
-### 9. Final verification
+1. Prose Stylist — apply Project Profile/Style Anchors to rhythm, viewpoint, imagery, clarity, and local pacing without semantic change.
+2. Narrative Humanizer — apply `narrative-humanizer.md` while preserving facts, contract, and delta meaning.
 
-The orchestrating process must independently verify:
-- expected files exist and non-empty
-- final chapter can be read
-- forbidden/meta terms absent
-- required chapter contract items preserved
-- chapter boundary respected: events reserved for the next chapter were not accidentally resolved early
-- length target checked against the approved brief/project profile; if outside range, either request/perform compression or explicitly report why the overflow is acceptable
-- audit contains required sections
-- dashboard endpoint returns HTTP 200 if running
+Keep inputs/outputs traceable; Production persists both.
 
-## Delivering completed chapter files
+### 5. Story Fact Check
 
-When the user asks to see or receive a completed chapter `.md` file on a messaging platform, send the existing file directly with a native media/file response (e.g. `MEDIA:/absolute/path/to/chapters/chapterXX_final.md`) instead of pasting the full chapter text into chat. If the user combines file delivery with a next-step request (e.g. “send the md, then enter next preflight”), deliver the file and continue with the requested preflight in the same turn.
+Compare refined candidate and Proposed Delta with the contract, pre-refinement source, System Bible, Story Memory, and activated evidence.
 
-## Never auto-continue
+Block unauthorized changes to event/order, action/intention, presence, knowledge, relationship, clue/evidence/provenance, rules, promises/reveal timing, exact phrases, ending boundary, or delta meaning.
 
-After reporting completion, stop and ask whether to continue to the next chapter.
+Name compared versions. Corrections return to the owner and rerun affected downstream checks.
+
+### 6. Final Verification
+
+Before any official write, verify:
+
+- candidate/audit/evidence are readable;
+- contract and reserved-future boundaries pass;
+- length is compliant or exception approved;
+- Content Review/Humanizer/Story Fact Check are complete and fresh;
+- Context Manifest covers activated authorities/evidence;
+- Proposed Delta is complete, source-backed, and dynamic only;
+- Stable Canon Candidates are separated from automatic updates;
+- candidate/target/backup plan are unambiguous;
+- no unrelated state change is proposed.
+
+Record findings only; do not promote or update state.
+
+### 7. Promotion & State Update
+
+For the selected run with fresh passing verification:
+
+- satisfy risk-based confirmation;
+- back up official prose before overwrite;
+- promote the exact verified candidate without further editing;
+- apply only verified dynamic Story Memory/project-state delta;
+- leave Stable Canon Candidates pending unless separately confirmed;
+- reread official prose and updated state;
+- record source, target, backup, changes, and reread evidence.
+
+Unselected verified candidates keep Promotion pending and require freshness after later selection.
+
+## Operations
+
+### Generate
+
+All seven stages for a new official unit.
+
+### Regenerate
+
+Create a separate candidate run. Use approved project truth, not old prose as rewrite base; preserve binding obligations unless changes were approved. Do not replace selection automatically.
+
+### Revise
+
+Use `chapter-humanizer-revision-workflow.md` for light/deep scope, review-first, backup, batching, and overwrite confirmation. Execute applicable stages here.
+
+### Audit
+
+Preflight, Content Review, and Final Verification by default. Do not rewrite prose or state unless the user expands scope into an approved correction.
+
+### One-shot / short scene
+
+Use `fanfic-one-shot-mini-gate.md`. A self-contained Fast unit may use temporary memory; an existing-canon unit still obeys relevant stable/dynamic state.
+
+## Alternative candidates
+
+A genuinely different version uses a separate regenerate run, varies realization rather than merely wording, completes applicable stages, preserves existing selection, and requires explicit candidate/overwrite confirmation before Promotion.
+
+## Completion
+
+Complete only after required Promotion succeeds, official prose and dynamic state are reread, and no required stage remains active, paused, blocked, stale, or pending. Stop after the requested unit; never auto-continue.

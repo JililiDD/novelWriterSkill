@@ -1,173 +1,215 @@
-# Continuity Bug Audit — 通用状态一致性与因果逻辑检查
+# Continuity & Story Logic Audit — 事实、状态、来源与因果审查
 
-This reference strengthens bug hunting for **all long-form fiction genres**. It is not a wuxia-specific checklist and should not force every story into injury/combat auditing. Its purpose is to track any story element whose state can drift across scenes or chapters.
+Use this as the canonical factual-quality reference for chapter, scene, revision, and periodic audits. It checks whether story content is possible, authorized, sourced, and causally consistent. It does not judge prose elegance; use `narrative-humanizer.md` for language-naturalness issues.
 
-## Core principle
+## Sources of truth
 
-Do not only check whether the current chapter sounds plausible in isolation. Track the **state of relevant entities** across the story:
+Compare candidate prose against the relevant approved sources:
 
-- characters: body, emotion, knowledge, relationships, promises, secrets, abilities
-- objects: ownership, location, damage, usage, scarcity, evidence value
-- information: who knows what, when they learned it, whether they can infer it
-- locations: access, distance, visibility, weather, damage, social control
-- systems: law, magic, technology, money, medicine, organizations, social rules
-- language: whether a phrase is literal, metaphorical, uncertain, rumor, dream, or character perception
-- scene physics: time, distance, breath, interruption, visibility, pressure, available actions
+1. chapter/scene contract;
+2. System Bible for stable canon;
+3. Story Memory for current dynamic state;
+4. approved outline/volume/arc plan for intended direction;
+5. promoted chapters for original evidence;
+6. Project Profile only where style, reader promise, or prohibited elements affect content acceptability.
 
-The audit should ask: **what changed, who knows it, what consequences should follow, and did later prose accidentally forget or reinterpret it?**
+When sources conflict, report the conflict and block rather than selecting the convenient version.
 
-## Do not over-specialize
+## Audit categories
 
-The examples below include wounds, blood, combat, and evidence because those are common places bugs appear. They are examples, not mandatory categories for every novel.
+Use only categories relevant to the work unit, but never omit a category that the content activates.
 
-For each project, build ledgers from the story's actual genre and premise:
+### 1. Contract compliance
 
-- Romance: relationship promises, emotional boundaries, prior conversations, family/social constraints.
-- Sci-fi: device state, energy/fuel, comms delay, technical limits, chain of command.
-- Fantasy/xianxia: magic/cultivation costs, artifacts, contracts, rules, cooldowns, realm limits.
-- Mystery/thriller: clue custody, witness knowledge, alibis, access, timestamps, evidence reliability.
-- Urban/realist: money, phones, transport, work schedules, legal/social consequences.
-- Horror: visibility, exits, injuries/fatigue, what the entity can/cannot do, who has seen what.
-- Wuxia/action: wounds, stamina, weapons, recognition, distance, timing, martial limitations.
+Check every binding item from the approved brief:
 
-## General ledger model
+- required event or turning point;
+- required/forbidden character presence;
+- reveal and non-reveal boundaries;
+- callback or foreshadowing obligation;
+- emotional turn;
+- exact required wording when applicable;
+- work-unit ending boundary;
+- events reserved for later units.
 
-Maintain only the ledgers relevant to the current story and chapter. Use broad categories first; add specific sub-ledgers only when needed.
+Mark each item:
 
-### 1. Character State Ledger
-
-Track character state changes that should affect later behavior.
-
-Possible fields:
-
-```markdown
-| Character | Event | State changed | Literal/metaphorical/uncertain? | Immediate effect | Follow-up consequence | Current status |
-|---|---|---|---|---|---|---|
+```text
+satisfied
+partial
+missing
+contradicted
 ```
 
-Examples of state:
-- physical: injury, illness, fatigue, pregnancy, hunger, intoxication, sensory loss
-- psychological: grief, fear, trust break, obsession, guilt, trauma response
-- social: debt, promise, betrayal, public humiliation, rank change
-- capability: lost weapon, depleted magic, broken device, exhausted money, burned contact
+A missing or contradicted central event, required character, reveal boundary, or ending condition is blocking.
 
-### 2. Information / Knowledge Ledger
+### 2. Character state and relationship continuity
 
-Track who knows what and how they know it.
+Check:
 
-Questions:
-- Has this character seen, heard, read, inferred, or been told this fact?
-- Is the name/identity known to them, only to another character, or only to the narrator?
-- Is the knowledge certain, suspected, false, rumor, or manipulated?
-- Does a later chapter let them act on knowledge they should not have?
+- location and physical condition;
+- current goal and immediate motivation;
+- capabilities and active limitations;
+- relationship phase;
+- promises, debts, duties, fears, and unresolved emotional consequences;
+- whether behavior follows from established pressure rather than author convenience.
 
-### 3. Object / Resource / Evidence Ledger
+A relationship or personality may change, but the causal bridge must appear in prose or approved planning.
 
-Track anything that can be held, lost, consumed, copied, damaged, hidden, spent, or used as proof.
+### 3. Knowledge and secret boundaries
 
-Questions:
-- Who has it now?
-- Where is it?
-- Is it intact, damaged, copied, destroyed, fake, or unreliable?
-- Has it already been used up or handed off?
-- Does later prose use it while it should be elsewhere?
+For each consequential statement or action, ask:
 
-### 4. Scene Feasibility Ledger
+- Does this character know, suspect, misunderstand, or remain unaware?
+- How and when was the information acquired?
+- Is certainty being confused with rumor, inference, manipulation, or false belief?
+- Has private or narrator-only information leaked into dialogue or action?
+- Has a secret been revealed before its permitted window?
 
-Track whether an action or line is possible under the current pressure.
+Impossible knowledge is blocking when it changes plot, evidence, trust, or a major decision.
 
-This is not only for combat. It applies to any high-pressure scene: argument, chase, surgery, ritual, meeting, trial, confession, escape, negotiation, disaster, sex/romance scene, stealth, or public confrontation.
+### 4. Object, resource, evidence, and capability state
 
-Questions:
-- Is there enough time to say/do this?
-- Is the character able to breathe, see, hear, stand, type, drive, call, cast, aim, remember, or decide?
-- Is there an interruption or pause that permits the action?
-- Is the description over-complete for the scene pressure?
-- Would a simpler fragment, silence, glance, failed attempt, or later recognition be more plausible?
+Track only consequential entities:
 
-### 5. Literal vs Figurative Language Ledger
+- ownership and location;
+- integrity, damage, copy, destruction, or consumption;
+- scarcity and available quantity;
+- evidentiary reliability and custody;
+- cooldown, cost, energy, money, ammunition, authority, reputation, or team capacity;
+- whether an entity reappears after being lost, spent, transferred, or disabled.
 
-Track vivid descriptions that might later be mistaken as facts.
+Do not create a ledger entry for ordinary detail that has no later consequence.
 
-Questions:
-- Is this a literal event, metaphor, sensation, rumor, dream, hallucination, character inference, or narrator fact?
-- Does later prose accidentally treat a metaphor as literal?
-- Does a comparison create a new implied object/injury/event that was never established?
+### 5. Timeline, location, and scene feasibility
 
-Example pattern:
-- `像被钝钉钉入` should be recorded as metaphor for pain/impact unless an actual nail-like object is explicitly introduced.
+Check:
 
-### 6. Cause → Consequence Ledger
+- elapsed time and simultaneous events;
+- travel, healing, training, investigation, production, and communication time;
+- access, visibility, distance, weather, social control, and physical obstacles;
+- whether characters can plausibly speak, move, notice, decide, operate equipment, fight, hide, or recover under the scene pressure;
+- whether ages, dates, seasons, schedules, and sequence align.
 
-For every major event, check whether consequences appear or are deliberately suppressed/explained.
+### 6. Provenance for new named entities
 
-Questions:
-- If someone is injured, humiliated, exposed, betrayed, promoted, poisoned, indebted, or seen, what follows?
-- If no consequence appears, is that plausible in this genre/world?
-- Did the story forget the cost of an action?
+For every newly prominent character, faction, artifact, organization, place, ability, or institution, identify at least one valid source:
+
+- approved outline or volume plan;
+- System Bible;
+- earlier clue, document, witness, rumor, relationship, journey, or organizational connection;
+- natural discovery caused by the current scene.
+
+A new entity does not need advance mention merely to exist, but it must enter through a plausible story-world path. Do not insert a convenient expert, map location, authority, enemy, or artifact with no causal route.
+
+### 7. Literal, figurative, uncertain, and subjective information
+
+Classify descriptions that may later be mistaken for facts:
+
+```text
+literal
+figurative
+perception
+inference
+rumor
+dream/hallucination
+uncertain
+```
+
+Do not promote a metaphor, sensation, rumor, dream, or character inference into objective canon without a later establishing event.
+
+### 8. Cause and consequence
+
+For every meaningful change, ask what follows.
+
+Examples:
+
+- injury affects later action or receives supported treatment;
+- betrayal changes trust or requires a reason it does not;
+- public exposure creates social or institutional effects;
+- resource expenditure limits later options;
+- discovered evidence changes investigation or must remain unusable for a stated reason;
+- promises and threats remain active until fulfilled, rejected, or made impossible.
+
+A story may suppress or delay a consequence, but the delay must be plausible and tracked as an open consequence.
+
+### 9. Foreshadowing and reader promises
+
+Check relevant Story Memory entries:
+
+- state and source are correct;
+- the current chapter advances only what the allowed window permits;
+- protected truth is not explained early;
+- reinforcement adds meaning rather than repeating the same clue;
+- resolved promises receive an actual payoff;
+- newly created promises are captured in the proposed state delta.
+
+### 10. Workflow and meta leakage
+
+Remove genuine planning, role, audit, or chapter-production language from final-intended prose. Use contextual judgment: a word such as “scene,” “reader,” or “chapter” may be legitimate inside the story world, but workflow scaffolding is not.
 
 ## Audit procedure
 
-Before approving a chapter:
+1. Read the approved contract and relevant authoritative state.
+2. Extract consequential facts and changes from the candidate.
+3. Map each change to prior state and source evidence.
+4. Run activated audit categories.
+5. Classify severity and identify the corrective owner.
+6. Propose the smallest correction that restores correctness without inventing unsupported facts.
+7. Extract the Proposed Story Memory Delta under `long-form-continuity.md`.
+8. Recheck affected categories after correction.
 
-1. **Extract state changes from the draft**
-   - character, object, information, relationship, location, system, resource, and language-state changes.
+## Severity
 
-2. **Classify ambiguous descriptions**
-   - literal / metaphorical / perception / rumor / dream / uncertain.
-   - Do not let later chapters silently convert one category into another.
+- **Critical:** changes plot identity, survival, core evidence, stable rules, protected reveal, central relationship decision, or work-unit contract.
+- **Major:** state drift, impossible knowledge/action, unsupported entity, missing consequence, timeline break, or promise failure that damages reader trust.
+- **Minor:** localized ambiguity or small continuity issue fixable without changing event meaning.
+- **Info:** observation that does not require correction.
 
-3. **Compare against prior canon**
-   - Read or summarize relevant prior chapter/audit/state. Do not rely on memory.
+Critical findings block. Major findings block when they break the approved contract or downstream logic. Do not hide a blocking factual issue behind prose polish.
 
-4. **Check scene feasibility**
-   - Actions, dialogue, recognition, physical movement, technical operations, emotional turns, and decisions must fit the time/pressure/knowledge available.
-
-5. **Check consequences**
-   - If a change should matter later, either carry it forward or explain why it no longer matters.
-
-6. **Flag severity**
-   - Critical: contradiction changes plot, identity, evidence, survival, rules, or a major relationship/decision.
-   - Major: state drift, impossible action, or missing consequence that breaks reader trust.
-   - Minor: ambiguity or wording that can be fixed with a line-level patch.
-
-7. **Patch with minimal changes**
-   - Clarify literal vs metaphorical status.
-   - Add or move a pause/opening/consequence when needed.
-   - Correct state ownership/source/timing consistently.
-   - Do not invent new facts unless necessary and consistent with approved canon.
-
-## Required audit output
+## Required output
 
 ```markdown
-## Continuity Bug Audit
+## Continuity & Story Logic Audit
 
-### Relevant ledgers used
-- Character state: used / not relevant
-- Information & knowledge: used / not relevant
-- Object/resource/evidence: used / not relevant
-- Scene feasibility: used / not relevant
-- Literal vs figurative language: used / not relevant
-- Cause → consequence: used / not relevant
-- Other project-specific ledger: [name]
+### Sources checked
+- Contract:
+- Stable canon:
+- Story Memory:
+- Original chapter evidence:
+- Outline/arc context:
+
+### Contract compliance
+- [Requirement]: satisfied / partial / missing / contradicted — evidence
+
+### Activated categories
+- Character/relationship:
+- Knowledge/secrets:
+- Object/resource/evidence:
+- Timeline/location/feasibility:
+- Provenance:
+- Literal/figurative:
+- Cause/consequence:
+- Foreshadowing/promises:
+- Workflow leakage:
 
 ### Findings
-- [Category]: Pass / Minor / Major / Critical — details and evidence
+- [Severity] [Category] — issue, evidence, corrective owner
 
 ### Required fixes
-- [Minimal targeted fix]
+- [Minimal targeted correction]
+
+### Proposed Story Memory Delta
+- See `long-form-continuity.md` format.
 
 Verdict: Pass / Needs targeted revision / Regenerate
 ```
 
-## Common examples to catch
+## Boundaries
 
-These are examples, not hardcoded categories:
-
-- A metaphor becomes a literal fact later.
-- A serious state change has no consequence and no explanation.
-- A character says, recognizes, or does something impossible under scene pressure.
-- A source/location/ownership state changes without cause.
-- A character knows a fact they never learned.
-- A relationship or promise is forgotten when it should constrain behavior.
-- A genre system's cost or limitation disappears when inconvenient.
+- Do not rewrite prose merely to make it more stylish.
+- Do not invent new canon to repair a contradiction when a smaller correction exists.
+- Do not treat all vivid language as literal.
+- Do not force every possible ledger category into every chapter.
+- Do not update Story Memory directly; return findings and a proposed delta to the Orchestrator.
