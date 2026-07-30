@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
+  "name": "novel-writer",
+  "displayName": "Novel Writer",
+  "version": "1.4.0",
+  "description": "Structured long-form fiction planning, seven-stage prose delivery, resumable run state, Story Memory, periodic audits, and continuity-safe revision.",
+  "author": {
+    "name": "JililiDD",
+    "url": "https://github.com/JililiDD"
+  },
+  "homepage": "https://github.com/JililiDD/novelWriterSkill#readme",
+  "repository": "https://github.com/JililiDD/novelWriterSkill",
+  "license": "MIT",
+  "keywords": [
+    "novel",
+    "fiction",
+    "creative-writing",
+    "long-form-writing",
+    "continuity"
+  ],
+  "skills": "./skills/"
+}

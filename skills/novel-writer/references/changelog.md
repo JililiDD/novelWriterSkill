@@ -11,6 +11,7 @@
 - Replaced the fixed style menu and exhaustive compatibility catalogue with premise-relevant library selection and a compact four-dimension compatibility framework.
 - Moved dashboard/mobile-reader and audiobook/TTS implementation out of core routing, retaining only safe companion handoff boundaries without fixed ports, process-kill commands, or time-sensitive model recommendations.
 - Preserved the seven-stage prose workflow and run-state schemas while synchronizing version `1.4.0` metadata and distribution.
+- Added matching Claude Code and Codex plugin manifests, GitHub marketplace metadata, installation documentation, and an MIT license so the repository can be installed directly as `novel-writer@novel-writer`.
 
 ## v1.3.0 — Resumable prose-run state
 

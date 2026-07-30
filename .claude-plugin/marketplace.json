@@ -1,6 +1,6 @@
 {
   "name": "novel-writer",
-  "description": "Local marketplace for the Novel Writer skill.",
+  "description": "Official marketplace for the Novel Writer long-form fiction workflow plugin.",
   "owner": {
     "name": "JililiDD"
   },
@@ -13,6 +13,8 @@
       "author": {
         "name": "JililiDD"
       },
+      "homepage": "https://github.com/JililiDD/novelWriterSkill#readme",
+      "repository": "https://github.com/JililiDD/novelWriterSkill",
       "license": "MIT",
       "keywords": [
         "novel",

@@ -3,8 +3,11 @@
   "version": "1.4.0",
   "description": "Structured long-form fiction planning, seven-stage prose delivery, resumable run state, Story Memory, periodic audits, and continuity-safe revision.",
   "author": {
-    "name": "JililiDD"
+    "name": "JililiDD",
+    "url": "https://github.com/JililiDD"
   },
+  "homepage": "https://github.com/JililiDD/novelWriterSkill#readme",
+  "repository": "https://github.com/JililiDD/novelWriterSkill",
   "license": "MIT",
   "keywords": [
     "novel",
@@ -31,6 +34,7 @@
       "Use novel-writer to prepare the next chapter preflight.",
       "Use novel-writer to audit and revise this chapter."
     ],
-    "brandColor": "#7C3AED"
+    "brandColor": "#7C3AED",
+    "websiteURL": "https://github.com/JililiDD/novelWriterSkill"
   }
 }
