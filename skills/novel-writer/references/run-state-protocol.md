@@ -1,40 +1,35 @@
-# Prose Run-State Protocol
+# Optional Run Record
 
-Use this reference only for persistence, recovery, freshness, candidate selection, and promotion safety in chapter, scene, and one-shot delivery. Role responsibilities belong to `role-execution-protocol.md`; prose procedure belongs to `chapter-pipeline.md`; long-term dynamic memory belongs to `long-form-continuity.md`.
+Use a run record only when ordinary `brief.md`, `candidate.md`, and `audit.md` cannot reliably handle recovery, candidate selection, batch coordination, source conflict, or a complex overwrite.
 
-## Scope and boundary
+Chapter procedure and stage ownership belong to `chapter-pipeline.md`. The run record points to those artifacts; it does not duplicate their findings or evidence.
 
-Supported work units:
+## 1. Creation triggers
 
-```text
-chapter
-scene
-one_shot
-```
+Create a run record only for one or more of:
 
-Supported operations:
+- interruption or recovery;
+- multiple viable candidates;
+- batch revision across promoted files;
+- source conflict or uncertain freshness;
+- a promoted-prose overwrite with complex downstream impact;
+- explicitly requested durable execution evidence;
+- an audit too large to inspect reliably as one file.
 
-```text
-generate
-regenerate
-revise   # revision_level: light | deep
-audit    # revision_level: null
-```
+Record the trigger in `brief.md` and in the run record.
 
-For non-revise operations set `revision_level` to `null`.
+Do not use run records for Story Kernel, Project Profile, Story Facts, master plans, volume plans, or ordinary planning confirmation.
 
-Do not use this state model for premise, Project Profile, System Bible, character/world setup, or outline planning.
+## 2. Files
 
-Implement through Markdown, JSON templates, and JSON Schema only. Do not imply a CLI, model runner, database, event log, checkpoint engine, lock, transaction, scheduler, background service, generic DAG, or provider adapter.
-
-## Project-local files
-
-Use an established equivalent when documented. Otherwise:
+Use:
 
 ```text
-state/runs/
-├── index.json
-└── <run-id>.json
+runs/
+├── active/
+│   └── <run-id>.md
+└── archive/
+    └── <run-id>.md
 ```
 
 Run ID:
@@ -43,41 +38,44 @@ Run ID:
 <work-unit-id>-<YYYYMMDD>-<sequence>
 ```
 
-It is immutable after creation.
+Start from `assets/run-state.template.md`.
 
-Start from:
+A work unit normally uses one run record containing all viable candidate paths and one selected candidate. Do not create a separate selection index.
 
-- `assets/run-state.template.json`
-- `assets/run-index.template.json`
+## 3. Record contents
 
-Validate against `references/schemas/` when a validator is available.
+Keep only:
 
-## Ownership
+- run ID, trigger reasons, work unit, operation, and revision level;
+- paths to brief, candidates, selected candidate, audit, promoted target, and required backup;
+- observations for high-risk inputs whose equality matters;
+- one status for each seven-stage step;
+- one blocking reason and short notes.
 
-Only the Orchestrator writes:
+Do not copy into the run record:
 
-- run snapshots and selection index;
-- official prose during Promotion;
-- verified Story Memory/dynamic-state updates;
-- stable canon or Project Profile only after separate project-level confirmation.
+- review findings;
+- Proposed Story Memory Changes;
+- Stable Setting Candidates;
+- detailed role inputs and outputs;
+- Final Verification evidence;
+- Promotion Result.
 
-Other roles return outputs, evidence, findings, and proposed changes. This is logical ownership, not filesystem concurrency protection.
+Those belong in `audit.md` and the referenced project artifacts.
 
-## Fixed stage order
+## 4. Stage and status model
+
+Fixed stage order:
 
 ```text
-1. preflight
-2. draft_writing
-3. content_review
-4. prose_refinement
-5. story_fact_check
-6. final_verification
-7. promotion_state_update
+preflight
+draft_writing
+content_review
+prose_refinement
+story_fact_check
+final_verification
+promotion_state_update
 ```
-
-At most one top-level stage may be `active`. Content Review internal checks may be parallel; Prose Refinement internal passes remain ordered.
-
-## Status model
 
 Allowed statuses:
 
@@ -92,175 +90,73 @@ cancelled
 not_applicable
 ```
 
-Normal transitions:
+At most one stage may be `active`.
 
-```text
-pending -> active | cancelled
-active -> passed | blocked | paused | cancelled
-paused -> active | cancelled
-blocked -> active | cancelled
-passed -> stale
-stale -> active | cancelled
-```
+Use `not_applicable` only when the operation genuinely omits a stage:
 
-Assign `not_applicable` during Preflight with `not_applicable_reason`. Return it to `pending` only after the approved operation/scope changes. Do not reopen a cancelled or successfully promoted run; create a new run.
-
-## Default applicability
-
-| Operation | Applicable stages by default |
+| Operation | Default stages |
 |---|---|
-| `generate` | all seven |
-| `regenerate` | all seven |
-| `revise + light` | Preflight, Prose Refinement, Story Fact Check, Final Verification, Promotion |
-| `revise + deep` | Preflight, Content Review, Prose Refinement, Story Fact Check, Final Verification, Promotion; Draft Writing when scope requires fresh drafting |
-| `audit` | Preflight, Content Review, Final Verification |
+| Generate / Regenerate | all seven |
+| Light revision | Preflight, Prose Refinement, Story Fact Check, Final Verification, Promotion |
+| Deep revision | Preflight, Content Review, Prose Refinement, Story Fact Check, Final Verification, Promotion; Draft Writing when required |
+| Audit | Preflight, Content Review, Final Verification |
 
-Make omitted review/drafting stages applicable whenever actual scope or discovered risk requires them. Never use `not_applicable` to evade a mandatory check.
+Make an omitted stage applicable when the actual change or a triggered risk requires it.
 
-## Snapshot contents
+## 5. Resume and stale behavior
 
-Store one current snapshot containing:
-
-- schema version;
-- immutable run ID;
-- created/updated timestamps;
-- mode;
-- work-unit type/ID;
-- operation/revision level;
-- seven fixed stage records.
-
-A stage may contain:
-
-- status and timestamps;
-- execution batch;
-- input/output/evidence artifacts;
-- findings;
-- blocking/applicability reason;
-- notes;
-- Content Review checks or Prose Refinement passes.
-
-Do not store derived/history fields:
+Resume from the earliest applicable stage whose status is:
 
 ```text
-status
-current_stage
-resume_from
-history
-events
+stale | blocked | paused | active | pending
 ```
 
-Git, backups, or an external system own history.
+When an input or candidate materially changes:
 
-## Derived run view
-
-Derive in this priority:
-
-1. any `blocked` -> blocked;
-2. any `paused` -> paused;
-3. any `active` -> active;
-4. any `stale` -> stale;
-5. Final Verification passed + Promotion pending + run not selected -> awaiting selection;
-6. every stage passed/not applicable -> completed;
-7. every remaining applicable unfinished stage cancelled -> cancelled;
-8. otherwise pending.
-
-`awaiting selection` is not stored.
-
-Resume from the earliest applicable stage in fixed order whose status is `stale`, `blocked`, `paused`, `active`, or `pending`.
-
-## Creation and persistence
-
-### Fast
-
-Create run state when any is true:
-
-- interruption/recovery is plausible;
-- persistent dynamic state may change;
-- multiple logical stages are used;
-- the user requests auditability.
-
-### Standard
-
-Create at Preflight start. Persist brief/Context Manifest, necessary evidence, candidate, Proposed Story Memory Delta, Stable Canon Candidates, verification, promotion, and dynamic-state results.
-
-### Production
-
-Create at Preflight start. Persist complete obtainable input snapshots, every internal output, Context Manifest, delta/candidates, blocking findings, backup evidence, and source-to-final traceability.
-
-## Artifact snapshots
-
-```json
-{
-  "path": "state/story_memory.md",
-  "revision": 4,
-  "sha256": null,
-  "observed_modified_at": "2026-07-29T16:20:00-04:00"
-}
-```
-
-`path` is required. Other values may be null. Record only obtained evidence; never fabricate hashes, revisions, timestamps, approvals, or files. Production reports incomplete integrity evidence as degraded.
-
-## Freshness
-
-Compare in order:
-
-1. SHA-256 when both sides have it;
-2. explicit revision;
-3. existence, path, and observed modification time;
-4. otherwise unknown.
-
-Results:
-
-- unchanged -> continue from derived resume point;
-- changed -> stale affected stage and all downstream applicable stages;
-- unknown in Standard -> rerun Final Verification and every earlier check reasonably affected;
-- unknown in Production -> block until reliable comparison or full required recheck.
-
-Do not claim equality without supporting evidence.
-
-## Stale propagation
-
-When a stage input/output materially changes:
-
-1. mark that stage `stale`;
+1. mark the earliest affected stage `stale`;
 2. mark every downstream applicable stage `stale`;
-3. preserve prior outputs/evidence;
-4. resume from the earliest stale stage.
+3. update the referenced candidate or input observation;
+4. rerun from the earliest stale stage.
 
-An internal Content Review or Prose Refinement change stales its parent and downstream applicable stages.
+Without a run record, record the same rerun decision in `audit.md`.
 
-## Candidate selection
+## 6. Freshness
 
-`state/runs/index.json` is a selection registry only.
+Record only high-risk inputs whose equality matters to the trigger, such as Story Memory, the promoted chapter being overwritten, or a candidate awaiting selection.
 
-- Auto-select the first and only ordinary run for a work unit.
-- A new alternative/parallel run does not replace selection.
-- Multiple candidates require explicit user selection to change `selected_run_id`.
-- An unselected run may pass Final Verification; Promotion remains pending.
-- After later selection, run freshness checks before Promotion.
+Evidence may use an explicit revision, SHA-256, or observed modification time. Compare available evidence in that order. If changed, stale affected stages. If unknown and safety depends on equality, perform the full affected recheck or block.
 
-## Promotion safety
+Never invent integrity evidence.
 
-Automatic promotion is allowed only when:
+## 7. Candidate selection
 
-- the run is selected;
-- it creates a new official work unit rather than overwriting one;
-- no competing candidate needs selection;
-- dynamic Story Memory/state delta is normal and verified;
-- no unresolved residual risk exists.
+- The first and only candidate may be selected automatically.
+- Multiple viable candidates require explicit user selection.
+- The selected candidate must be listed in the run record before Promotion.
+- Recheck freshness after delayed selection.
+- Minor corrections to one candidate do not create a parallel-candidate system.
 
-Require change summary and confirmation when:
+## 8. Promotion safety
 
-- regenerate or deep revision overwrites official prose;
-- selection changes among candidates;
-- residual risk is accepted;
-- dynamic-state update is abnormal;
-- any Stable Canon Candidate would be applied;
-- backup is uncertain or missing;
-- target differs from the verified plan.
+Promotion requires:
 
-Promotion must use the exact verified candidate, apply only verified dynamic state, leave unconfirmed stable-canon changes pending, reread outputs, record evidence, and stop.
+- the selected candidate when selection applies;
+- fresh passing Final Verification in `audit.md`;
+- an unambiguous promoted target;
+- a completed backup when overwrite triggers it;
+- verified Story Memory changes;
+- no unconfirmed Stable Setting Candidate scheduled for automatic application.
 
-## Completion
+Promotion uses the exact verified candidate, rereads promoted prose and updated Story Memory, records the result in `audit.md`, then updates the run status.
 
-A persisted run is complete only when applicable stages pass, selected promotion succeeds where required, official prose and updated dynamic state are reread, no unconfirmed Stable Canon Candidate was applied, and no stage remains active, paused, blocked, stale, or pending.
+## 9. Retirement
+
+After successful Promotion:
+
+1. move the record from `runs/active/` to `runs/archive/`;
+2. keep it outside ordinary chapter context;
+3. delete it when trusted project history already preserves enough recovery evidence and durable execution evidence was not requested.
+
+## 10. Completion
+
+A run record is complete when applicable stages pass, required Promotion succeeds, promoted prose and Story Memory are reread, and no required stage remains active, paused, blocked, stale, or pending.

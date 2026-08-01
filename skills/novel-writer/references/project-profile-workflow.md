@@ -6,6 +6,12 @@ Use this reference to create or update the project's authoritative style and rea
 state/project_profile.md
 ```
 
+## Contents
+
+- Ownership, creation order, and confirmation
+- Project Profile template and Style Anchors
+- Chapter usage, audits, and updates
+
 ## Ownership
 
 Project Profile is the sole owner of:
@@ -22,20 +28,22 @@ It answers:
 
 > What should this book feel like, and what experience must it consistently deliver?
 
-Do not duplicate the full Style Bible or Element Bible inside the System Bible. The System Bible owns stable story facts and references the approved Project Profile.
+It may reference the confirmed Story Kernel's reader promise, but it does not own protagonist motivation, opposition logic, relationship pressure, or plot choices.
+
+Do not duplicate the full Style Bible or Element Bible inside Story Facts. Story Facts owns stable confirmed facts and each recurring character's compact Voice Signature; it references the approved Project Profile.
 
 ## Creation order
 
 Create the Project Profile after confirming:
 
-1. premise direction;
+1. the Story Kernel, including its reader promise and decision status;
 2. main and supporting styles;
 3. core and secondary elements;
 4. compatibility constraints;
 5. Tone Lock;
 6. target length and chapter scale.
 
-Use it before whole-book planning, System Bible work, volume planning, chapter preflight, generation, revision, and periodic style-drift audits.
+Use it before master-plan work, Story Facts work, volume planning, chapter preflight, generation, revision, and style-drift audits.
 
 ## Confirmation
 
@@ -53,7 +61,6 @@ A one-off chapter complaint, experimental rewrite, brainstorming question, or te
 - Genre:
 - Target length:
 - Chapter scale:
-- Default execution mode:
 
 ## Style
 - Main style:
@@ -63,6 +70,7 @@ A one-off chapter complaint, experimental rewrite, brainstorming question, or te
 - Dialogue style:
 - Emotional expression:
 - Description density:
+- Visual emphasis for key entrances/scenes:
 - Pacing:
 - Viewpoint rules:
 - Allowed rhetorical devices:
@@ -105,27 +113,27 @@ A one-off chapter complaint, experimental rewrite, brainstorming question, or te
 ### Drift Signals
 - Patterns that indicate the prose is moving away from the approved voice:
 
-## Generation Rules
-- Draft Writer must:
-- Character Review must:
-- Lore & Continuity Audit must:
-- Prose Stylist must:
-- Narrative Humanizer must:
-- Story Fact Check must:
-
-## Revision Rules
+## Delivery Boundaries
+- Drafting must preserve:
+- Refinement may change:
+- Reviews must check:
 - Light revision may:
 - Deep revision requires:
 - Never change automatically:
 
-## Periodic Audit
-- Checkpoint interval: 10 promoted chapters by default
-- Additional drift triggers:
+## Rolling Audit
+- Checkpoint window: 5 promoted chapters by default
+- Explicit project override, when approved:
+- Additional drift/complexity triggers:
 ```
 
 ## Style Anchors
 
 Style adjectives alone are not reliable enough for long projects. Keep one primary narrative anchor and one primary dialogue anchor. A high-intensity anchor is optional for projects whose action, horror, romance, comedy, or emotional peaks require a different register.
+
+The Dialogue Anchor defines only the book's shared dialogue floor: era and setting fit, readability, density, punctuation, realism level, and broad conversational texture. It must not impose one cadence, vocabulary, humor style, politeness strategy, or explanatory ability on every character. When its source contains a distinctive speaker, extract only shared project-level traits; that speaker's individual cadence and wording do not become cast-wide rules. Individual Voice Signatures belong in Story Facts.
+
+Visual emphasis defines a project-level tendency, not a fixed word quota. Key character entrances and key scene establishments may receive more selected detail than ordinary transitions, while remaining viewpoint-bound, action-connected, and proportional to the genre and pace. Character-specific stable Recognition Anchors belong in Story Facts; chapter-specific clothing, appearance, and scene-establishment needs belong in the current brief.
 
 An anchor may be:
 
@@ -145,15 +153,17 @@ Chapter Preflight should copy only the constraints relevant to the current work 
 - Relevant elements:
 - Tone bounds:
 - Relevant Style Anchors:
+- Shared dialogue-floor constraints:
+- Relevant visual-emphasis constraints:
 - Forbidden drift:
 - Chapter-specific prose risks:
 ```
 
 Do not paste the complete Project Profile into every brief.
 
-## Periodic audit usage
+## Rolling audit usage
 
-Checkpoint, arc, and volume audits compare promoted prose against Style Anchors and Drift Signals. A drift finding may trigger targeted revision, but it does not automatically rewrite the Project Profile.
+Project Creation defaults to a five-promoted-chapter rolling Checkpoint unless the user explicitly approves another cadence. The Checkpoint fully reviews the new window, inherits prior unresolved findings, and compares prose against Style Anchors and Drift Signals without re-auditing all earlier chapters. Additional cross-range audits may run when drift or complexity signals justify them. Arc and volume Completion Records may absorb a coincident Checkpoint. A drift finding may trigger targeted revision, but it does not automatically rewrite the Project Profile.
 
 ## Update rules
 

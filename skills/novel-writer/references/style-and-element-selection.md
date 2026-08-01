@@ -69,7 +69,7 @@ Output:
 - Items to weaken, defer, or remove:
 ```
 
-Do not proceed to final length and Project Profile until the user confirms the resulting mix under `execution-modes.md`.
+Do not proceed to final length and Project Profile until the user confirms the resulting mix under `creation-paths.md`.
 
 ## Step 4: Tone Lock
 

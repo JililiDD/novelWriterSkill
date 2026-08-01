@@ -4,7 +4,7 @@
 
 The reusable `novel-writer` skill should store **methods**, not full project content.
 
-Individual novel projects may produce useful lessons, but the skill must not embed full chapters, full briefs, full audits, or whole-book canon as reference material.
+Individual novel projects may produce useful lessons, but the skill must not embed full chapters, full briefs, full audits, or whole-book story facts as reference material.
 
 ## What belongs in universal references
 

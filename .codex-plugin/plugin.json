@@ -1,7 +1,7 @@
 {
   "name": "novel-writer",
-  "version": "1.4.0",
-  "description": "Structured long-form fiction planning, seven-stage prose delivery, resumable run state, Story Memory, periodic audits, and continuity-safe revision.",
+  "version": "2.4.0",
+  "description": "Standalone and persistent fiction workflows with adaptive story discovery, compact character Voice Signatures, selective visual emphasis, natural-voice drafting, rolling five-chapter audits, Story Facts, Story Memory, and continuity-safe revision.",
   "author": {
     "name": "JililiDD",
     "url": "https://github.com/JililiDD"
@@ -19,8 +19,8 @@
   "skills": "./skills/",
   "interface": {
     "displayName": "Novel Writer",
-    "shortDescription": "Plan, write, audit, revise, and maintain long-form fiction.",
-    "longDescription": "A structured fiction workflow with Fast, Standard, and Production modes, explicit confirmation gates, seven-stage prose delivery, resumable candidate runs, source-backed Story Memory, checkpoint/arc/volume audits, continuity review, narrative humanization, and verified post-check promotion.",
+    "shortDescription": "Develop standalone stories and continuity-safe novel projects.",
+    "longDescription": "A structured fiction workflow with Standalone and Project Creation paths, adaptive Story Kernel discovery, compact recurring-character Voice Signatures and Recognition Anchors, selective key-character and key-scene visual emphasis, stable Story Facts, active-only Story Memory, natural-voice guardrails, rolling five-chapter checkpoints, and verified promotion.",
     "developerName": "JililiDD",
     "category": "Productivity",
     "capabilities": [
@@ -30,8 +30,8 @@
       "Project Memory"
     ],
     "defaultPrompt": [
-      "Use novel-writer to set up a new novel project.",
-      "Use novel-writer to prepare the next chapter preflight.",
+      "Use novel-writer to develop a Story Kernel with me and create a persistent novel project.",
+      "Use novel-writer to prepare the next chapter brief, candidate, and audit.",
       "Use novel-writer to audit and revise this chapter."
     ],
     "brandColor": "#7C3AED",

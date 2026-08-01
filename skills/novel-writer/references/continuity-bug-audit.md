@@ -1,15 +1,21 @@
 # Continuity & Story Logic Audit — 事实、状态、来源与因果审查
 
-Use this as the canonical factual-quality reference for chapter, scene, revision, and periodic audits. It checks whether story content is possible, authorized, sourced, and causally consistent. It does not judge prose elegance; use `narrative-humanizer.md` for language-naturalness issues.
+Use this as the canonical factual-quality reference for chapter, scene, revision, and cross-range audits. It checks whether story content is possible, authorized, sourced, and causally consistent. It does not judge prose elegance; use `narrative-humanizer.md` for language-naturalness issues.
+
+## Contents
+
+- Sources of truth and audit categories
+- Audit procedure and severity
+- Required output and boundaries
 
 ## Sources of truth
 
 Compare candidate prose against the relevant approved sources:
 
 1. chapter/scene contract;
-2. System Bible for stable canon;
-3. Story Memory for current dynamic state;
-4. approved outline/volume/arc plan for intended direction;
+2. Story Facts for stable confirmed facts and protected facts;
+3. Story Memory for active current state;
+4. approved master/volume/arc plan for intended direction;
 5. promoted chapters for original evidence;
 6. Project Profile only where style, reader promise, or prohibited elements affect content acceptability.
 
@@ -96,7 +102,7 @@ Check:
 For every newly prominent character, faction, artifact, organization, place, ability, or institution, identify at least one valid source:
 
 - approved outline or volume plan;
-- System Bible;
+- Story Facts;
 - earlier clue, document, witness, rumor, relationship, journey, or organizational connection;
 - natural discovery caused by the current scene.
 
@@ -116,7 +122,7 @@ dream/hallucination
 uncertain
 ```
 
-Do not promote a metaphor, sensation, rumor, dream, or character inference into objective canon without a later establishing event.
+Do not promote a metaphor, sensation, rumor, dream, or character inference into an objective story fact without a later establishing event.
 
 ### 8. Cause and consequence
 
@@ -156,7 +162,7 @@ Remove genuine planning, role, audit, or chapter-production language from final-
 4. Run activated audit categories.
 5. Classify severity and identify the corrective owner.
 6. Propose the smallest correction that restores correctness without inventing unsupported facts.
-7. Extract the Proposed Story Memory Delta under `long-form-continuity.md`.
+7. Extract Proposed Story Memory Changes under `long-form-continuity.md`.
 8. Recheck affected categories after correction.
 
 ## Severity
@@ -175,7 +181,7 @@ Critical findings block. Major findings block when they break the approved contr
 
 ### Sources checked
 - Contract:
-- Stable canon:
+- Stable story facts:
 - Story Memory:
 - Original chapter evidence:
 - Outline/arc context:
@@ -200,8 +206,11 @@ Critical findings block. Major findings block when they break the approved contr
 ### Required fixes
 - [Minimal targeted correction]
 
-### Proposed Story Memory Delta
+### Proposed Story Memory Changes
 - See `long-form-continuity.md` format.
+
+### Stable Setting Candidates
+- Proposed durable change, evidence, impact, and confirmation requirement.
 
 Verdict: Pass / Needs targeted revision / Regenerate
 ```
@@ -209,7 +218,7 @@ Verdict: Pass / Needs targeted revision / Regenerate
 ## Boundaries
 
 - Do not rewrite prose merely to make it more stylish.
-- Do not invent new canon to repair a contradiction when a smaller correction exists.
+- Do not invent new stable story facts to repair a contradiction when a smaller correction exists.
 - Do not treat all vivid language as literal.
 - Do not force every possible ledger category into every chapter.
-- Do not update Story Memory directly; return findings and a proposed delta to the Orchestrator.
+- Do not update Story Memory directly; return findings and proposed changes to the Orchestrator.

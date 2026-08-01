@@ -1,5 +1,5 @@
 interface:
   display_name: "Novel Writer"
-  short_description: "Plan and maintain continuity-safe long-form fiction"
+  short_description: "Develop standalone stories and continuity-safe novel projects"
   brand_color: "#7C3AED"
-  default_prompt: "Use novel-writer to plan or continue a long-form fiction project with Project Profile, System Bible, Story Memory, seven-stage prose delivery, and periodic continuity audits."
+  default_prompt: "Use novel-writer to choose Standalone or Project Creation, develop the Story Kernel when needed, and write with compact recurring-character Voice Signatures and Recognition Anchors, selective key-character and key-scene visual emphasis, active Story Memory, natural-voice guardrails, rolling five-chapter checkpoints, and seven-stage verification."

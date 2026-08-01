@@ -1,5 +1,86 @@
 # Changelog
 
+## v2.4.0 — Selective Visual Emphasis
+
+- Added one-to-three stable Recognition Anchors for core and recurring characters without creating full appearance dossiers.
+- Added optional Emphasis Targets for important first appearances, first true observations, meaningful re-entries, transformed states, key locations, and materially changed familiar settings.
+- Required important entrances to establish a viewpoint-selected base image using appearance or clothing, action/posture, and scene effect when natural.
+- Required key scenes to establish spatial, sensory, and action-relevant anchors progressively rather than through static tours.
+- Separated stable Recognition Anchors from temporary clothing, grooming, disguise, injury presentation, and one-scene visual details.
+- Added review checks for under-description, appearance inventories, repeated entrance formulas, floating dialogue, decorative scene tours, and viewpoint-invalid detail.
+- Added rolling Checkpoint signals for visual-recognition drift and repeated scene-staging patterns.
+- Synchronized plugin metadata and documentation to version `2.4.0`.
+
+## v2.3.0 — Minimal Character Voice Signatures
+
+- Separated the Project Profile Dialogue Anchor into a shared dialogue floor rather than a cast-wide voice template.
+- Added a four-field Voice Signature for core and recurring characters: default tactic, attention bias, speech baseline, and one pressure or relationship shift.
+- Limited chapter briefs to one compact Voice Cue line per important speaker instead of copying character dossiers.
+- Added motive- and relationship-based dialogue generation plus a limited speaker-substitution test for meaningful lines.
+- Preserved legitimate shared language from family, institution, class, or subculture and exempted functional short lines from forced uniqueness.
+- Blocked personality quotas, mandatory catchphrases, accents, verbal tics, and surface archetype labels as substitutes for character differentiation.
+- Added cross-window checks for convergence in tactic, attention, cadence, humor method, explanatory precision, and social strategy.
+- Synchronized plugin metadata and documentation to version `2.3.0`.
+
+## v2.2.0 — Natural Voice at Source
+
+- Added compact draft-time naturalness guardrails so prose does not defer all anti-template work to the Humanizer pass.
+- Required narration, attention, judgment, and dialogue to belong to the active viewpoint, character, relationship, and pressure.
+- Added constructedness, over-completion, voice/thought ownership, cognition-shaped rhythm, emotional-stakes, skeptical-reader, and artificial-roughness diagnostics.
+- Prevented Prose Stylist from regularizing supported hesitation, bias, evasion, asymmetry, interruption, and unfinished thought.
+- Added keep / targeted correction / return-upstream decisions so language revision does not disguise missing motivation, causality, relationship movement, or scene construction.
+- Added cross-window drift checks for repeated over-completion, manufactured depth, converging attention, and formulaic roughness.
+- Preserved Story Fact Check after every Humanizer change and synchronized metadata and documentation to version `2.2.0`.
+
+## v2.1.0 — Rolling Checkpoint Audits
+
+- Added a default rolling Checkpoint every five promoted chapters for Project Creation.
+- Made the previous window's Checkpoint a read-only prerequisite before Draft Writing the first chapter of the next window.
+- Limited each Checkpoint to the new five-chapter window, prior unresolved findings and Carry-Forward Constraints, current authorities, and targeted historical evidence instead of repeated full-manuscript review.
+- Added baseline rules for previously unaudited projects, including one Chapters 001–010 baseline when appropriate and bounded current-arc/recent-window baselines for longer projects.
+- Added three action levels: Blocking Before Next Chapter, Required During Next Window, and Watchlist.
+- Added promise/credibility, Story Memory health, arc/volume capacity, and narrative-pattern checks to the cross-range audit template.
+- Added Checkpoint merge priority for coincident Volume and Arc Completion Records and kept audit findings separate from approved repair workflows.
+- Synchronized plugin metadata and documentation to version `2.1.0`.
+
+## v2.0.0 — Clean Project Model
+
+- Removed compatibility support for legacy execution modes, System Bible paths, old run schemas, and historical pointer references.
+- Renamed the active control references to `creation-paths.md` and `story-facts-workflow.md`.
+- Standardized Project Creation on `state/story_facts.md` and the canonical project directory structure.
+- Replaced JSON run state, JSON Schema, and the selected-run index with one optional Markdown run record.
+- Made `brief.md`, `candidate.md`, and `audit.md` progressive artifact roles instead of a fixed three-file load set, and replaced fixed recent-chapter loading with dependency-driven minimum promoted-prose selection.
+- Renamed the cross-range audit asset and excluded obsolete compatibility and companion references from the release package.
+- Reduced the release from 38 to 26 canonical Skill files while preserving Story Discovery, planning, seven-stage prose delivery, Story Fact Check, Final Verification, backup-before-overwrite, Promotion, compaction, and no-auto-continue.
+- Synchronized plugin metadata and documentation to version `2.0.0`.
+
+## v1.6.0 — Simplified Project Model and Selective Context
+
+- Replaced Fast, Standard, and Production with two user-visible creation paths: Standalone Creation and Project Creation.
+- Removed hidden rigor escalation; added explicit Fact Protection, Plan Boundary, and File Safety checks derived from the exact information or operation touched.
+- Replaced user-visible canon/System Bible terminology with Story Facts, stable setting, current state, happened events, and future plans while preserving legacy-path compatibility.
+- Added `plans/master-plan.md` plus permanent per-volume files with active arc detail, Arc Completion Records, and Volume Completion Records.
+- Added hot, warm, and cold context tiers; archive, backups, completed runs, closed audits, superseded plans, old revisions, and historical candidates are excluded by default.
+- Simplified ordinary project chapters to `brief.md`, `candidate.md`, and `audit.md`; split evidence, backups, impact analysis, and run state are conditional.
+- Made run state optional, added active/archive retirement, and upgraded its lightweight pointer schema/templates to version `1.2` with `creation_path`, trigger reasons, artifact paths, high-risk input observations, candidate selection, and stage statuses.
+- Removed the duplicated role protocol from the default loading chain; `chapter-pipeline.md` now solely owns stage responsibility and handoff.
+- Reduced the former execution-mode control reference to creation-path routing, conditional triggers, optional persistence, and confirmation renewal.
+- Replaced the fixed ten-chapter checkpoint default with request-, signal-, or user-interval-based cross-range audits.
+- Simplified Project Profile's role-specific generation fields into compact delivery and revision boundaries.
+- Made `chapters/index.md` an optional navigation aid rather than a mandatory project artifact.
+- Moved arc/volume rebaseline into their planning Completion Records and reserved periodic audit files for checkpoint, cross-range, and publication issues.
+- Synchronized plugin metadata and documentation to version `1.6.0`.
+
+## v1.5.0 — Adaptive Story Discovery
+
+- Added an adaptive Story Discovery Gate before style selection and formal planning for persistent new-story setup.
+- Added a compact Story Kernel covering core appeal, protagonist drive, internal contradiction, opposition logic, core relationship pressure, first irreversible choice, and climactic value conflict.
+- Limited discovery to high-leverage structural gaps, at most two primary questions per turn, and explicit separation of Confirmed, Suggested, Open, and Rejected material.
+- Added Fast, Standard, and Production behavior without creating a new reference, template, state file, schema, run type, or prose stage.
+- Made the Story Kernel the first section of the existing whole-book plan and required renewed confirmation for material story-engine changes.
+- Prevented System Bible and Project Profile creation from silently promoting assistant suggestions or unresolved Story Kernel decisions into canon.
+- Updated plugin metadata and documentation to version `1.5.0`.
+
 ## v1.4.0 — Long-form continuity and architecture simplification
 
 - Added one active-only `state/story_memory.md` model for Current Position, Active Characters, Knowledge & Secrets, Important Objects & Resources, Foreshadowing & Promises, and Open Consequences.

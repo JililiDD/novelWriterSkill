@@ -1,55 +1,85 @@
-# Fanfic / One-Shot Mini Planning Gate
+# Standalone Story / One-Shot Mini Gate
 
-Use this for short fanfiction or a one-shot scene when the `novel-writer` Skill is active or a structured workflow has been promised.
+Use this for a self-contained short story, fanfiction one-shot, scene, experiment, or bounded rewrite that does not require continuing project state.
 
-Load `execution-modes.md` first. It owns whether the compact gate is required, may be combined, or may be skipped by an explicit immediate-writing request. Load `run-state-protocol.md` and `role-execution-protocol.md` when prose delivery uses persisted state or multiple logical stages. This file owns the content of the compact gate.
+Load `creation-paths.md` first. It owns Standalone versus Project Creation and confirmation rules. Load `run-state-protocol.md` only when recovery, multiple candidates, source conflict, batch work, or requested auditability triggers an optional run record.
 
-## Default routing
+## Routing boundary
 
-- Fast is normally eligible for a self-contained one-shot that does not create broad persistent canon.
-- Standard applies when the user does not select a mode and the work depends on an ongoing project or substantial canon.
-- Escalate from Fast when continuity, persistent-canon, destructive-revision, or multi-chapter risk appears.
-- Do not use “short” as a reason to ignore an already-promised workflow.
+Use Standalone Creation only when the unit:
+
+- is self-contained;
+- does not update an existing project's master plan, Story Facts, Story Memory, or future continuity;
+- can be governed by one compact binding brief.
+
+A short unit belonging to an existing novel, series, or shared setting is Project Creation. Length does not override project dependency.
 
 ## Compact gate
 
-Capture the following as one reviewable brief when the active mode permits compact confirmation:
+Capture these items in one reviewable `brief.md`:
 
 1. **Premise Lock**
    - main character and POV;
-   - central emotional conflict;
+   - core appeal;
+   - central emotional or external conflict;
    - relationship structure;
-   - ending direction.
-2. **Style Lock**
+   - decisive choice and ending direction.
+2. **Style and Tone Lock**
    - main style;
-   - supporting styles;
-   - avoid list.
+   - supporting style;
+   - emotional bounds;
+   - avoid list;
+   - reader-experience target.
 3. **Element Lock**
    - core elements;
    - secondary elements;
    - forbidden elements.
-4. **Tone Lock**
-   - main emotion;
-   - lower and upper bounds;
-   - reader-experience target.
-5. **Outline**
-   - five to nine beats for a one-shot.
-6. **Mini System Bible**
+4. **Compact Beats**
+   - five to nine beats when useful;
+   - required turning point;
+   - ending boundary.
+5. **Temporary Story Facts**
    - key characterization rules;
-   - dialogue-distribution rules;
-   - facts and boundaries that must not be contradicted.
-7. **Scene/Chapter Preflight**
-   - three to five targeted confirmation checks covering the highest-risk constraints.
+   - relationship and dialogue constraints;
+   - facts, secrets, and boundaries that must not be contradicted.
+6. **Preflight**
+   - the highest-impact confirmation checks;
+   - source/target paths for rewrite work;
+   - any overwrite backup requirement.
 
-Apply the confirmation and skip rules from `execution-modes.md`. When an immediate-writing Fast path is valid, preserve the user's explicit premise, facts, style constraints, and forbidden changes as a temporary binding brief before drafting.
+When the user's request already states sufficient premise, facts, style, and forbidden changes, a direct immediate-writing command may count as compact brief confirmation. Do not use this exception to invent a missing protagonist engine, decisive choice, or ending direction that materially changes the requested story.
+
+## Work files
+
+Default:
+
+```text
+brief.md
+candidate.md
+audit.md
+final.md
+```
+
+Use one combined audit with separately identifiable Contract, Character, Story Fact, Language, Story Fact Check, and Final Verification sections.
+
+Do not create persistent Project Profile, Story Facts, Story Memory, master-plan, volume, archive, or run-record structures for a genuinely self-contained unit.
 
 ## Quality boundaries
 
-- Encode specified dialogue distribution in the Mini System Bible before prose unless the valid immediate-writing path already states it unambiguously.
+- Preserve specified dialogue distribution and characterization in Temporary Story Facts before prose.
 - For a mostly silent protagonist, show emotion through action, withheld response, physical blocking, chores, departure, and what others fail to notice; do not compensate with unrequested monologues.
-- Story Fact Check remains mandatory after prose refinement, and Final Verification must pass before any Promotion & State Update.
-- Stop after the requested one-shot or scene; do not auto-continue.
+- Story Fact Check remains mandatory after prose refinement.
+- Final Verification must pass before a verified final artifact or overwrite.
+- Back up supplied official text before an approved destructive overwrite.
+- Stop after the requested story or scene; do not auto-continue.
 
-## Failure lesson
+## Escalation to Project Creation
 
-A prior workflow failure occurred when a short angst fanfic was drafted immediately after a structured process had been promised. The correction is not “always add ceremony”; it is to apply the active mode honestly: use the compact gate when required, or use the explicit Fast immediate-writing path only when the user's request already supplies a sufficient binding brief.
+Reclassify before continuing when the work starts to require:
+
+- multiple future chapters or volumes;
+- continuing character, relationship, knowledge, object, promise, or consequence state;
+- updates to an existing project's stable facts or current state;
+- shared-setting continuity beyond the requested unit.
+
+State the reason and initialize only the minimum project artifacts needed.

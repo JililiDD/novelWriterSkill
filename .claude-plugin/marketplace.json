@@ -8,8 +8,8 @@
     {
       "name": "novel-writer",
       "source": "./",
-      "description": "Structured long-form fiction planning, seven-stage prose delivery, resumable run state, Story Memory, periodic audits, and continuity-safe revision.",
-      "version": "1.4.0",
+      "description": "Standalone and persistent fiction workflows with adaptive story discovery, compact character Voice Signatures, selective visual emphasis, natural-voice drafting, rolling five-chapter audits, Story Facts, Story Memory, and continuity-safe revision.",
+      "version": "2.4.0",
       "author": {
         "name": "JililiDD"
       },
