@@ -1,178 +1,75 @@
-# Continuity & Story Logic Audit — 事实、状态、来源与因果审查
+# Continuity & Story Logic Audit — 事实、状态、来源、章节接口与因果审查
 
-Use this as the canonical factual-quality reference for chapter, scene, revision, and cross-range audits. It checks whether story content is possible, authorized, sourced, and causally consistent. It does not judge prose elegance; use `narrative-humanizer.md` for language-naturalness issues.
+Use this as the canonical factual-quality reference for chapter, scene, revision, and cross-range audits. It checks whether story content is possible, authorized, sourced, causally consistent, and seamlessly interfaced with neighboring chapters.
 
 ## Contents
 
 - Sources of truth and audit categories
+- Chapter interface continuity
 - Audit procedure and severity
 - Required output and boundaries
 
 ## Sources of truth
 
-Compare candidate prose against the relevant approved sources:
-
+Compare candidate prose against relevant approved sources:
 1. chapter/scene contract;
 2. Story Facts for stable confirmed facts and protected facts;
 3. Story Memory for active current state;
 4. approved master/volume/arc plan for intended direction;
 5. promoted chapters for original evidence;
-6. Project Profile only where style, reader promise, or prohibited elements affect content acceptability.
+6. `state/writing_lessons.md` for confirmed project craft constraints.
 
 When sources conflict, report the conflict and block rather than selecting the convenient version.
 
 ## Audit categories
 
-Use only categories relevant to the work unit, but never omit a category that the content activates.
-
 ### 1. Contract compliance
-
-Check every binding item from the approved brief:
-
-- required event or turning point;
-- required/forbidden character presence;
-- reveal and non-reveal boundaries;
-- callback or foreshadowing obligation;
-- emotional turn;
-- exact required wording when applicable;
-- work-unit ending boundary;
-- events reserved for later units.
-
-Mark each item:
-
-```text
-satisfied
-partial
-missing
-contradicted
-```
-
-A missing or contradicted central event, required character, reveal boundary, or ending condition is blocking.
+Check every binding item from the approved brief (events, character presence, reveal boundaries, exact wording obligations, ending state).
 
 ### 2. Character state and relationship continuity
-
-Check:
-
-- location and physical condition;
-- current goal and immediate motivation;
-- capabilities and active limitations;
-- relationship phase;
-- promises, debts, duties, fears, and unresolved emotional consequences;
-- whether behavior follows from established pressure rather than author convenience.
-
-A relationship or personality may change, but the causal bridge must appear in prose or approved planning.
+Check location, physical condition, immediate goal, active limitations, relationship phase, and emotional aftermath.
 
 ### 3. Knowledge and secret boundaries
-
-For each consequential statement or action, ask:
-
-- Does this character know, suspect, misunderstand, or remain unaware?
-- How and when was the information acquired?
-- Is certainty being confused with rumor, inference, manipulation, or false belief?
-- Has private or narrator-only information leaked into dialogue or action?
-- Has a secret been revealed before its permitted window?
-
-Impossible knowledge is blocking when it changes plot, evidence, trust, or a major decision.
+Check who knows what, how information was acquired, and prevent narrator/private knowledge leakage.
 
 ### 4. Object, resource, evidence, and capability state
-
-Track only consequential entities:
-
-- ownership and location;
-- integrity, damage, copy, destruction, or consumption;
-- scarcity and available quantity;
-- evidentiary reliability and custody;
-- cooldown, cost, energy, money, ammunition, authority, reputation, or team capacity;
-- whether an entity reappears after being lost, spent, transferred, or disabled.
-
-Do not create a ledger entry for ordinary detail that has no later consequence.
+Track consequential objects, custody, damage, depletion, and evidentiary reliability.
 
 ### 5. Timeline, location, and scene feasibility
-
-Check:
-
-- elapsed time and simultaneous events;
-- travel, healing, training, investigation, production, and communication time;
-- access, visibility, distance, weather, social control, and physical obstacles;
-- whether characters can plausibly speak, move, notice, decide, operate equipment, fight, hide, or recover under the scene pressure;
-- whether ages, dates, seasons, schedules, and sequence align.
+Check elapsed time, travel duration, physical distance, stamina/healing feasibility, and environmental obstacles.
 
 ### 6. Provenance for new named entities
-
-For every newly prominent character, faction, artifact, organization, place, ability, or institution, identify at least one valid source:
-
-- approved outline or volume plan;
-- Story Facts;
-- earlier clue, document, witness, rumor, relationship, journey, or organizational connection;
-- natural discovery caused by the current scene.
-
-A new entity does not need advance mention merely to exist, but it must enter through a plausible story-world path. Do not insert a convenient expert, map location, authority, enemy, or artifact with no causal route.
+Verify that newly prominent characters, factions, places, or artifacts enter through a plausible story-world route.
 
 ### 7. Literal, figurative, uncertain, and subjective information
-
-Classify descriptions that may later be mistaken for facts:
-
-```text
-literal
-figurative
-perception
-inference
-rumor
-dream/hallucination
-uncertain
-```
-
-Do not promote a metaphor, sensation, rumor, dream, or character inference into an objective story fact without a later establishing event.
+Ensure metaphors, sensations, rumors, or dreams are not promoted into objective facts without an establishing event.
 
 ### 8. Cause and consequence
-
-For every meaningful change, ask what follows.
-
-Examples:
-
-- injury affects later action or receives supported treatment;
-- betrayal changes trust or requires a reason it does not;
-- public exposure creates social or institutional effects;
-- resource expenditure limits later options;
-- discovered evidence changes investigation or must remain unusable for a stated reason;
-- promises and threats remain active until fulfilled, rejected, or made impossible.
-
-A story may suppress or delay a consequence, but the delay must be plausible and tracked as an open consequence.
+Verify that injuries, betrayals, resource expenditures, and discoveries produce plausible, tracked consequences.
 
 ### 9. Foreshadowing and reader promises
-
-Check relevant Story Memory entries:
-
-- state and source are correct;
-- the current chapter advances only what the allowed window permits;
-- protected truth is not explained early;
-- reinforcement adds meaning rather than repeating the same clue;
-- resolved promises receive an actual payoff;
-- newly created promises are captured in the proposed state delta.
+Ensure promises advance within allowed windows, protected secrets stay unrevealed, and resolved threads receive payoffs.
 
 ### 10. Workflow and meta leakage
+Remove genuine planning, role, audit, or workflow scaffolding from prose.
 
-Remove genuine planning, role, audit, or chapter-production language from final-intended prose. Use contextual judgment: a word such as “scene,” “reader,” or “chapter” may be legitimate inside the story world, but workflow scaffolding is not.
+### 11. Chapter Interface Continuity (跨章接缝检查)
+Inspect continuity across chapter boundaries ($N-1 \rightarrow N \rightarrow N+1$):
+- **Time**: Time of day and elapsed time align with the previous chapter's ending.
+- **Location**: Specific room/spatial position matches preceding arrival/exit.
+- **Physical state**: Fatigue, injuries, breath, and attire state carry forward plausibly.
+- **Object custody**: Items carried in hands or pockets match the previous scene.
+- **Present cast**: Entrances and exits are causally accounted for.
+- **Emotional aftermath**: Character attention and mood reflect preceding events.
+- **Pending action**: Opening hook connects smoothly to previous unresolved tension.
 
 ## Audit procedure
 
-1. Read the approved contract and relevant authoritative state.
-2. Extract consequential facts and changes from the candidate.
-3. Map each change to prior state and source evidence.
-4. Run activated audit categories.
-5. Classify severity and identify the corrective owner.
-6. Propose the smallest correction that restores correctness without inventing unsupported facts.
-7. Extract Proposed Story Memory Changes under `long-form-continuity.md`.
-8. Recheck affected categories after correction.
-
-## Severity
-
-- **Critical:** changes plot identity, survival, core evidence, stable rules, protected reveal, central relationship decision, or work-unit contract.
-- **Major:** state drift, impossible knowledge/action, unsupported entity, missing consequence, timeline break, or promise failure that damages reader trust.
-- **Minor:** localized ambiguity or small continuity issue fixable without changing event meaning.
-- **Info:** observation that does not require correction.
-
-Critical findings block. Major findings block when they break the approved contract or downstream logic. Do not hide a blocking factual issue behind prose polish.
+1. Read the approved contract and authoritative state.
+2. Run activated audit categories and Chapter Interface Check.
+3. Classify severity: **Critical** (blocks), **Major** (blocks if breaking contract/logic), **Minor** (targeted fix), **Info**.
+4. Propose minimal targeted corrections and extract Proposed Story Memory Changes.
+5. Invalidate downstream checks if substantive edits are required (`references/quality-gate.md`).
 
 ## Required output
 
@@ -184,21 +81,22 @@ Critical findings block. Major findings block when they break the approved contr
 - Stable story facts:
 - Story Memory:
 - Original chapter evidence:
-- Outline/arc context:
 
 ### Contract compliance
 - [Requirement]: satisfied / partial / missing / contradicted — evidence
+
+### Chapter Interface Check
+- Time & Location continuity: Pass / [Finding]
+- Physical state & Object custody: Pass / [Finding]
+- Emotional aftermath & Pending action: Pass / [Finding]
 
 ### Activated categories
 - Character/relationship:
 - Knowledge/secrets:
 - Object/resource/evidence:
 - Timeline/location/feasibility:
-- Provenance:
-- Literal/figurative:
-- Cause/consequence:
-- Foreshadowing/promises:
-- Workflow leakage:
+- Provenance / Cause & Consequence:
+- Foreshadowing / Workflow leakage:
 
 ### Findings
 - [Severity] [Category] — issue, evidence, corrective owner
@@ -212,13 +110,5 @@ Critical findings block. Major findings block when they break the approved contr
 ### Stable Setting Candidates
 - Proposed durable change, evidence, impact, and confirmation requirement.
 
-Verdict: Pass / Needs targeted revision / Regenerate
+Verdict: Pass / Needs Targeted Revision / Regenerate
 ```
-
-## Boundaries
-
-- Do not rewrite prose merely to make it more stylish.
-- Do not invent new stable story facts to repair a contradiction when a smaller correction exists.
-- Do not treat all vivid language as literal.
-- Do not force every possible ledger category into every chapter.
-- Do not update Story Memory directly; return findings and proposed changes to the Orchestrator.

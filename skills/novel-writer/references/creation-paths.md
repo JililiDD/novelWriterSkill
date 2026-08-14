@@ -35,7 +35,7 @@ Use when any are true:
 
 A short chapter in an existing novel is Project Creation. A long one-shot may remain Standalone Creation. Do not classify by word count alone.
 
-Project setup and files are owned by `startup-workflow.md`, `layered-novel-planning.md`, `story-facts-workflow.md`, `long-form-continuity.md`, and `chapter-pipeline.md`.
+Project setup and files are owned by `startup-workflow.md`, `style-calibration.md`, `layered-novel-planning.md`, `story-facts-workflow.md`, `long-form-continuity.md`, and `chapter-pipeline.md`.
 
 ## 2. Add only triggered checks
 
@@ -88,44 +88,46 @@ Do not create run records, backups, split evidence, or impact-analysis files wit
 Ordinary Project Creation uses at most three core artifact roles:
 
 ```text
-brief.md
-candidate.md
-audit.md
+work/chapter-XXX/
+├── brief.md
+├── candidate.md
+└── audit.md
 ```
 
-Create and read them progressively under `chapter-pipeline.md`; they are not a mandatory three-file load set. Create an optional run record only when recovery, candidate selection, batch coordination, source conflict, complex overwrite, or explicitly requested execution evidence cannot be handled reliably by those artifacts.
+Create and read them progressively under `chapter-pipeline.md`. Candidate prose remains isolated and possesses zero authority until officially promoted.
 
-Split evidence only when one combined audit is too large to inspect, a cross-range or publication review requires it, or a source conflict needs an independent record.
-
-## 4. Confirmation rule
+## 4. Confirmation rules
 
 Silence is not confirmation. Approval applies only to the named artifact, change, or work unit.
 
-### Standalone Creation
-
-The premise, style, facts, and brief may be confirmed together when the request already supplies enough binding direction. Do not invent a materially different story engine merely to avoid a question.
-
-### Project Creation
+### Project Creation Confirmation Gates
 
 Obtain explicit confirmation before first use or material change of:
 
 - Story Kernel;
-- Project Profile;
+- Project Profile (Style Lock & Narrative Anchor);
 - master-plan direction;
 - current volume or arc obligations;
-- Story Facts;
+- Story Facts and Dialogue Profiles;
+- project craft lessons (`state/writing_lessons.md`);
 - the current work-unit brief.
 
-Also require explicit confirmation for:
+### Mandatory Promotion Confirmation Gate
 
-- replacing promoted prose;
-- choosing among multiple viable candidates;
-- accepting unresolved residual risk;
-- applying a Stable Setting Candidate.
+1. Final Verification passing verdict strictly yields **`PROMOTION READY`**, never silent Promotion.
+2. Candidate prose and proposed Story Memory changes must **never** be written to official project files (`chapters/chapter-XXX.md`, `state/story_memory.md`) without a fresh, explicit user confirmation in the current turn.
+3. **Fresh Confirmation Requirement**: Even if the user stated *"改完直接替换"* at the beginning of the turn, the assistant must still present the `PROMOTION READY` status, quality gate score, and verification summary, and request final promotion confirmation before modifying official project files.
+4. **Valid Promotion Authorizations**: *"可以 promote"*, *"就用这版"*, *"正式替换吧"*, *"定为正式章节"*.
+5. **Invalid / Insufficient Authorizations**: *"改一下第二章"*, *"润色一下"*, *"给我看看"*, *"继续检查"*, *"做到 9.5 分以上"*.
 
-Reuse prior approval only when the current authority and relevant decision are materially unchanged.
+### Autonomous Batch Mode Delegation (自动化连写授权)
 
-A request for the next unit authorizes its Preflight only. Stop after every requested unit.
+When the user explicitly requests multi-chapter autonomous drafting (e.g. *"自动连写第 5 到 10 章"*, *"按大纲写完第一卷"*, or slash command `/goal`):
+1. The user grants **Bounded Batch Promotion Delegation** across the specified range $[M..N]$.
+2. Within this bounded scope, the system autonomously executes drafting, dual-pass humanization, quality gate scoring, promotion, and memory updates per `references/autonomous-batch-pipeline.md`.
+3. **Circuit Breakers**: If any chapter fails the quality gate ($< 9.5$) after 2 automated repair passes, encounters an unresolvable story fact conflict, or hits a blocking 5-chapter checkpoint audit, the delegation is **immediately suspended**, and the assistant pauses to request human review.
+
+Outside of an explicit Autonomous Batch command, stop after every requested unit.
 
 ## 5. Conflict ownership
 

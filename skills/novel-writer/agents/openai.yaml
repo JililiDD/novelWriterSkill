@@ -2,4 +2,4 @@ interface:
   display_name: "Novel Writer"
   short_description: "Develop standalone stories and continuity-safe novel projects"
   brand_color: "#7C3AED"
-  default_prompt: "Use novel-writer to choose Standalone or Project Creation, develop the Story Kernel when needed, and write with compact recurring-character Voice Signatures and Recognition Anchors, selective key-character and key-scene visual emphasis, active Story Memory, natural-voice guardrails, rolling five-chapter checkpoints, and seven-stage verification."
+  default_prompt: "Use novel-writer to choose Standalone or Project Creation, calibrate style, develop the Story Kernel, and write with generative Dialogue Engines, Project Profiles with Style Lock, active Story Memory, dual-pass humanization, chapter quality gates, chapter interface checks, and verified promotion confirmation."

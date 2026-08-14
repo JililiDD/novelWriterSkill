@@ -2,8 +2,8 @@
   "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
   "name": "novel-writer",
   "displayName": "Novel Writer",
-  "version": "2.4.0",
-  "description": "Standalone and persistent fiction workflows with adaptive story discovery, compact character Voice Signatures, selective visual emphasis, natural-voice drafting, rolling five-chapter audits, Story Facts, Story Memory, and continuity-safe revision.",
+  "version": "2.6.0",
+  "description": "Standalone and persistent fiction workflows with autonomous batch multi-chapter drafting, style calibration, generative Dialogue Engines, project craft lessons, dual-pass humanization, chapter quality gates, and verified promotion.",
   "author": {
     "name": "JililiDD",
     "url": "https://github.com/JililiDD"
@@ -16,7 +16,8 @@
     "fiction",
     "creative-writing",
     "long-form-writing",
-    "continuity"
+    "continuity",
+    "autonomous-writing"
   ],
   "skills": "./skills/"
 }
