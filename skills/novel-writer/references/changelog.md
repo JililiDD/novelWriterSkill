@@ -1,5 +1,31 @@
 # Changelog
 
+- Added **Autonomous Project Genesis** (`references/startup-workflow.md`): enables one-click full-project novel architecture design from a single theme prompt, including multi-variant concept comparison (方案 A/B/C) with pros/cons tradeoff analysis.
+- Added **Genesis Architecture Self-Audit** (`references/startup-workflow.md`): automatically evaluates protagonist engine, opposition logic, volume arc feasibility, and mechanism agency before project finalization.
+- Added **Genesis Confirmation & Bypass Gate**: supports interactive executive review by default, with an optional direct auto-start bypass into Autonomous Batch Pipeline.
+- Added the **Autonomous Batch Pipeline** (`references/autonomous-batch-pipeline.md`): enables autonomous multi-chapter drafting, continuous volume completion, and whole-book generation with explicit user delegation, rolling context compaction, automated dual-pass humanization, and auto-promotion.
+- Added **Circuit Breakers for Autonomous Mode**: automated pause-and-alert triggers on Quality Gate failures ($< 9.5$ after 2 auto-repair iterations), unresolvable story fact conflicts, blocking rolling checkpoints, or explicit user decision forks.
+- Added **Dynamic Chapter Scale & Anti-Padding Rules** (`references/project-profile-workflow.md`, `references/layered-novel-planning.md`, `references/quality-gate.md`, `references/chapter-pipeline.md`): establishes chapter word counts as flexible guidance targets rather than rigid quotas, enforcing that dramatic completeness and narrative tension strictly override artificial padding.
+- Added `scripts/batch_runner.py` for batch chapter sequence verification, word count aggregation, and multi-chapter quality diagnostic scans.
+- Added `scripts/scan_chapter.py` for single-command all-in-one chapter diagnostics (dialogue, clichés, paragraph cadence, and boundary interface).
+- Completed architecture streamlining: removed 11 legacy tombstone files and 5 obsolete schemas/JSON templates, merged `failure-patterns.md` into `feedback-promotion.md`, merged compatibility analysis into `style-and-element-selection.md`, and merged data isolation policy into `skill-change-protocol.md`.
+- Removed novel-specific project artifacts and subgenre-specific planning files to make the plugin 100% universal across all fiction genres.
+- Synchronized all plugin manifests and documentation to version `2.6.0`.
+
+## v2.5.0 — Safe Promotion, Style Calibration, Dialogue Engine & Quality Gate
+
+- Added the **Mandatory Promotion Confirmation Gate**: Final Verification outputs `PROMOTION READY`; promotion to official chapter files and Story Memory updates strictly require fresh explicit user confirmation in the current turn.
+- Added **Style Calibration & Recalibration** (`references/style-calibration.md`) for controlled multi-variant comparison (600–1,500 Chinese characters) to establish Style Lock, Narrative Anchor, and Rejected Drift Notes before drafting Chapter 1.
+- Added the **Dialogue Engine** (`references/dialogue-engine.md`) replacing negative bans with generative formulas ($Goal + Knowledge + Status + Relationship + Emotion + Strategy$), Speaker-Substitution Checks, and Functional Character Realism for NPCs.
+- Added **Project Craft Lessons** and the **Feedback Promotion Protocol** (`references/feedback-promotion.md`) to persist recurring user corrections into `state/writing_lessons.md` with cataloged failure patterns (`FP-001` to `FP-008`).
+- Added the **Dual-Pass Humanizer** (`references/narrative-humanizer.md`) with an explicit Structural Naturalness Pass (macro) preceding Prose Stylist and Surface Naturalness Pass (micro), enforcing the Explanation Budget and Evidence Before Explanation.
+- Added the **7-Dimension Chapter Quality Gate** (`references/quality-gate.md`) requiring a score $\ge 9.5 / 10.0$ and no critical dimension $< 9.0$ before qualifying for `PROMOTION READY`.
+- Added the **Substantive Check Invalidation Matrix** ensuring that downstream reviews are invalidated and re-executed when candidate prose is substantively revised.
+- Added the **Chapter Interface Check** in `references/continuity-bug-audit.md` and `references/chapter-pipeline.md` to systematically inspect transitions across Chapter $N-1 \rightarrow N \rightarrow N+1$.
+- Formalized **Protected Story Meaning vs Realization Layer** in `references/chapter-humanizer-revision-workflow.md` to empower deep revision without breaking story facts.
+- Added four Python diagnostic scan scripts (`scripts/dialogue_scan.py`, `scripts/repetition_scan.py`, `scripts/paragraph_shape_scan.py`, `scripts/chapter_interface_scan.py`).
+- Synchronized all plugin manifests and documentation to version `2.5.0`.
+
 ## v2.4.0 — Selective Visual Emphasis
 
 - Added one-to-three stable Recognition Anchors for core and recurring characters without creating full appearance dossiers.

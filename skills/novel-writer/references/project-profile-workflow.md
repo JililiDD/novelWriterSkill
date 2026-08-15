@@ -1,6 +1,6 @@
 # Project Profile Workflow — 项目级风格、元素与读者体验总控
 
-Use this reference to create or update the project's authoritative style and reader-experience file:
+Use this reference to create or update the project's authoritative style, reader-experience, and Style Lock file:
 
 ```text
 state/project_profile.md
@@ -9,19 +9,19 @@ state/project_profile.md
 ## Contents
 
 - Ownership, creation order, and confirmation
-- Project Profile template and Style Anchors
+- Project Profile template, Style Lock, and Style Anchors
 - Chapter usage, audits, and updates
 
 ## Ownership
 
 Project Profile is the sole owner of:
 
-- writing style and prose density;
+- writing style, prose density, and Style Lock dimensions;
 - element mix and implementation rules;
 - Tone Lock;
 - reader promise;
-- Style Anchors;
-- forbidden styles, expressions, and structural tendencies;
+- Style Anchors and Rejected Drift Notes;
+- project-level craft constraints and forbidden tendencies;
 - project-level generation and revision boundaries.
 
 It answers:
@@ -30,7 +30,7 @@ It answers:
 
 It may reference the confirmed Story Kernel's reader promise, but it does not own protagonist motivation, opposition logic, relationship pressure, or plot choices.
 
-Do not duplicate the full Style Bible or Element Bible inside Story Facts. Story Facts owns stable confirmed facts and each recurring character's compact Voice Signature; it references the approved Project Profile.
+Do not duplicate the full Style Bible or Element Bible inside Story Facts. Story Facts owns stable confirmed facts and each recurring character's Dialogue Profile; it references the approved Project Profile.
 
 ## Creation order
 
@@ -38,10 +38,10 @@ Create the Project Profile after confirming:
 
 1. the Story Kernel, including its reader promise and decision status;
 2. main and supporting styles;
-3. core and secondary elements;
-4. compatibility constraints;
-5. Tone Lock;
-6. target length and chapter scale.
+3. Style Calibration outcome (Style Lock & Narrative Anchor) when calibrated;
+4. core and secondary elements;
+5. compatibility constraints and Tone Lock;
+6. target length and chapter scale (flexible reference range, e.g., 2,500–4,000 chars, not a rigid quota).
 
 Use it before master-plan work, Story Facts work, volume planning, chapter preflight, generation, revision, and style-drift audits.
 
@@ -49,7 +49,15 @@ Use it before master-plan work, Story Facts work, volume planning, chapter prefl
 
 Show the complete Project Profile draft and obtain explicit confirmation before first creation or any project-level change.
 
-A one-off chapter complaint, experimental rewrite, brainstorming question, or temporary tone request does not authorize a Project Profile update.
+A one-off chapter complaint, experimental rewrite, brainstorming question, or temporary tone request does not authorize a Project Profile update. Use `references/feedback-promotion.md` when upgrading recurring feedback.
+
+## Chapter Scale Flexibility & Anti-Padding Principle (字数弹性与反注水原则)
+
+- **Chapter scale is a reference range, never a rigid hard gate**: Set a target span (e.g. `2,500–4,000 words/characters`) as an orientation benchmark, not a mechanical cutoff.
+- **Dramatic completeness & prose quality take absolute priority over word quota**:
+  - If a chapter's core dramatic arc, conflict friction, character turn, and cliffhanger are fully delivered in 2,000–3,000 words, **do NOT artificially expand, pad, or inject filler prose** just to reach an initial target like 5,000 words.
+  - Artificial expansion that dilutes narrative tension, bloats dialogue, or degrades prose quality is strictly forbidden.
+  - Scene density dictates chapter length: fast-paced combat or single-scene confrontations may naturally be leaner, while multi-threaded ensemble turns may naturally expand.
 
 ## Required template
 
@@ -60,21 +68,38 @@ A one-off chapter complaint, experimental rewrite, brainstorming question, or te
 - Title:
 - Genre:
 - Target length:
-- Chapter scale:
+- Chapter scale: [e.g. Flexible target: 2,500–4,000 words (density-adaptive, tension-first)]
 
-## Style
-- Main style:
-- Supporting styles:
-- Language density:
-- Sentence/rhythm tendencies:
-- Dialogue style:
-- Emotional expression:
-- Description density:
-- Visual emphasis for key entrances/scenes:
-- Pacing:
-- Viewpoint rules:
-- Allowed rhetorical devices:
-- Forbidden style drift:
+## Narrative Style Lock
+### Narrative distance
+- [e.g. Third-person limited, medium-close; strict sensory radius]
+
+### Cognitive movement
+- [e.g. Observe sensory evidence → infer immediate risk → act/decide]
+
+### Sentence rhythm
+- [e.g. Mixed sentence lengths; landing sentences only under high pressure]
+
+### Description density
+- [e.g. Functional and scene-grounded; 1–2 sharp tactile/spatial cues]
+
+### Psychological explicitness
+- [e.g. Restrained by default; show through avoidance, task focus, or physical friction]
+
+### Dialogue floor
+- [e.g. Natural modern vernacular; goal-driven; no shared clipped aphorisms]
+
+### Information release
+- [e.g. Evidence before explanation; zero summary of what dialogue already revealed]
+
+### Competence display
+- [e.g. Shown through questions asked, verification actions, and cost management]
+
+### Visual emphasis for key entrances/scenes
+- [e.g. Viewpoint-selected base image for entrances; spatial/sensory anchors for key scenes]
+
+### Forbidden drift
+- [e.g. Over-explaining clues, characters sharing clipped syntax, speechifying NPCs]
 
 ## Elements
 - Core elements:
@@ -98,7 +123,7 @@ A one-off chapter complaint, experimental rewrite, brainstorming question, or te
 
 ## Style Anchors
 ### Narrative Anchor
-- Source chapter/path or approved short sample:
+- Source chapter/path or approved calibration sample:
 - Must-preserve traits:
 
 ### Dialogue Anchor
@@ -109,6 +134,9 @@ A one-off chapter complaint, experimental rewrite, brainstorming question, or te
 - Required: no
 - Source chapter/path or approved short sample:
 - Must-preserve traits:
+
+### Rejected Drift Notes
+- [Brief reasons for options rejected during Style Calibration or reviews]
 
 ### Drift Signals
 - Patterns that indicate the prose is moving away from the approved voice:
@@ -127,55 +155,34 @@ A one-off chapter complaint, experimental rewrite, brainstorming question, or te
 - Additional drift/complexity triggers:
 ```
 
-## Style Anchors
+## Style Anchors & Style Lock
 
-Style adjectives alone are not reliable enough for long projects. Keep one primary narrative anchor and one primary dialogue anchor. A high-intensity anchor is optional for projects whose action, horror, romance, comedy, or emotional peaks require a different register.
+Style adjectives alone are not reliable for long projects. The Style Lock decomposes style into concrete execution rules.
 
-The Dialogue Anchor defines only the book's shared dialogue floor: era and setting fit, readability, density, punctuation, realism level, and broad conversational texture. It must not impose one cadence, vocabulary, humor style, politeness strategy, or explanatory ability on every character. When its source contains a distinctive speaker, extract only shared project-level traits; that speaker's individual cadence and wording do not become cast-wide rules. Individual Voice Signatures belong in Story Facts.
+The Dialogue Anchor defines only the book's shared dialogue floor: era and setting fit, readability, density, punctuation, realism level, and broad conversational texture. It must not impose one cadence, vocabulary, humor style, or politeness strategy on every character. Individual Dialogue Profiles belong in Story Facts (`references/dialogue-engine.md`).
 
-Visual emphasis defines a project-level tendency, not a fixed word quota. Key character entrances and key scene establishments may receive more selected detail than ordinary transitions, while remaining viewpoint-bound, action-connected, and proportional to the genre and pace. Character-specific stable Recognition Anchors belong in Story Facts; chapter-specific clothing, appearance, and scene-establishment needs belong in the current brief.
+Visual emphasis defines a project-level tendency, not a word quota. Key character entrances and key scenes receive selected detail while remaining viewpoint-bound and action-connected.
 
 An anchor may be:
-
-- a short user-approved sample;
+- a user-approved sample from Style Calibration (`references/style-calibration.md`);
 - a precise path plus passage location in a promoted chapter;
 - a compact description of observable traits when no sample exists yet.
 
-Do not store many competing samples. Replace an anchor only after explicit project-level confirmation.
-
 ## Chapter usage
 
-Chapter Preflight should copy only the constraints relevant to the current work unit:
+Chapter Preflight copies only constraints relevant to the current work unit:
 
 ```markdown
 ## Project Profile Constraints
-- Main/supporting style:
+- Style Lock constraints:
 - Relevant elements:
 - Tone bounds:
 - Relevant Style Anchors:
 - Shared dialogue-floor constraints:
-- Relevant visual-emphasis constraints:
-- Forbidden drift:
+- Forbidden drift & project craft lessons:
 - Chapter-specific prose risks:
 ```
 
-Do not paste the complete Project Profile into every brief.
-
-## Rolling audit usage
-
-Project Creation defaults to a five-promoted-chapter rolling Checkpoint unless the user explicitly approves another cadence. The Checkpoint fully reviews the new window, inherits prior unresolved findings, and compares prose against Style Anchors and Drift Signals without re-auditing all earlier chapters. Additional cross-range audits may run when drift or complexity signals justify them. Arc and volume Completion Records may absorb a coincident Checkpoint. A drift finding may trigger targeted revision, but it does not automatically rewrite the Project Profile.
-
 ## Update rules
 
-Project-level confirmation is required to change:
-
-- main/supporting style;
-- element hierarchy;
-- Tone Lock;
-- reader promise;
-- Style Anchors;
-- forbidden tendencies;
-- target scale;
-- project-level revision boundaries.
-
-Record the reason and effective point when a confirmed change would affect existing chapters. Use the existing stale/revision workflow for affected prose; do not silently reinterpret earlier chapters.
+Project-level confirmation is required to change Style Lock dimensions, elements, Tone Lock, reader promise, Style Anchors, or revision boundaries. Use `references/feedback-promotion.md` for project-level lesson promotion.

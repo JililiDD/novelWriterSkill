@@ -1,4 +1,4 @@
-# Story Facts Workflow — 稳定故事事实与受保护设定
+# Story Facts Workflow — 稳定故事事实、人物对白配置与受保护设定
 
 Use this reference after the Story Kernel, Project Profile, and master-plan direction are approved.
 
@@ -11,15 +11,16 @@ state/story_facts.md
 ## Contents
 
 - Ownership and decision boundaries
-- Story Facts structure and protected facts
+- Story Facts structure and Dialogue Profiles
 - Stable facts versus current state
+- Functional Character Realism for secondary characters
 - Context loading, confirmation, and review
 
 ## Ownership
 
 Story Facts is the sole owner of confirmed, durable story facts:
 
-- core character foundations;
+- core character foundations and Dialogue Profiles (`references/dialogue-engine.md`);
 - stable relationship foundations and hidden relationships;
 - opposition foundations;
 - world, magic, technology, institutional, legal, social, or genre-system rules;
@@ -66,13 +67,18 @@ When a proposed fact would decide an Open Story Kernel or plan question, return 
 - Durable external motivation:
 - Internal contradiction or durable pressure:
 - Cost-producing method/belief when confirmed:
-- Voice Signature:
-  - Default tactic:
-  - Attention bias:
-  - Speech baseline:
-  - Pressure or relationship shift:
-- Recognition Anchors, 1–3 stable visual or behavioral cues when useful:
-- Contrast note, only when another recurring character risks blending:
+- Dialogue Profile:
+  - Wants / Habitual drive:
+  - Notices first / Attention bias:
+  - Knowledge baseline (deep vs blind):
+  - Default conversational tactic:
+  - Status speech impact:
+  - Under pressure behavior:
+  - With trusted counterparts:
+  - Typical refusal style:
+  - Typical request style:
+- Recognition Anchors (1–3 stable visual/behavioral cues):
+- Contrast note (only when another recurring character risks blending):
 - Capabilities and fixed limits:
 - Protected secrets:
 - Long-term change direction:
@@ -130,28 +136,34 @@ When a proposed fact would decide an Open Story Kernel or plan question, return 
 
 Use only relevant sections. Do not manufacture an encyclopedia before the story needs it.
 
-## Minimum viable character voice
+## Character Dialogue Engine & Voice Profiles
 
-Create a Voice Signature only for core or recurring characters whose choices or dialogue affect the project. Four fields are enough:
+Create a Dialogue Profile in Story Facts for core and recurring characters (`references/dialogue-engine.md`):
 
-- **Default tactic** — how the character usually tries to get what they want;
-- **Attention bias** — what they notice first, ignore, or misread;
-- **Speech baseline** — directness, sentence shape, vocabulary level, and usual degree of explanation;
-- **Pressure or relationship shift** — the one material way speech changes under pressure or with a key counterpart.
+- **Wants / Habitual drive** — default social objective in dialogue;
+- **Notices first / Attention bias** — what they register immediately;
+- **Knowledge baseline** — what they understand deeply vs what they are blind to;
+- **Default tactic** — habitual conversational strategy (e.g. transactional, evasive, aggressive probing);
+- **Status speech impact** — how station, profession, and vulnerability shape word choices;
+- **Under pressure behavior** — syntax and composure changes under stress;
+- **With trusted counterparts** — register shift with allies;
+- **Typical refusal & request styles** — how they decline or ask for help.
 
-Use observable, predictive distinctions. `Cold`, `warm`, `funny`, `gentle`, or `sarcastic` alone are not Voice Signatures. Do not assign cast quotas, mandatory catchphrases, accents, verbal tics, or a unique gimmick to every speaker.
+Do not assign cast quotas, mandatory catchphrases, accents, or verbal gimmicks. Meaningful dialogue must pass the **Speaker-Substitution Check** (`references/dialogue-engine.md`).
 
-A character is distinct enough when a meaningful choice, observation, or line would not transfer unchanged to another major character without losing motive, attention, relationship strategy, or phrasing. Functional short lines may remain shared.
+## Functional Character Realism for Secondary Characters
 
-Project Profile's Dialogue Anchor defines the book's shared dialogue floor, not one voice for the whole cast. Temporary deviations caused by injury, secrecy, fear, grief, fatigue, or current relationship state belong in Story Memory or the current brief, not in the stable Voice Signature.
+Secondary characters and NPCs operate under **Functional Character Realism ("Ordinary People Mode")**:
+1. **Partial knowledge**: they understand their immediate workspace and duty, not the grand conspiracy.
+2. **Self-preservation**: wages, physical safety, blame avoidance, and family come before the protagonist's quest.
+3. **Concrete particulars**: express concrete tangible experiences (*"别又算在我头上"*) rather than abstract authorial analysis.
+4. **Natural imperfection**: hesitation, non-linear recall, and answering only what they comprehend.
 
 ## Selective visual identity
 
-For a core or recurring character, keep at most one to three stable Recognition Anchors when they materially help readers identify the person. Use observable cues such as a lasting physical feature, habitual presentation choice, posture, movement, object-handling pattern, or other repeatable behavior. Do not create a full appearance inventory.
+For core and recurring characters, keep at most 1–3 stable Recognition Anchors (lasting physical trait, habitual posture, object-handling pattern). Do not create a full appearance dossier.
 
-An important character's first formal appearance should normally establish a usable base image when the viewpoint can observe it. Select a small combination of appearance, clothing, posture, action, and effect on the scene; include at least one appearance or clothing cue when natural. Each retained detail should help recognition or reveal identity, status, condition, self-presentation, relationship, or practical constraint.
-
-Temporary clothing, grooming, weather effects, disguise, fatigue, injury presentation, or one-scene visual details belong in the current brief and promoted prose. A lasting physical or presentation change belongs first in Story Memory while active and becomes a Story Facts candidate only when confirmed durable. Later appearances add detail only when a new viewpoint, setting, relationship, state change, or plot use gives it new meaning.
+Temporary clothing, grooming, disguise, fatigue, or injury presentation belong in the brief and Story Memory, not in stable Story Facts.
 
 ## Stable facts versus current state
 
@@ -159,81 +171,12 @@ Story Facts stores durable background, motivation, baseline voice, capability ru
 
 Story Memory stores changing location, injury, inventory, relationship phase, active goal, known information, false belief, active promise movement, and unresolved consequence.
 
-Promoted chapters preserve detailed historical evidence. Completed arc and volume records preserve compact historical outcomes.
-
 When a current condition appears likely to become durable, list it in the chapter audit as a **Stable Setting Candidate**. Do not update Story Facts until the user confirms the durable change.
-
-## Protected facts
-
-Use `Protected Facts` for information requiring special checks, such as:
-
-- true identity;
-- survival or death status;
-- permanent capability limits;
-- irreversible relationship foundations;
-- world-rule costs and exceptions;
-- protected secrets and reveal conditions;
-- facts whose change would invalidate multiple chapters or plans.
-
-A chapter touching a protected fact triggers the relevant Fact Protection check under `creation-paths.md`.
-
-## Fact precision
-
-For every important rule or constraint, state:
-
-- what it permits and forbids;
-- its cost or limit;
-- who knows it;
-- whether exceptions exist;
-- what approved evidence established it.
-
-Avoid facts that can be rewritten whenever the plot needs convenience.
 
 ## Context loading
 
-Do not automatically load the entire Story Facts file for every chapter.
-
-Load only sections activated by:
-
-- characters present or directly affected;
-- relationships moving in the chapter;
-- locations, factions, artifacts, or rules used;
-- protected facts, secrets, or capability limits touched;
-- source conflicts requiring verification.
-
-When the file becomes too large for reliable selective reads, split by domain while retaining one index:
-
-```text
-state/story_facts/
-├── index.md
-├── characters.md
-├── relationships.md
-├── world-rules.md
-├── factions.md
-├── locations.md
-└── artifacts.md
-```
-
-Do not split early. One compact file is preferable for ordinary projects.
-
-## Confirmation
-
-Show the Story Facts draft and obtain explicit confirmation before first use as an authority.
-
-Material changes to identity, world rules, power limits, fixed relationship foundations, protected secrets, durable motivation, or opposition logic require renewed confirmation.
-
-A chapter audit may propose a Stable Setting Candidate but cannot apply it automatically.
-
-Confirmation of Story Facts does not confirm remaining Open Story Kernel or planning items unless those decisions are explicitly shown and approved.
+Do not automatically load the entire Story Facts file for every chapter. Load only sections activated by present characters, moving relationships, used locations/rules, or touched protected facts.
 
 ## Review rule
 
-Story Fact and Continuity Review compares candidate prose against:
-
-1. confirmed Story Kernel and master/current-volume plan for story-engine and plan obligations;
-2. approved Story Facts for durable facts and protected boundaries;
-3. Story Memory for active current state;
-4. promoted chapters for original evidence;
-5. the approved work-unit brief for current obligations.
-
-Unsupported or contradicted major facts are blocking. When authorities disagree, identify the outdated source and resolve the conflict against approved evidence rather than choosing the convenient version.
+Story Fact and Continuity Review compares candidate prose against confirmed Story Kernel, approved planning, Story Facts, Story Memory, and original promoted prose. Unsupported or contradicted facts are blocking.

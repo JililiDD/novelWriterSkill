@@ -1,7 +1,7 @@
 {
   "name": "novel-writer",
-  "version": "2.4.0",
-  "description": "Standalone and persistent fiction workflows with adaptive story discovery, compact character Voice Signatures, selective visual emphasis, natural-voice drafting, rolling five-chapter audits, Story Facts, Story Memory, and continuity-safe revision.",
+  "version": "2.6.0",
+  "description": "Standalone and persistent fiction workflows with autonomous batch multi-chapter drafting, style calibration, generative Dialogue Engines, project craft lessons, dual-pass humanization, chapter quality gates, and verified promotion.",
   "author": {
     "name": "JililiDD",
     "url": "https://github.com/JililiDD"
@@ -14,25 +14,27 @@
     "fiction",
     "creative-writing",
     "long-form-writing",
-    "continuity"
+    "continuity",
+    "autonomous-writing"
   ],
   "skills": "./skills/",
   "interface": {
     "displayName": "Novel Writer",
-    "shortDescription": "Develop standalone stories and continuity-safe novel projects.",
-    "longDescription": "A structured fiction workflow with Standalone and Project Creation paths, adaptive Story Kernel discovery, compact recurring-character Voice Signatures and Recognition Anchors, selective key-character and key-scene visual emphasis, stable Story Facts, active-only Story Memory, natural-voice guardrails, rolling five-chapter checkpoints, and verified promotion.",
+    "shortDescription": "Develop standalone stories and continuity-safe novel projects with autonomous batch mode.",
+    "longDescription": "A structured fiction workflow with Standalone and Project Creation paths, Autonomous Batch multi-chapter drafting, adaptive Story Kernel discovery, style calibration, generative Dialogue Engines, Project Profiles with Style Lock, project craft lessons, dual-pass humanization, chapter quality gates, and verified promotion.",
     "developerName": "JililiDD",
     "category": "Productivity",
     "capabilities": [
       "Writing",
       "Planning",
       "Review",
-      "Project Memory"
+      "Project Memory",
+      "Autonomous Batch Writing"
     ],
     "defaultPrompt": [
-      "Use novel-writer to develop a Story Kernel with me and create a persistent novel project.",
-      "Use novel-writer to prepare the next chapter brief, candidate, and audit.",
-      "Use novel-writer to audit and revise this chapter."
+      "Use novel-writer to calibrate style, develop a Story Kernel, and create a persistent novel project.",
+      "Use novel-writer to autonomously draft and verify chapters 1 to 5.",
+      "Use novel-writer to prepare the next chapter brief, candidate, audit, and quality gate scoring."
     ],
     "brandColor": "#7C3AED",
     "websiteURL": "https://github.com/JililiDD/novelWriterSkill"

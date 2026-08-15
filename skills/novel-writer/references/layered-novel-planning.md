@@ -396,6 +396,14 @@ For event-heavy fiction, estimate both set pieces and consequence space. Reduce 
 
 Escalation in recognition, power, resources, and threat must follow demonstrated causes.
 
+## 10. Dynamic Chapter Scale & Anti-Padding Rules (章节字数弹性与反注水)
+
+Chapter word count budgets in volume and arc plans are orienting guidelines, not rigid mechanical quotas:
+
+- **Narrative density dictates chapter length**: A focused confrontation, tight duel, or single turning point may naturally conclude with high tension at 2,000–3,000 words. A multi-threaded negotiation or complex battle escalation may extend to 4,000–5,000 words.
+- **Never force artificial padding (严禁机械注水扩写)**: If the chapter's core dramatic beat, relationship friction, and closing hook are fully delivered, close the chapter cleanly. Do not inject repetitive dialogue loops, wandering exposition, or bloated scenery descriptions merely to hit an arbitrary word count ceiling.
+- **Dramatic completeness & prose quality take absolute priority**: Always favor a tight, gripping 2,500-word chapter over a dilated, diluted 5,000-word chapter.
+
 ## Confirmation
 
 Confirm the Story Kernel before treating its engine as binding. Confirm the master-plan direction before creating dependent Story Facts. Confirm each new or materially changed volume contract and active arc before chapter planning.

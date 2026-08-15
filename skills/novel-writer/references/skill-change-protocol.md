@@ -1,42 +1,38 @@
-# Skill Change Protocol — 修改 skill 前必须确认
+# Skill Change Protocol & Data Isolation — Skill 修改确认与项目数据隔离规范
 
-## Core rule
+Use this reference when proposing modifications to this reusable Skill or enforcing data isolation between reusable methods and novel-specific project files.
 
-When the user discusses possible improvements to this skill, **do not modify the skill immediately**. First explain the plan and wait for explicit user confirmation.
+---
+
+## 1. Skill Change Core Rule
+
+When discussing possible improvements to this skill, **do not modify the skill immediately**. First explain the plan and wait for explicit user confirmation.
 
 This applies to:
 - `SKILL.md`
-- any file under `references/`, `templates/`, `scripts/`, or `assets/`
-- reusable style/element libraries
-- workflow rules, audit rules, prompts, or hard constraints
+- any file under `references/`, `scripts/`, or `assets/`
+- reusable style and element libraries
+- workflow rules, audit gates, prompts, or hard constraints
 
-## Allowed before confirmation
+### Allowed Before Confirmation
+1. Inspect current skill files
+2. Identify problems and architectural bottlenecks
+3. Propose refactoring or patch plans
+4. List files that would change
+5. Draft sample wording in chat
 
-You may:
-1. inspect the current skill
-2. identify problems
-3. propose a refactor or patch plan
-4. list files that would change
-5. explain risks and alternatives
-6. draft sample wording in the chat
+### Requires Explicit Confirmation
+Do **not** edit skill files until the user explicitly confirms (e.g. *“可以改”*, *“就这么做”*, *“开始修改”*, *“确认”*, *“可以继续”*).
 
-## Requires explicit confirmation
+---
 
-Do **not** call `skill_manage` or edit skill files until the user explicitly says something like:
-- 可以改
-- 就这么做
-- 开始修改
-- 确认
-- 按这个方案执行
-- 可以继续
+## 2. Pre-Change Response Template
 
-## Pre-change response template
-
-Before changing the skill, tell the user:
+Before modifying the skill, report:
 
 ```markdown
 我建议这样改：
-1. 修改/新增哪些文件
+1. 修改/新增/删除哪些文件
 2. 每个文件改什么
 3. 是否影响现有流程
 4. 是否有风险
@@ -45,14 +41,25 @@ Before changing the skill, tell the user:
 你确认后我再修改 skill。
 ```
 
-## Exception
+---
 
-If the user directly commands a concrete skill edit (e.g. “把这条规则写进 skill”), that counts as confirmation. Still keep the edit minimal and report exactly what changed.
+## 3. Data Isolation Policy (项目数据与通用 Skill 物理隔离)
 
-## After changing
+The reusable `novel-writer` skill stores **universal methods, protocols, and tools**, never specific novel manuscripts or book-specific lore.
 
-After modifications:
-1. report files changed
-2. verify required rules exist
-3. mention backup path if one was created
-4. do not continue adding extra features without a new confirmation
+### What Belongs in Reusable Skill References
+- reusable workflow protocols and decision gates
+- abstracted failure patterns (`FP-XXX`)
+- compact checklists and diagnostic criteria
+- universal quality gates and review metrics
+- diagnostic scanning utilities (`scripts/`)
+
+### What Stays Exclusively in the Novel Project Directory
+- novel manuscripts (`chapters/`)
+- project planning (`plans/`)
+- dynamic state (`state/story_memory.md`, `state/story_facts.md`)
+- book-specific lessons (`state/writing_lessons.md`)
+- chapter candidate and audit drafts (`work/chapter-XXX/`)
+- project backups and historical archives (`backups/`, `archive/`)
+
+Never copy a specific novel's full text, character dossiers, or plot notes into this reusable plugin repository.

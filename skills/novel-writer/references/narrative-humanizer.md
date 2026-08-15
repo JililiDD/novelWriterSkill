@@ -1,304 +1,175 @@
-# Narrative Humanizer — 小说语言自然度与去模板化
+# Narrative Humanizer — 小说语言自然度、结构去模板化与双层诊断
 
-Use this as the canonical naturalness reference for both draft-time prevention and the post-Stylist Humanizer pass. It preserves the approved story, Project Profile, Style Anchors, viewpoint, and work-unit contract.
+Use this as the canonical naturalness reference for both draft-time prevention and post-draft humanization passes. It preserves the approved story, Project Profile, Style Lock, Style Anchors, viewpoint, and work-unit contract.
 
 Narrative Humanizer is not a continuity auditor, plot editor, or story-fact authority. Factual or structural defects return to the owning stage. Every changed candidate still passes Story Fact Check.
 
+---
+
 ## Contents
 
-- Draft-time naturalness guardrails
-- Humanizer diagnostic and correction pass
-- Genre overlays, Style Anchors, output, and blocking rules
+- Dual-pass operational model
+- Draft-time naturalness guardrails & Explanation Budget
+- Pass 1: Structural Naturalness Pass (Macro)
+- Pass 2: Surface Naturalness Pass (Micro)
+- Skeptical Reader Test & Genre overlays
+- Script-assisted diagnostics
 
-## Working model
+---
 
-Naturalness is controlled twice:
+## Dual-Pass Operational Model
 
-1. **Draft Writing prevents obvious construction patterns** with a compact set of guardrails.
-2. **Narrative Humanizer diagnoses and repairs the actual candidate** after Prose Stylist.
+Naturalness cannot be achieved merely by swapping adjectives or polishing sentences if the underlying scene architecture is artificial. Humanization operates across two distinct passes:
 
-Do not write a deliberately artificial draft and expect Humanizer to rescue it. Do not make Draft Writing execute a large checklist sentence by sentence.
+```text
+Draft Writing (applies positive generation principles & Explanation Budget)
+  ↓
+Pass 1: Structural Naturalness Pass (Macro logic, NPC utility, cognitive pacing)
+  ↓
+Prose Stylist (clarity, imagery, and rhythm refinement)
+  ↓
+Pass 2: Surface Naturalness Pass (Micro cadence, clichés, unearned aphorisms)
+  ↓
+Story Fact Check (semantic & factual verification)
+```
 
 The governing principle is:
 
 > Do not pursue roughness. Preserve irregularity that has a source in viewpoint, character, pressure, relationship, setting, or genre.
 
-## Inputs
+---
 
-Read only what is needed:
+## Draft-Time Guardrails & Explanation Budget
 
-- current candidate prose;
-- relevant Project Profile constraints and Style Anchors;
-- viewpoint constraints and relevant Story Facts Voice Signatures;
-- work-unit contract and protected facts;
-- activated promoted prose when checking repetition or drift;
-- blocking language findings from prior review.
+### Five Positive Generation Principles
+1. **POV owns the prose**: narration, attention, and sensory radius belong strictly to the viewpoint character.
+2. **Characters speak from motive, knowledge, status, relationship, and pressure**: apply the generative Dialogue Engine (`references/dialogue-engine.md`).
+3. **Evidence precedes interpretation**: show concrete evidence, behavior, and physical consequences before narration.
+4. **Competence is behavioral**: protagonist competence is shown through selective attention, questions asked, verification actions, and cost management.
+5. **Causal closure**: scenes end after meaningful causal state change, not after thematic summary.
 
-## Draft-time naturalness guardrails
+### The Explanation Budget
+```text
+Evidence shown in scene
+  ↓
+Can a reasonable reader understand enough to follow the next decision?
+  ├─ YES → STOP EXPLAINING IMMEDIATELY.
+  └─ NO  → Add minimum necessary interpretation for the next action.
+```
+- Each critical piece of evidence permits at most **one** necessary interpretation.
+- If dialogue, action, or physical consequence has already conveyed meaning, delete narrator summaries.
+- Never add a final paragraph summarizing the philosophical or dramatic theme of the chapter.
 
-Draft Writing and Prose Stylist apply these without turning them into a visible checklist:
+---
 
-- **Ownership** — narration, attention, judgment, and speech must belong to the current viewpoint, character, relationship, and pressure.
-- **Restraint** — do not explain what action, dialogue, silence, or object handling already makes clear.
-- **Cognitive rhythm** — let syntax and paragraph movement follow attention, understanding speed, avoidance, fatigue, fear, intimacy, or conflict rather than mechanical variation.
-- **Incomplete meaning** — not every paragraph needs observation, interpretation, emotional summary, and polished closure.
-- **No manufactured roughness** — do not add random fragments, slang, errors, interruptions, or ambiguity merely to appear human.
+## Pass 1: Structural Naturalness Pass (Macro Diagnostic)
 
-Prose Stylist may improve clarity, rhythm, imagery, and pacing, but must not regularize supported hesitation, bias, evasion, asymmetry, interruption, or unfinished thought.
+Execute this pass **before** Prose Stylist. If macro structures are artificial, surface polishing cannot rescue the prose.
 
-## Allowed changes
+### 1. Smartness Inflation & Instant Dedication (FP-003)
+- Check whether the protagonist makes gigantic deductive leaps without trial, error, or physical verification costs.
+- Ensure the protagonist's conclusions are earned through specific sensory clues.
 
-- sentence and paragraph rewrites;
-- dialogue naturalization;
-- rhythm and attention-flow adjustment;
-- removal of redundant explanation or over-completion;
-- compression of generic, over-polished, or self-consciously clever phrasing;
-- replacement of weak, repeated, or viewpoint-inappropriate imagery;
-- restoration of supported silence, interruption, asymmetry, or incomplete thought.
+### 2. NPC Friction & Functional Realism (FP-002)
+- Check whether secondary characters act as frictionless information kiosks.
+- Verify **Functional Character Realism**: NPCs care about their wages, safety, blame avoidance, and have fragmented, imperfect knowledge.
 
-## Forbidden changes
+### 3. Universal Service to Protagonist (FP-007)
+- Check whether surrounding characters exist solely to react, praise, or be tested by the protagonist.
+- Ensure named characters have independent tasks, schedules, and ongoing concerns.
 
-Do not change:
+### 4. Monotonous Scene Architecture (FP-005)
+- Check whether every paragraph or exchange follows a neat, uniform cycle (Setup $\rightarrow$ Explanation $\rightarrow$ Reaction $\rightarrow$ Summary).
+- Restore asymmetrical attention, pauses, interruptions, and unresolved friction.
 
-- plot events or event order;
-- character actions, intentions, presence, or knowledge;
-- clues, evidence, provenance, or reveal timing;
-- world or system rules;
-- required beats or exact phrases;
-- foreshadowing obligations;
-- relationship state;
-- work-unit ending boundary;
-- Proposed Story Memory Changes.
+*Action*: If a scene fails Structural Naturalness, choose **Return Upstream** to restructure scene motivation rather than attempting surface phrasing patches.
 
-When a language correction requires a factual, motivational, emotional-sequencing, or structural change, return a finding instead of disguising the problem with prose.
+---
 
-## Humanizer diagnostic pass
+## Pass 2: Surface Naturalness Pass (Micro Diagnostic)
 
-### 1. Constructedness and over-completion
+Execute this pass **after** Prose Stylist.
 
-Ask whether the passage feels designed to complete a competent paragraph rather than shaped by someone experiencing the scene.
+### 1. Clipped Dialogue & Fragment Chains (FP-001)
+- Scan for high-frequency 2–5 character fragments (*“为何？”*, *“不然？”*, *“走。”*).
+- Verify that dialogue expresses complete grammatical units shaped by the speaker's status and strategy.
+- Run `scripts/dialogue_scan.py` to highlight suspect lines.
 
-Check for:
+### 2. Explanatory Echoes & Insight Phrases (FP-004)
+- Flag repeated narrator insight summaries (*“他知道”*, *“这意味着”*, *“他意识到”*, *“换句话说”*).
+- Run `scripts/repetition_scan.py` to identify excessive summary counts.
 
-- every paragraph having a neat beginning, turn, and conclusion;
-- every emotional beat being named or interpreted;
-- every exchange directly and intelligently answering the previous line;
-- every transition being explained;
-- every image carrying an obvious symbolic function;
-- repeated polished conclusions or scene-ending aphorisms;
-- narration repeatedly proving that it understands the scene.
+### 3. Stock Body Reaction Clichés
+- Eliminate repetitive physical shortcuts: tightening knuckles (*指关节发白*), caught breath (*倒吸一口凉气*), darkened eyes (*瞳孔微缩*), cold spines (*后背发凉*).
+- Replace with scene-specific actions, object interactions, posture changes, or silence.
 
-Remove only unnecessary completion. A controlled narrator, formal scene, ritual register, or deliberate rhetorical structure may remain polished.
+### 4. Unearned Aphorisms & Manufactured Depth (FP-006)
+- Flag pseudo-philosophical generalizations inserted into ordinary logistical scenes.
+- Delete unearned summary sentences at paragraph and chapter ends.
 
-### 2. Voice and thought ownership
+### 5. Paragraph Shape Monotony
+- Run `scripts/paragraph_shape_scan.py` to detect long runs of ultra-short paragraphs or unnaturally uniform paragraph lengths.
 
-For important lines, ask:
+---
 
-> Why would this person, in this moment, notice, judge, think, or say it this way?
+## The Skeptical Reader Test
 
-Check ownership of:
+Before granting a Pass verdict, evaluate the 8 diagnostic questions in `references/quality-gate.md`:
+1. *Does the author feel present arranging characters to supply information?*
+2. *Does the protagonist deduce truths faster and more correctly than everyone else without cause?*
+3. *Do supporting characters vanish the moment the protagonist no longer needs them?*
+4. *Is there an unearned aphorism designed solely for superficial depth?*
+5. *Would any paragraph be stronger if its final summary sentence were deleted?*
+6. *If character names are masked, can key dialogue lines still be distinguished?*
+7. *Is every emotional beat explained too completely?*
+8. *Does anyone say something exceeding their knowledge, status, or self-interest?*
 
-- vocabulary, education, age, profession, class, era, and region;
-- what the viewpoint notices first and what it ignores;
-- bias, self-justification, mistaken inference, and selective attention;
-- directness, evasion, politeness, aggression, and relationship-specific address;
-- how pressure changes expressive ability.
+---
 
-Use the character's compact Voice Signature as evidence: default tactic, attention bias, speech baseline, and pressure or relationship shift. The Project Profile Dialogue Anchor is only the shared dialogue floor; it must not flatten the cast into one cadence, vocabulary, humor style, or level of explanatory precision.
+## Genre Overlays
 
-For meaningful decisions, conflict lines, and emotional turns, apply a limited speaker-substitution test. If another major character could take the line unchanged without losing motive, attention, relationship strategy, or phrasing, inspect for convergence. Functional short lines do not need artificial uniqueness.
+Apply only overlays required by the approved Project Profile:
 
-Do not force every narrator to state a strong opinion. A voice may reveal itself through attention, omission, misreading, restraint, or what it refuses to name. Do not create distinction through catchphrases, accents, quirks, or constant verbal performance alone.
+- **Wuxia / Xianxia**: Check decorative pseudo-classical diction, technique-list combat, and realm exposition that halts the scene. Preserve tactical breath, physical injury, and semi-classical cadence.
+- **Mystery / Thriller**: Check premature clue explanation, detective-summary narration, and tidy evidence chains.
+- **Romance / Emotional Drama**: Check generic emotional labels and intimacy without specific personal habits or choices.
+- **Sci-Fi / Fantasy**: Check encyclopedia exposition and unsupported jargon overload. Preserve operational rules.
+- **Historical / Court Politics**: Check modern corporate jargon (*“信息粒度”*, *“底层逻辑”*) and ensure dialogue reflects strict feudal status vulnerability.
 
-### 3. Cognition-shaped rhythm
+---
 
-Check whether thought and sentence movement are implausibly linear, evenly paced, or immediately insightful.
-
-Supported irregularity may include:
-
-- a sudden shortening after a realization;
-- self-correction or changed wording;
-- noticing a minor object before admitting the central problem;
-- circling around a painful conclusion;
-- a long pressured inference followed by a plain stop;
-- an important fact mentioned lightly because the viewpoint cannot face it;
-- interruption, silence, or an unfinished response.
-
-Do not manufacture these effects mechanically. Every irregularity needs a viewpoint, character, pressure, relationship, or genre reason.
-
-### 4. Explanation and emotional stakes
-
-Reduce narration that restates what action, dialogue, silence, or consequence already shows.
-
-Common symptoms:
-
-- repeated “this meant” or “finally understood” summaries;
-- naming the emotion after the scene has already conveyed it;
-- explaining a clue immediately after presenting it;
-- narrating the theme at the end of each scene;
-- adding intensity words where the event has no choice, cost, or consequence.
-
-When emotion feels weak, first look for a concrete choice, avoidance, loss, failed response, attention shift, or relationship consequence. Do not simulate feeling by adding tears, bodily shorthand, backstory, or a quotable line.
-
-Preserve precise interiority and named emotion when the viewpoint would genuinely recognize it.
-
-### 5. Manufactured depth and self-conscious cleverness
-
-Flag lines that sound designed for quotation, significance, or authorial intelligence without being earned by scene pressure.
-
-Prefer specific behavior, sensory evidence, object interaction, plain language, or omission when stronger. Do not remove genuine lyricism, wit, or rhetoric merely because it is polished.
-
-### 6. Dialogue credibility
-
-Check each important speaker for:
-
-- vocabulary and sentence length;
-- social position and relationship-specific language;
-- what the speaker wants from the exchange;
-- what they conceal, avoid, misunderstand, or leave unanswered;
-- knowledge boundaries;
-- how pressure changes their speech.
-
-Dialogue should pursue a character goal through that speaker's usual tactic and relationship strategy. It need not be inefficient for its own sake, but it should not function as a perfectly cooperative outline explanation. Preserve overlap where characters genuinely share background, institution, family, or subculture; difference is not a quota.
-
-### 7. Imagery and reaction shorthand
-
-Reject imagery that:
-
-- does not fit viewpoint, era, setting, profession, or sensory context;
-- implies an unintended physical fact;
-- repeats an image family without added meaning;
-- becomes more elaborate but less clear;
-- replaces one stock gesture with another.
-
-Watch repeated tightening hands, darkened eyes, caught breath, constricted throat, pale knuckles, frozen steps, and similar shortcuts. Keep a simple cue when accurate and not overused; otherwise use scene-specific action, object handling, silence, posture, or changed speech rhythm.
-
-A recurring motif is valid when deliberate, spaced, and meaningfully developed.
-
-### 8. Visual emphasis and scene grounding
-
-For an activated important-character entrance, preserve enough concrete, viewpoint-valid appearance or clothing, posture/action, and scene effect to form a usable base image. Flag both abstraction-only introductions and paused inventories of face, body, clothing, and accessories. Later description should add new meaning through viewpoint, relationship, setting, condition, or plot use rather than repeat the initial portrait.
-
-For an activated key scene, preserve enough spatial relation, dominant sensory information, and action-relevant object or constraint for the reader to understand movement and pressure. Flag floating dialogue in an ungrounded space, but also flag static tours, decorative inventory, adjective piles, or imagery that delays the active scene.
-
-Do not remove necessary visual or spatial anchors merely to make prose faster. Do not add detail solely because a character or location is important; selected details must support recognition, identity, status, condition, mood, relationship, action, or consequence.
-
-### 9. Skeptical-reader credibility and artificial roughness
-
-Read as someone suspicious of prose that is too clean, too correct, too balanced, too emotionally resolved, or too aware of its intended effect.
-
-Then perform the reverse check. Flag revisions that create a new formula through:
-
-- random fragments or sentence-length alternation;
-- decorative dashes and ellipses;
-- unexplained slang or errors;
-- arbitrary missing transitions;
-- identical hesitation, interruption, or self-correction across characters;
-- deliberate vagueness where precision is natural;
-- casual speech imposed on a formal narrator or genre.
-
-A passage fails if it merely exchanges polished AI regularity for manufactured human roughness.
-
-### 10. Meta and workflow leakage
-
-Remove genuine references to drafting, agents, audits, outlines, readers, chapter production, or tagged foreshadowing from final-intended prose.
-
-Use contextual judgment. A legitimate in-world chapter, reader, scene, report, or audit is not automatically workflow leakage.
-
-## Correction decision
-
-For each material issue, choose one:
-
-- **Keep** — polish or regularity is supported by narrator, genre, scene, or intent.
-- **Targeted correction** — revise only the affected line, exchange, paragraph, or local pattern.
-- **Return upstream** — the prose feels false because motivation, causality, relationship movement, or scene construction is missing.
-
-Do not rewrite unaffected passages merely to demonstrate activity.
-
-## Genre overlays
-
-Apply only overlays required by the approved Project Profile.
-
-### Wuxia / xianxia
-
-Check decorative pseudo-classical diction, technique-list combat, realm exposition that stops the scene, and grand abstractions without distance, cost, breath, injury, or tactical cause. Preserve legitimate semi-classical cadence and meaningful named techniques.
-
-### Mystery / thriller
-
-Check premature clue explanation, detective-summary narration, over-complete villain explanation, and evidence chains made unnaturally tidy. Preserve fair-play clarity.
-
-### Romance / emotional drama
-
-Check generic emotional labels, template melodrama, intimacy without specific habit or choice, and forgiveness without cost. Preserve precise interiority and genre-appropriate tenderness.
-
-### Science fiction / fantasy
-
-Check encyclopedia exposition, unsupported jargon, proper-noun overload, and scale inflation. Preserve rules and operational detail that affect decisions.
-
-### Horror / weird fiction
-
-Check direct fear labels, adjective piles, telegraphed scares, and fully explained threats. Preserve ambiguity, sensory pressure, and delayed understanding.
-
-### Realist / urban / workplace
-
-Check corporate-summary language, unnaturally complete dialogue, generic social labels, and scenes without lived constraints. Preserve plainness and supported speech patterns.
-
-### Web novel / light novel
-
-Check mechanical trope execution, system-message monotony, tag-like reactions, and repeated explanation of every payoff. Preserve momentum, accessibility, and approved genre conventions.
-
-## Style Anchor check
-
-Compare the candidate with relevant Project Profile anchors:
-
-- narrative distance and viewpoint;
-- sentence and rhythm tendencies;
-- dialogue texture;
-- emotional explicitness;
-- imagery density;
-- high-intensity register when applicable.
-
-Do not imitate anchor wording. Preserve observable traits.
-
-If promoted chapters consistently diverge from the anchors, report a drift signal for rolling Checkpoint or cross-range audit rather than forcing one chapter to compensate for the whole trend.
-
-## Output
+## Output Template
 
 ```markdown
 ## Narrative Humanizer Check
 
-### Project style used
-- Project Profile:
-- Style Anchors:
-- Genre overlay:
+### Passes Evaluated
+- Structural Naturalness Pass: Pass | Needs Restructuring
+- Surface Naturalness Pass: Pass | Targeted Edits Applied
 
-### Constructedness risks
-- None / [only material risks: over-completion, neat transition, unowned voice/attention, cognition mismatch, unsupported emotional explanation, or artificial roughness]
+### Diagnostic Script Findings
+- Dialogue Scan: [Clipped count / Question chains]
+- Repetition Scan: [Summary phrases count / Clichés count]
+- Paragraph Shape Scan: [Rhythm health / Short chains]
 
-### Findings and edits
+### Skeptical Reader Test (8 Questions)
+- 1. Information Kiosk: No / [Finding]
+- 2. Instant Insight: No / [Finding]
+- 3. NPC Utility: No / [Finding]
+- 4. Unearned Aphorism: No / [Finding]
+- 5. Paragraph Summary: No / [Finding]
+- 6. Masked Voice: No / [Finding]
+- 7. Over-Explanation: No / [Finding]
+- 8. Status Leakage: No / [Finding]
+
+### Findings and Edits
 - [Category] — passage/problem → keep / targeted correction / return upstream — rationale
 
-### Preserved boundaries
-- Plot/events unchanged: Yes / No
-- Character action/knowledge unchanged: Yes / No
-- Clues/rules/reveal timing unchanged: Yes / No
-- Required beats/exact phrases preserved: Yes / No
-- Work-unit boundary preserved: Yes / No
+### Preserved Boundaries
+- Plot events unchanged: Yes / No
+- Character knowledge unchanged: Yes / No
+- Protected secrets & rules unchanged: Yes / No
 - Proposed Story Memory Changes unchanged: Yes / No
 
-### Drift signals
-- None / [cross-chapter pattern for rolling Checkpoint or cross-range audit]
-
-Verdict: Pass / Needs targeted revision / Return upstream
+Verdict: Pass / Needs Targeted Revision / Return Upstream
 ```
-
-Any `No`, unresolved artificial roughness, or `Return upstream` blocks handoff to Story Fact Check.
-
-## Boundaries
-
-- Keyword counts and sentence-length variation are diagnostic, not quality targets.
-- Do not flatten genre voice into generic literary or conversational prose.
-- Do not make every sentence unusual.
-- Do not increase ornament merely to avoid common phrasing.
-- Do not equate polish with AI or roughness with authenticity.
-- Do not solve continuity, motivation, causality, or contract problems inside this pass.
