@@ -41,7 +41,7 @@ Create the Project Profile after confirming:
 3. Style Calibration outcome (Style Lock & Narrative Anchor) when calibrated;
 4. core and secondary elements;
 5. compatibility constraints and Tone Lock;
-6. target length and chapter scale.
+6. target length and chapter scale (flexible reference range, e.g., 2,500–4,000 chars, not a rigid quota).
 
 Use it before master-plan work, Story Facts work, volume planning, chapter preflight, generation, revision, and style-drift audits.
 
@@ -50,6 +50,14 @@ Use it before master-plan work, Story Facts work, volume planning, chapter prefl
 Show the complete Project Profile draft and obtain explicit confirmation before first creation or any project-level change.
 
 A one-off chapter complaint, experimental rewrite, brainstorming question, or temporary tone request does not authorize a Project Profile update. Use `references/feedback-promotion.md` when upgrading recurring feedback.
+
+## Chapter Scale Flexibility & Anti-Padding Principle (字数弹性与反注水原则)
+
+- **Chapter scale is a reference range, never a rigid hard gate**: Set a target span (e.g. `2,500–4,000 words/characters`) as an orientation benchmark, not a mechanical cutoff.
+- **Dramatic completeness & prose quality take absolute priority over word quota**:
+  - If a chapter's core dramatic arc, conflict friction, character turn, and cliffhanger are fully delivered in 2,000–3,000 words, **do NOT artificially expand, pad, or inject filler prose** just to reach an initial target like 5,000 words.
+  - Artificial expansion that dilutes narrative tension, bloats dialogue, or degrades prose quality is strictly forbidden.
+  - Scene density dictates chapter length: fast-paced combat or single-scene confrontations may naturally be leaner, while multi-threaded ensemble turns may naturally expand.
 
 ## Required template
 
@@ -60,7 +68,7 @@ A one-off chapter complaint, experimental rewrite, brainstorming question, or te
 - Title:
 - Genre:
 - Target length:
-- Chapter scale:
+- Chapter scale: [e.g. Flexible target: 2,500–4,000 words (density-adaptive, tension-first)]
 
 ## Narrative Style Lock
 ### Narrative distance

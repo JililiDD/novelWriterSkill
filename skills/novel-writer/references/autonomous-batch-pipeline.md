@@ -45,6 +45,7 @@ For each Chapter $K$ in requested range $[M..N]$:
   ├─ Step 2: Auto-Drafting
   │    - Generates candidate prose in work/chapter-K/candidate.md.
   │    - Applies Dialogue Engine (6 drivers), Style Lock, and Character Voice Signatures.
+  │    - Respects narrative density: Concludes when dramatic beat finishes cleanly without artificial padding.
   │
   ├─ Step 3: Auto-Review & Chapter Interface Check
   │    - Verifies N-1 -> N transition (time continuity, spatial integrity, object custody).

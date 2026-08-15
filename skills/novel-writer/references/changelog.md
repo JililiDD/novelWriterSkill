@@ -1,9 +1,11 @@
 # Changelog
 
-## v2.6.0 — Autonomous Batch Pipeline & Universal Architecture
-
+- Added **Autonomous Project Genesis** (`references/startup-workflow.md`): enables one-click full-project novel architecture design from a single theme prompt, including multi-variant concept comparison (方案 A/B/C) with pros/cons tradeoff analysis.
+- Added **Genesis Architecture Self-Audit** (`references/startup-workflow.md`): automatically evaluates protagonist engine, opposition logic, volume arc feasibility, and mechanism agency before project finalization.
+- Added **Genesis Confirmation & Bypass Gate**: supports interactive executive review by default, with an optional direct auto-start bypass into Autonomous Batch Pipeline.
 - Added the **Autonomous Batch Pipeline** (`references/autonomous-batch-pipeline.md`): enables autonomous multi-chapter drafting, continuous volume completion, and whole-book generation with explicit user delegation, rolling context compaction, automated dual-pass humanization, and auto-promotion.
 - Added **Circuit Breakers for Autonomous Mode**: automated pause-and-alert triggers on Quality Gate failures ($< 9.5$ after 2 auto-repair iterations), unresolvable story fact conflicts, blocking rolling checkpoints, or explicit user decision forks.
+- Added **Dynamic Chapter Scale & Anti-Padding Rules** (`references/project-profile-workflow.md`, `references/layered-novel-planning.md`, `references/quality-gate.md`, `references/chapter-pipeline.md`): establishes chapter word counts as flexible guidance targets rather than rigid quotas, enforcing that dramatic completeness and narrative tension strictly override artificial padding.
 - Added `scripts/batch_runner.py` for batch chapter sequence verification, word count aggregation, and multi-chapter quality diagnostic scans.
 - Added `scripts/scan_chapter.py` for single-command all-in-one chapter diagnostics (dialogue, clichés, paragraph cadence, and boundary interface).
 - Completed architecture streamlining: removed 11 legacy tombstone files and 5 obsolete schemas/JSON templates, merged `failure-patterns.md` into `feedback-promotion.md`, merged compatibility analysis into `style-and-element-selection.md`, and merged data isolation policy into `skill-change-protocol.md`.

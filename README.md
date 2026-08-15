@@ -70,12 +70,17 @@ When explicitly authorized (e.g. *“自动连写第 5 到 10 章”*, *“按�
 - Autonomously iterates: `Auto-Brief` $\rightarrow$ `Auto-Draft` $\rightarrow$ `Auto-Review & Interface` $\rightarrow$ `Dual-Pass Humanizer` $\rightarrow$ `Quality Gate` $\rightarrow$ `Auto-Promote` $\rightarrow$ `Incremental Memory Update` $\rightarrow$ Advance to next chapter.
 - **Circuit Breakers**: Immediately halts and alerts the user if quality score $< 9.5$ after 2 auto-repair iterations, an unresolvable story fact conflict occurs, or a 5-chapter rolling checkpoint flags a blocking issue.
 
-## Adaptive story discovery & Style Calibration
+## Adaptive story discovery & Autonomous Project Genesis
 
-For a new persistent project, Novel Writer:
-1. Conducts an **Adaptive Story Discovery Gate** (core appeal, protagonist drive, internal contradiction, opposition logic, core relationships, choice architecture).
-2. Establishes the confirmed **Story Kernel** inside `plans/master-plan.md`.
-3. Offers optional **Style Calibration** (`references/style-calibration.md`): generates 2–4 controlled variants (600–1,500 Chinese characters) of a single scene to lock narrative distance, cognitive movement, sentence rhythm, psychological explicitness, dialogue floor, and information release into `state/project_profile.md` as the **Style Lock** and **Narrative Anchor**.
+Novel Writer supports two project startup workflows:
+1. **Autonomous Project Genesis (一键全案智能立项)**:
+   - For a single theme seed (e.g. *"五代十国权谋账房"*), autonomously constructs **2–3 distinct architectural variants (方案 A/B/C)** with pros/cons tradeoff analysis.
+   - Autonomously drafts full project files: `master-plan.md` (Story Kernel & Volume Map), `volume-001.md` (Arc 1 Chapter-by-Chapter Beat Contracts), `project_profile.md` (Style Lock & Narrative Anchor Sample), and `story_facts.md` (Character Dialogue Profiles).
+   - Executes the **Genesis Architecture Self-Audit** (evaluating protagonist agency, opposition logic, and arc escalation).
+   - **Confirmation Gate**: Presents an Executive Brief for user confirmation by default, or directly initiates continuous drafting if the user explicitly commanded full delegation.
+2. **Interactive Discovery Mode (深度交互共创)**:
+   - Explores core appeal, internal contradiction, and choice architecture in 1–2 high-leverage questions per turn.
+   - Offers optional **Style Calibration** (`references/style-calibration.md`): generates 2–4 controlled variants (600–1,500 Chinese characters) to lock Style Lock and Narrative Anchor.
 
 ## Project information model
 
@@ -148,6 +153,11 @@ Before a candidate is eligible for promotion, it must pass the 7-Dimension Quali
 
 **Gate Threshold**: Total Score $\ge 9.5 / 10.0$ and no critical category $< 9.0 / 10.0$.
 Substantive candidate modifications invalidate dependent downstream checks and require re-execution.
+
+## Dynamic Chapter Scale & Anti-Padding Principle
+
+- Chapter word counts (e.g. 2,500–4,000 words) are flexible guidance targets, not rigid boundaries.
+- **Narrative tension and dramatic completeness strictly override word count quotas**: if a chapter naturally and completely delivers its core dramatic beat, turning point, and closing hook in 2,500 words, artificial expansion/padding to reach 5,000 words is forbidden.
 
 ## Mandatory Promotion Confirmation Gate
 

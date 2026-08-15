@@ -126,7 +126,7 @@ Create or refresh `brief.md`:
 - Type and ID:
 - Operation / revision level:
 - POV and title:
-- Target size:
+- Target size: [Flexible guidance range, e.g. 2,500–4,000 words; dramatic density first]
 
 ## Approved Contract
 - Starting state:
@@ -188,6 +188,7 @@ Create or refresh `brief.md`:
 - Draft from approved brief and five positive generation principles (`SKILL.md`).
 - Generate dialogue via Dialogue Engine (`references/dialogue-engine.md`). Apply Functional Character Realism for NPCs.
 - Apply Explanation Budget: evidence and concrete actions before narration.
+- Respect narrative density: Conclude the chapter when dramatic beats and emotional shifts are complete. Never force artificial padding to hit an arbitrary word count ceiling.
 - Save to `candidate.md`. Never write directly to official chapters.
 
 ### 3. Content Review
@@ -209,7 +210,7 @@ Execute in strict sequence:
 
 ### 6. Final Verification & Quality Gate
 - Score the candidate against the 7-dimension Quality Gate (`references/quality-gate.md`).
-- Evaluate the 8-question Skeptical Reader Test.
+- Evaluate the 9-question Skeptical Reader Test (including Artificial Padding Check).
 - If Total $\ge 9.5 / 10$ and no critical dimension $< 9.0$: assign verdict **`PROMOTION READY`**.
 - Present verification results to the user and request explicit promotion authorization.
 

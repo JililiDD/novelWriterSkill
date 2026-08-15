@@ -70,5 +70,6 @@ Before approving Final Verification, run this 8-point diagnostic scan:
 6. **Masked Voice Check**: If character names are removed, can the speaker of every consequential dialogue line still be identified?
 7. **Over-Explanation Check**: Is every emotional beat, reaction, or clue explained to the reader multiple times?
 8. **Knowledge / Status Leakage**: Does any character speak outside their social station, professional reality, or self-interest?
+9. **Artificial Padding / Word Inflation Check**: Was redundant filler prose, padded dialogue loops, or bloated scenery description injected merely to hit an arbitrary length target? (Dramatic completeness and narrative tension strictly override arbitrary word count quotas).
 
 *Action*: Any `YES` answer must be resolved through targeted revision or upstream structural adjustment before granting `PROMOTION READY`.

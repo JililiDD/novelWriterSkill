@@ -46,7 +46,7 @@ All paths below are relative to `references/`.
 
 | User intent | References |
 |---|---|
-| Start or re-establish a persistent novel | `creation-paths.md`, `startup-workflow.md`, `style-calibration.md`; load each style, planning, facts, or continuity owner only when its startup step begins |
+| Start a novel (Interactive Discovery or Autonomous Genesis) | `creation-paths.md`, `startup-workflow.md`, `style-calibration.md`, `layered-novel-planning.md`, `style-and-element-selection.md` |
 | Standalone short story, fanfiction, or scene | `creation-paths.md`, `fanfic-one-shot-mini-gate.md`, `chapter-pipeline.md`, `dialogue-engine.md` |
 | Autonomous multi-chapter batch drafting / whole-book generation | `autonomous-batch-pipeline.md`, `creation-paths.md`, `chapter-pipeline.md`, `quality-gate.md`, `long-form-continuity.md` |
 | Calibrate or recalibrate narrative style | `style-calibration.md`, `project-profile-workflow.md` |
