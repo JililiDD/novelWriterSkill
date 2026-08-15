@@ -1,5 +1,5 @@
-# Changelog
-
+- Added **Dual-Tier Writing Rules Architecture** (`references/feedback-promotion.md`): separates universal cross-book invariants into **Global Writing Rules** (`~/.novel-writer/global_writing_rules.md`) from book-specific **Project Craft Lessons** (`<novel_dir>/state/writing_lessons.md`), cascade-loading both in every preflight and humanizer pass.
+- Added **FP-009: Tautological Collocation & Semantic Collision Protection** (`references/feedback-promotion.md`, `references/narrative-humanizer.md`): systematic interception of borrowed quantifiers and metaphor collision (e.g. “一豆如豆”, “一抹如墨”), psychological tautology (“暗自心想”), and adverbial stuttering.
 - Added **Autonomous Project Genesis** (`references/startup-workflow.md`): enables one-click full-project novel architecture design from a single theme prompt, including multi-variant concept comparison (方案 A/B/C) with pros/cons tradeoff analysis.
 - Added **Genesis Architecture Self-Audit** (`references/startup-workflow.md`): automatically evaluates protagonist engine, opposition logic, volume arc feasibility, and mechanism agency before project finalization.
 - Added **Genesis Confirmation & Bypass Gate**: supports interactive executive review by default, with an optional direct auto-start bypass into Autonomous Batch Pipeline.

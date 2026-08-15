@@ -1,18 +1,21 @@
-# Feedback Promotion Protocol & Project Craft Lessons — 用户反馈升级与项目写作经验沉淀
+# Feedback Promotion Protocol — 用户反馈升级与双层写作经验沉淀
 
-Use this reference to capture, upgrade, and persist recurring writing feedback into project-level craft lessons in `state/writing_lessons.md`, and to look up established failure patterns (`FP-001` through `FP-008`).
+Use this reference to capture, upgrade, and persist recurring writing feedback into:
+1. **Global Writing Rules** (`~/.novel-writer/global_writing_rules.md`) — universal linguistic and craft rules across **all novel projects**;
+2. **Project Craft Lessons** (`state/writing_lessons.md`) — novel-specific craft lessons and style boundaries;
+and to look up established failure patterns (`FP-001` through `FP-009`).
 
 ---
 
 ## 1. Problem & Purpose
 
-In long serialized projects, AI models frequently repeat systemic writing habits (e.g. clipped dialogue, all characters sounding like cold strategists, narrator repeatedly summarizing themes at paragraph ends).
+In long serialized projects, AI models frequently repeat systemic writing habits (e.g. clipped dialogue, tautological modifier collisions, all characters sounding like cold strategists, narrator repeatedly summarizing themes at paragraph ends).
 
-Treating these issues solely as local single-chapter bugs leads to repetitive patching. **Feedback Promotion systematically converts repeated user corrections into persistent project-level craft rules.**
+Treating these issues solely as local single-chapter bugs leads to repetitive patching. **Feedback Promotion systematically converts repeated user corrections into persistent global or project-level rules.**
 
 ---
 
-## 2. Feedback Promotion Protocol
+## 2. Feedback Promotion Protocol & Dual-Tier Architecture
 
 ```text
 Level 1: Local Feedback
@@ -22,42 +25,61 @@ Fix applied locally in candidate.md
   │
   ├─ If issue is isolated → Done.
   │
-  └─ If similar feedback occurs 2+ times across chapters/scenes
+  └─ If similar feedback occurs 2+ times OR is a fundamental linguistic/craft rule
         │
         ▼
-Level 2: Repeated Pattern Recognition
-  │  (Assistant identifies the underlying generative defect)
-  │  (Assistant drafts a proposed Project Craft Rule)
-  ▼
-Propose Craft Rule to User
+Level 2: Scope Classification & Rule Drafting
+  │
+  ├─ [Universal Craft / Linguistic Bug] (e.g. 语义叠床架屋 "一豆如豆", NPC问答机, 解释预算超标)
+  │    └─ Target: Global Writing Rules (~/.novel-writer/global_writing_rules.md)
+  │
+  └─ [Project-Specific Style / Tone Drift] (e.g. 当前小说的特定阵营语气、术语规范、门派口吻)
+       └─ Target: Project Craft Lessons (state/writing_lessons.md)
+        │
+        ▼
+Propose Rule & Target Scope to User
   │
   ├─ User declines → Kept as local preference.
   │
-  └─ User explicitly confirms ("对，以后都按这个规矩写", "确认加入项目经验")
+  └─ User explicitly confirms ("加入全局规则" / "加入本书经验")
         │
         ▼
-Level 3: Project Craft Lesson Persistence
-  │  (Write to state/writing_lessons.md and reference in Project Profile)
+Level 3: Rule Persistence & Cascade Loading
+  │  (Writes to ~/.novel-writer/global_writing_rules.md OR state/writing_lessons.md)
   ▼
-Active Enforcement in all subsequent Briefs, Drafting, and Humanizer passes
+Cascade Enforcement across all subsequent Briefs, Drafting, Humanizer, and Quality Gate passes
 ```
 
 ---
 
-## 3. Project Craft Lessons File (`state/writing_lessons.md`)
+## 3. Storage Formats
 
-When confirmed by the user, store project lessons in `state/writing_lessons.md` using the standard format:
+### (A) Global Writing Rules (`~/.novel-writer/global_writing_rules.md`)
+Stored globally in user's home directory. Automatically loaded across **all novel projects**:
+- Core linguistic invariants (e.g., anti-tautology, explanation budget, cognitive pacing);
+- Universal AI anti-template and anti-cliché rules;
+- Cross-project narrative humanization standards.
+
+### (B) Project Craft Lessons (`state/writing_lessons.md`)
+Stored inside the specific novel's repository under `state/`. Owns book-specific constraints:
 
 ```markdown
 # Project Craft Lessons
 
-## FP-001 — [Title of Failure Pattern]
+## FP-XXX — [Title of Project Lesson]
 
 ### Symptom
-- [Observable manifestations in text, e.g., consecutive 2–5 character interrogative fragments]
-- [Multiple distinct characters sharing the same abrupt rhythm]
+- [Observable manifestations in text]
 
 ### Why it fails
+- [Root cause / specific tone conflict with this novel's style lock]
+
+### Correction
+- [Actionable positive generation rule for this book]
+
+### Scope
+- Project-level confirmed lesson. Effective from Chapter [XXX] onward.
+```
 - [Root cause, e.g., mistaking clipped sentence fragments for intelligence or historical gravity]
 - [Homogenizes dialogue cadence across the cast]
 
@@ -117,10 +139,26 @@ Use these standard templates when diagnosing issues or proposing project-level r
 - **Why it fails**: Strips dramatic events of lasting consequence.
 - **Generative Correction**: Track emotional aftermath across scenes as active friction: fatigue, altered attention, hesitation, and physical exhaustion.
 
+### FP-009: Tautological Collocation & Semantic Collision (语义叠床架屋与量词修饰撞车)
+- **Symptom**:
+  1. *Quantifier / Metaphor collision*: e.g., “一豆如豆的黄光”, “一抹如墨的夜色”, “一丝如丝的凉风”.
+  2. *Psychological tautology*: e.g., “心中暗自心想”, “暗暗心下忖度”, “心底暗想”.
+  3. *Adverbial duplication*: e.g., “忍不住不禁”, “由不得禁不住”, “仿佛好像”.
+  4. *Organ / perception redundancy*: e.g., “双目目光望去”, “耳边耳畔听闻”.
+- **Why it fails**: Autoregressive attention blends mutually exclusive collocations, resulting in ungrammatical stuttering and semantic bloating.
+- **Generative Correction**: Enforce single-choice clarity:
+  - Pick either quantifier or metaphor: *“一豆黄光”* OR *“如豆的黄光”* (NEVER both).
+  - Pick either verb or adverb: *“心想”* OR *“暗忖”* (NEVER *“暗自心想”*).
+  - Pick single adverb: *“不禁”* OR *“忍不住”*.
+  - Surface Naturalness Pass scans and eliminates all modifier collisions.
+
 ---
 
 ## 5. Authority & Maintenance Rules
 
-1. **Explicit User Approval Required**: The assistant must never silently write or alter `state/writing_lessons.md` without explicit user confirmation.
-2. **Selective Context Loading**: Subsequent chapter briefs load only the active lesson summaries relevant to that chapter’s specific risks.
-3. **Audit Enforcement**: `audit.md` verifies compliance against confirmed project craft lessons during Content Review and Narrative Humanizer stages.
+1. **Dual Cascade Loading**: All novel writing workflows automatically load:
+   - `~/.novel-writer/global_writing_rules.md` (Global cross-novel invariants);
+   - `state/writing_lessons.md` (Project-specific lessons, if present).
+2. **Explicit User Approval Required**: The assistant must never silently write or alter `global_writing_rules.md` or `state/writing_lessons.md` without explicit user confirmation.
+3. **Selective Brief Loading**: Subsequent chapter briefs load the active lesson IDs relevant to that chapter's specific risks.
+4. **Audit Enforcement**: `audit.md` verifies compliance against both global and project craft lessons during Content Review and Narrative Humanizer stages.

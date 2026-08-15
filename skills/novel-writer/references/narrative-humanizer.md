@@ -110,11 +110,16 @@ Execute this pass **after** Prose Stylist.
 ### 5. Paragraph Shape Monotony
 - Run `scripts/paragraph_shape_scan.py` to detect long runs of ultra-short paragraphs or unnaturally uniform paragraph lengths.
 
+### 6. Tautological Collocations & Quantifier Clashes (FP-009)
+- Scan for hybrid collision of borrowed quantifiers and metaphors (e.g., *“一豆如豆”*, *“一抹如墨”*, *“一丝如丝”*). Enforce single-choice clarity (*“一豆黄光”* OR *“如豆的黄光”*).
+- Eliminate redundant psychological adverbs and verbs (e.g., *“心中暗自心想”* $\rightarrow$ *“心想”* / *“暗忖”*).
+- Eliminate adverbial duplication (*“忍不住不禁”* $\rightarrow$ *“不禁”*) and organ/perception redundancies (*“双目目光”* $\rightarrow$ *“目光”*).
+
 ---
 
 ## The Skeptical Reader Test
 
-Before granting a Pass verdict, evaluate the 8 diagnostic questions in `references/quality-gate.md`:
+Before granting a Pass verdict, evaluate the 9 diagnostic questions in `references/quality-gate.md`:
 1. *Does the author feel present arranging characters to supply information?*
 2. *Does the protagonist deduce truths faster and more correctly than everyone else without cause?*
 3. *Do supporting characters vanish the moment the protagonist no longer needs them?*
@@ -123,6 +128,7 @@ Before granting a Pass verdict, evaluate the 8 diagnostic questions in `referenc
 6. *If character names are masked, can key dialogue lines still be distinguished?*
 7. *Is every emotional beat explained too completely?*
 8. *Does anyone say something exceeding their knowledge, status, or self-interest?*
+9. *Was redundant filler prose, padded dialogue, or artificial expansion added merely to hit an arbitrary word count?*
 
 ---
 

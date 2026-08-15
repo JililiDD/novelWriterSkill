@@ -42,9 +42,10 @@ work/chapter-XXX/
 Ownership:
 
 - Project Profile — style, reader experience, Style Lock, and shared dialogue floor;
+- Global Writing Rules (`~/.novel-writer/global_writing_rules.md`) — universal linguistic invariants, anti-tautology, and cross-project craft standards;
 - Story Facts — stable confirmed facts, protected facts, Dialogue Profiles, and Recognition Anchors;
 - Story Memory — active/open current state only;
-- `state/writing_lessons.md` — confirmed project craft constraints (`references/feedback-promotion.md`);
+- `state/writing_lessons.md` — confirmed project craft constraints for this novel (`references/feedback-promotion.md`);
 - master and volume plans — future intended direction;
 - promoted prose — original evidence of happened events;
 - brief — current contract and selected context;
@@ -182,6 +183,7 @@ Create or refresh `brief.md`:
 - Resolve creation path, work unit, target, confirmation, and any optional run record.
 - If first chapter of a new five-chapter window, verify previous Checkpoint.
 - Read hot context only (brief, Story Memory, Dialogue Profiles, relevant Story Facts, minimum promoted prose).
+- Cascade-load craft rules: Universal rules from `~/.novel-writer/global_writing_rules.md` and active project lessons from `state/writing_lessons.md`.
 - Recheck original promoted prose for high-impact facts.
 
 ### 2. Draft Writing
@@ -202,7 +204,7 @@ Record separately in `audit.md`:
 Execute in strict sequence:
 1. **Structural Naturalness Pass**: macro check for smartness inflation, NPC info kiosks, instant comprehension, paragraph symmetry, all-service-to-protagonist scenes (`references/narrative-humanizer.md`).
 2. **Prose Stylist**: improve rhythm, viewpoint imagery, clarity, and pacing without regularizing supported hesitation or asymmetry.
-3. **Surface Naturalness Pass**: micro check for sentence cadence, AI reaction clichés, unearned aphorisms, and over-completion.
+3. **Surface Naturalness Pass**: micro check for sentence cadence, AI reaction clichés, unearned aphorisms, over-completion, and **FP-009 Tautological Collisions (e.g. "一豆如豆", "暗自心想", "忍不住不禁")**.
 
 ### 5. Story Fact Check
 - Compare refined candidate with pre-refinement version and approved brief.

@@ -10,7 +10,7 @@ Use this Skill as the control plane for structured fiction work. Load only the r
 ## Universal invariants
 
 1. Read actual supplied or project files before claiming project state, chapter status, story facts, or existing prose.
-2. Keep manuscripts, plans, state, briefs, candidates, audits, archives, and book-specific lessons (`state/writing_lessons.md`) inside the novel project, not this reusable Skill.
+2. Keep manuscripts, plans, state, briefs, candidates, audits, archives, and book-specific lessons (`state/writing_lessons.md`) inside the novel project, and universal cross-book rules in `~/.novel-writer/global_writing_rules.md`.
 3. Give each information class one current owner: master/volume plans for future direction; Project Profile for style, reader experience, and Style Lock; Story Facts for stable confirmed facts, Dialogue Profiles, and Recognition Anchors; Story Memory for active current state; and promoted prose for original evidence of happened events.
 4. Treat every approved contract, plan obligation, exact phrase, knowledge boundary, promise window, protected fact, and forbidden change as binding.
 5. Apply the five positive generation principles to all prose:
@@ -22,7 +22,7 @@ Use this Skill as the control plane for structured fiction work. Load only the r
 6. Unpromoted candidate prose has zero authority over happened story events and must never silently alter downstream Story Memory, future chapter assumptions, or official text.
 7. Never promote candidate prose into an official chapter or update Story Memory from that candidate without a fresh, explicit user confirmation after Final Verification. Final Verification may produce `PROMOTION READY`; it may not silently produce `PROMOTED`.
 8. Substantive candidate changes invalidate dependent downstream checks. Re-run affected Character, Naturalness, Story Fact, Interface, and Final Verification stages before returning to `PROMOTION READY`.
-9. Evaluate repeated user feedback about writing defects for project-level promotion into `state/writing_lessons.md`. Do not repeatedly patch single chapters when the underlying generation rule is flawed.
+9. Evaluate repeated user feedback for global promotion into `~/.novel-writer/global_writing_rules.md` (universal rules) or project-level promotion into `state/writing_lessons.md` (book-specific lessons). Do not repeatedly patch single chapters when the underlying generation rule is flawed.
 10. Keep logical role inputs and outputs isolated. Ordinary findings share one audit file only when each check remains separately identifiable.
 11. Run Story Fact Check after Narrative Humanizer whenever prose changes.
 12. Stable-setting, Project Profile, and project craft lesson changes require explicit project-level confirmation; a chapter audit may propose but not silently apply them.

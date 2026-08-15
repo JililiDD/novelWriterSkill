@@ -159,6 +159,12 @@ Substantive candidate modifications invalidate dependent downstream checks and r
 - Chapter word counts (e.g. 2,500–4,000 words) are flexible guidance targets, not rigid boundaries.
 - **Narrative tension and dramatic completeness strictly override word count quotas**: if a chapter naturally and completely delivers its core dramatic beat, turning point, and closing hook in 2,500 words, artificial expansion/padding to reach 5,000 words is forbidden.
 
+## Dual-Tier Writing Rules & Project Craft Lessons
+
+- **Global Writing Rules** (`~/.novel-writer/global_writing_rules.md`): Stored in user home root, applying universal linguistic invariants, anti-tautology (`FP-009` modifier/quantifier collision protection), and anti-template rules across **all novel projects**.
+- **Project Craft Lessons** (`<novel_dir>/state/writing_lessons.md`): Captures and persists book-specific tone constraints, faction nuances, and terminology guidelines confirmed by the user.
+- **Cascade Enforcement**: Every chapter brief, draft, and humanizer pass automatically cascade-loads global rules and local lessons.
+
 ## Mandatory Promotion Confirmation Gate
 
 1. Final Verification passing verdict yields **`PROMOTION READY`**, never silent Promotion in standard interactive mode.
